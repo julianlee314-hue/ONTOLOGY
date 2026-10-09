@@ -170,21 +170,6 @@ html[data-theme="dark"] .realm .rw{color:#ff9c84}
 .switch[aria-pressed="true"]{background:rgba(127,211,168,.25);border-color:#7fd3a8}
 .switch[aria-pressed="true"] .knob{background:#3aa76d}
 .switch[aria-pressed="true"] .knob::after{left:16px}
-/* parent cards */
-.note.parent{padding:16px 13px 11px;border-top-width:9px;border-radius:4px 4px 8px 4px}
-.note.parent h3{font-size:16px}
-.note.parent .sum{-webkit-line-clamp:2}
-.note.parent{box-shadow:7px 7px 0 -2px rgba(255,250,236,.9),7px 7px 0 -1px rgba(60,35,10,.25),var(--shadow)}
-html[data-theme="dark"] .note.parent{box-shadow:7px 7px 0 -2px #4a3d33,7px 7px 0 -1px rgba(0,0,0,.4),var(--shadow)}
-.prog{margin-top:9px;height:8px;border-radius:999px;background:rgba(0,0,0,.1);overflow:hidden}
-.prog>i{display:block;height:100%;background:linear-gradient(90deg,#3aa76d,#62c58e);border-radius:999px}
-.progtxt{display:flex;justify-content:space-between;font-size:11px;color:#5a4836;margin-top:3px}
-.why{font-size:11px;color:#6b5843;font-style:italic;margin-top:5px;line-height:1.3}
-.tag.realm-t{background:var(--c);color:#1d140c;font-weight:700;letter-spacing:.6px}
-.tag.proj{background:rgba(0,0,0,.07);color:#3a2b1d;font-weight:600}
-.match{background:#ffe27a;color:#3a2616;border-radius:4px;padding:1px 6px;font-weight:600}
-.cnt-kids{background:rgba(0,0,0,.07);border-radius:4px;padding:1px 6px}
-body.waitmode .note.parent:not(.waiting){opacity:.28;filter:grayscale(.6)}
 /* panel lists */
 .back{border:none;background:transparent;color:var(--ink-soft);cursor:pointer;padding:0;font-size:13.5px;margin-bottom:4px}
 .back:hover{color:var(--ink)}
@@ -206,35 +191,91 @@ html[data-theme="dark"] .kid{filter:saturate(.85) brightness(.92)}
   .realm .rn{font-size:12.5px}
   .switch{flex:1 1 100%;justify-content:center}
 }
+/* ---- v4: goals, history, abandoned ---- */
+.goals{display:flex;gap:10px;padding:12px 20px 4px;overflow-x:auto;scrollbar-width:thin;align-items:stretch}
+.goal{flex:0 0 auto;position:relative;min-width:168px;max-width:230px;text-align:left;border:none;cursor:pointer;color:#1d140c;background:linear-gradient(180deg,var(--gc),color-mix(in srgb,var(--gc) 78%,#000));
+  border-radius:10px 10px 10px 10px;padding:9px 34px 9px 12px;box-shadow:0 3px 8px rgba(0,0,0,.25);opacity:.9;transition:transform .12s,opacity .12s,box-shadow .12s}
+.goal::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;border-radius:10px 0 0 10px;background:rgba(255,255,255,.45)}
+.goal .gt{display:block;font-weight:800;font-size:13.5px;line-height:1.2;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.35);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.goal .gs{display:block;font-size:11px;color:rgba(255,255,255,.92);margin-top:2px;white-space:nowrap}
+.goal .gbar{display:flex;height:5px;border-radius:999px;overflow:hidden;margin-top:6px;background:rgba(255,255,255,.25)}
+.goal .gbar i{display:block;height:100%}
+.goal .gw{background:#fff;color:#c2412c;border-radius:999px;padding:0 6px;font-weight:800;margin-left:4px}
+.goal .tl{position:absolute;top:6px;right:6px;width:24px;height:24px;border-radius:50%;border:none;background:rgba(255,255,255,.85);color:#2b2118;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.goal .tl:hover{background:#fff;transform:scale(1.08)}
+.goal:hover{opacity:1;transform:translateY(-1px)}
+.goal[aria-pressed="true"]{opacity:1;box-shadow:0 0 0 3px #fff,0 0 0 6px var(--gc),0 6px 14px rgba(0,0,0,.3)}
+.goals.dim .goal[aria-pressed="false"]{opacity:.55}
+.goal.allg{--gc:#5a4330;min-width:110px}
+.goalinfo{margin:6px 20px 0;background:var(--panel);color:var(--panel-ink);border-left:8px solid var(--gc);border-radius:10px;padding:9px 14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.goalinfo b{font-size:15px}.goalinfo span{font-size:13px;color:var(--ink-soft);flex:1 1 300px}
+.gtag{display:inline-block;background:var(--gc);color:#fff;font-weight:700;border-radius:4px;padding:1px 6px;text-shadow:0 1px 1px rgba(0,0,0,.3);max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
+button.gtag{border:none;cursor:pointer;font-size:12px;padding:2px 8px}
+.ago{color:#6b5843;white-space:nowrap}
+.ago.old{color:#a0522d}
+.board{grid-template-columns:repeat(var(--ncol,6),minmax(210px,1fr))}
+.col.ab{background:repeating-linear-gradient(135deg,rgba(80,70,60,.10) 0 10px,rgba(80,70,60,.04) 10px 20px);border-style:dashed}
+.col.ab .colhead{background:#e9e1d6}
+html[data-theme="dark"] .col.ab .colhead{background:#2a241f}
+.col.ab .note{filter:grayscale(.55);opacity:.85}
+.col.ab .note h3{text-decoration:line-through;text-decoration-color:rgba(0,0,0,.35)}
+.stamp{position:absolute;right:8px;bottom:22px;transform:rotate(-9deg);border:2px solid #9b3b2a;color:#9b3b2a;font-weight:800;font-size:10px;letter-spacing:1px;padding:0 5px;border-radius:3px;opacity:.7;text-transform:uppercase}
+.abtoggle{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;transform:rotate(180deg);min-height:200px;border:2px dashed rgba(60,40,20,.35);border-radius:14px;background:rgba(255,248,235,.25);cursor:pointer;font-family:var(--hand);font-size:15px;color:#3a2616;padding:12px 6px;gap:8px}
+.abtoggle:hover{background:rgba(255,248,235,.5)}
+html[data-theme="dark"] .abtoggle{color:var(--ink-soft);border-color:rgba(255,230,200,.2);background:rgba(0,0,0,.2)}
+.board.withab{grid-template-columns:repeat(var(--ncol,6),minmax(210px,1fr)) 48px}
+/* timeline */
+.tline{list-style:none;margin:8px 0 0;padding:0 0 0 4px;position:relative}
+.tline::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--c),rgba(0,0,0,.12))}
+.tline li{position:relative;padding:0 0 12px 28px}
+.tline li::before{content:"";position:absolute;left:4px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--panel);border:3px solid var(--c)}
+.tline li.first::before{background:var(--c);width:12px;height:12px;left:3px;top:3px}
+.tline li.future::before{border-style:dashed;opacity:.6}
+.tline .td{font-size:12px;font-weight:700;color:var(--ink-soft);letter-spacing:.3px}
+.tline .td .ap{font-weight:600;background:rgba(0,0,0,.07);border-radius:4px;padding:0 5px;margin-left:5px}
+.tline .tk{font-size:10.5px;text-transform:uppercase;letter-spacing:.8px;background:var(--c);color:#fff;border-radius:3px;padding:0 5px;margin-left:6px;text-shadow:0 1px 1px rgba(0,0,0,.25)}
+.tline .tt{font-size:14px;line-height:1.45;margin-top:1px}
+.tline .tn{font-size:11.5px;font-weight:700;border-radius:3px;padding:0 5px;margin-right:5px;cursor:pointer;background:var(--nc);color:#fff;border:none}
+.srcline{font-size:11.5px;color:var(--ink-soft);margin-top:8px;font-style:italic}
+.stbar{display:flex;height:10px;border-radius:999px;overflow:hidden;margin:10px 0 4px;background:rgba(0,0,0,.08)}
+.stbar i{display:block;height:100%}
+.stleg{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11.5px;color:var(--ink-soft)}
+.stleg span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sc);margin-right:4px}
+@media (max-width:760px){
+  .goals{padding:10px 12px 4px;gap:8px}
+  .goal{min-width:140px}
+  .goalinfo{margin:6px 12px 0}
+  .board,.board.withab{grid-template-columns:repeat(var(--ncol,6),86vw)}
+  .abtoggle{display:none}
+}
 </style>
 </head>
 <body>
 <header class="top">
   <div class="titlebar">
     <h1>📌 ONTOLOGY Kanban</h1>
-    <span class="meta">Last updated <b id="updated"></b></span>
+    <span class="meta">v4 · bot data from <b id="updated"></b></span>
     <div class="totals" id="totals"></div>
   </div>
   <div class="toolbar">
-    <button class="waitbtn" id="waitBtn" aria-pressed="false" title="Highlight everything whose next step is a decision or action by you">⏳ Waiting on Julius <span class="n" id="waitN">0</span></button>
-    <input class="search" id="q" type="search" placeholder="Search projects, cards, files, links…" aria-label="Search">
+    <button class="waitbtn" id="waitBtn" aria-pressed="false" title="Highlight every note whose next step is a decision or action by you">⏳ Waiting on Julius <span class="n" id="waitN">0</span></button>
+    <input class="search" id="q" type="search" placeholder="Search notes, goals, history…" aria-label="Search">
     <select class="sel" id="ownerSel" aria-label="Filter by bot"><option value="">All bots</option></select>
-    <button class="switch" id="flatBtn" aria-pressed="false" title="Show every sub-card in the columns (flat view)"><span class="knob"></span>Show all sub-cards</button>
+    <button class="switch" id="abBtn" aria-pressed="false" title="Show the Abandoned / Superseded column"><span class="knob"></span>Abandoned <span id="abN"></span></button>
     <button class="tbtn primary" id="addBtn">＋ Sticky note</button>
     <button class="tbtn" id="exportBtn" title="Download the current board as JSON">⤓ Export</button>
-    <button class="tbtn" id="resetBtn" title="Undo your drag-and-drop moves">↺ Reset to bot data</button>
+    <button class="tbtn" id="resetBtn" title="Undo your drag-and-drop moves">↺ Reset</button>
     <button class="tbtn" id="themeBtn" title="Toggle dark mode" aria-label="Toggle dark mode">◐</button>
   </div>
 </header>
 <nav class="realms" id="realms" aria-label="Realms"></nav>
-<div class="chips" id="chips" role="toolbar" aria-label="Filter by project"></div>
+<nav class="goals" id="goals" aria-label="Goals"></nav>
+<div id="goalinfo"></div>
 <div class="status" id="status"></div>
 <main class="board" id="board"></main>
-
 <footer class="foot" id="footer" hidden></footer>
 <div class="scrim" id="scrim"></div>
 <aside class="panel" id="panel" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pTitle"></aside>
-
 <dialog id="addDlg">
   <form method="dialog" id="addForm">
     <h2>New sticky note</h2>
@@ -243,7 +284,7 @@ html[data-theme="dark"] .kid{filter:saturate(.85) brightness(.92)}
       <div><label for="fRealm">Realm</label><select id="fRealm"></select></div>
       <div><label for="fStage">Column</label><select id="fStage"></select></div>
     </div>
-    <label for="fProj">Add to project (optional)</label><select id="fProj"></select>
+    <label for="fGoal">Goal (optional)</label><select id="fGoal"></select>
     <label for="fSum">Note</label><textarea id="fSum" rows="3" maxlength="400" placeholder="One line about it"></textarea>
     <label for="fNext">Next step (optional)</label><input id="fNext" maxlength="200">
     <label style="text-transform:none;letter-spacing:0;font-size:13.5px;display:flex;gap:8px;align-items:center;color:inherit"><input type="checkbox" id="fWait" style="width:auto"> This is waiting on me</label>
@@ -251,312 +292,228 @@ html[data-theme="dark"] .kid{filter:saturate(.85) brightness(.92)}
   </form>
 </dialog>
 <div class="toast" id="toast"></div>
-
 <script src="projects.js"></script>
 <script>
 (function(){
 "use strict";
-const META = window.BOARD_META || {stages:["Idea","Planning","Design","In Progress","Built / Shipped","Paused"],realms:[],updated:"",title:"ONTOLOGY Kanban"};
-const STAGES = META.stages;
+const META = window.BOARD_META || {stages:["Idea","Planning","Design","In Progress","Built / Shipped","Paused","Abandoned / Superseded"],realms:[],updated:"",title:"ONTOLOGY Kanban"};
+const STAGES = META.stages, AB = "Abandoned / Superseded";
+const MAIN_STAGES = STAGES.filter(s=>s!==AB);
 const BASE_ITEMS = (window.ITEMS||[]).map(p=>Object.assign({},p));
-const BASE_PROJ = (window.PROJECTS||[]).map(p=>Object.assign({},p));
+const GOALS = (window.GOALS||[]).map(g=>Object.assign({},g));
 const REALMS = META.realms.length?META.realms:[{id:"OTHER",label:"OTHER"}];
 const REALM_COLORS = {EDUCATION:"#f6c445",LIFE:"#6fd19c",MEDIA:"#ff7f7f",TOOLS:"#8fa0ff",OTHER:"#c9b29a"};
 const NOTE_BG = {EDUCATION:"#fff3c2",LIFE:"#dcf5e7",MEDIA:"#ffe0e0",TOOLS:"#e6e9ff",OTHER:"#f4ece2",mine:"#fff9a8"};
-const STAGE_COLORS = {"Idea":"#9b7bd8","Planning":"#3b8fe2","Design":"#e28a2b","In Progress":"#e2513b","Built / Shipped":"#3aa76d","Paused":"#8a7d70"};
-const ACTIVE_ORDER = ["Idea","Planning","Design"];
+const STAGE_COLORS = {"Idea":"#9b7bd8","Planning":"#3b8fe2","Design":"#e28a2b","In Progress":"#e2513b","Built / Shipped":"#3aa76d","Paused":"#8a7d70","Abandoned / Superseded":"#6b5f55"};
 const PFX = META.storagePrefix||"juliusKanban";
-const LS = {ov:PFX+".overrides.v1", mine:PFX+".custom.v1", theme:PFX+".theme", ui:PFX+".ui.v2"};
+const LS = {ov:PFX+".overrides.v1", mine:PFX+".custom.v1", theme:PFX+".theme", ui:PFX+".ui.v4"};
 const store = {
   get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},
   set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){toast("Couldn't save (storage blocked)")}}
 };
-let overrides = store.get(LS.ov,{});   // {cardOrProjectId:{stage}} — same key/format as v1, so old moves still apply
-let mine = store.get(LS.mine,[]);
-const ui = store.get(LS.ui,{});
-const state = {realm:ui.realm||"", project:"", owner:"", q:"", wait:false, flat:!!ui.flat};
 const $ = s=>document.querySelector(s);
 const esc = s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const goalById = id=>GOALS.find(g=>g.id===id);
+// ---- load + migrate saved state (v3 card ids carry over; v3 big-project moves are dropped) ----
+let overrides = store.get(LS.ov,{});
+let mine = store.get(LS.mine,[]);
+(function migrate(){
+  const ids=new Set(BASE_ITEMS.map(i=>i.id)), mig=META.migrate||{}; let changed=false; const out={};
+  for(const [k,v] of Object.entries(overrides)){
+    let id=k;
+    if(Object.prototype.hasOwnProperty.call(mig,k)){ id=mig[k]; changed=true; if(!id) continue; }
+    if(!ids.has(id)||!v||!STAGES.includes(v.stage)){ changed=true; continue; }
+    const base=BASE_ITEMS.find(b=>b.id===id); if(base.stage===v.stage){ changed=true; continue; }
+    out[id]=v;
+  }
+  mine=mine.map(m=>{ if(m.project&&!m.goal){ changed=true; const o=Object.assign({},m); delete o.project; return o;} return m; });
+  overrides=out; if(changed){ store.set(LS.ov,overrides); store.set(LS.mine,mine); }
+})();
+const ui = store.get(LS.ui,{});
+const state = {realm:ui.realm||"", goal:"", owner:"", q:"", wait:false, ab:!!ui.ab};
+const saveUI = ()=>store.set(LS.ui,{realm:state.realm,ab:state.ab});
+function hash(s){let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))|0;return Math.abs(h)}
 function liveA(x,cls){ if(!x.liveUrl) return ""; const t=x.liveLabel||"Open live site";
   return `<a class="${cls||"live"}" href="${esc(x.liveUrl)}" target="_blank" rel="noopener noreferrer" title="${esc(t)}" aria-label="${esc(t)}" data-live="1">${cls?"↗ "+esc(t):"↗"}</a>`; }
-function hash(s){let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))|0;return h}
-const projById = id=>BASE_PROJ.find(p=>p.id===id);
-const realmOfMine = m => (m.project && projById(m.project)) ? projById(m.project).realm : (REALMS.some(r=>r.id===m.realm)?m.realm:"OTHER");
-const saveUI = ()=>store.set(LS.ui,{realm:state.realm,flat:state.flat});
-
-// theme
+// ---- dates ----
+const todayStr = ()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const dayNum = s=>{const [y,m,d]=s.split("-").map(Number);return Date.UTC(y,m-1,d)/864e5};
+function daysAgo(s){ if(!s) return null; return Math.max(0,Math.round(dayNum(todayStr())-dayNum(s))); }
+function agoText(s,long){ const n=daysAgo(s); if(n==null) return long?"not dated":""; if(n===0) return long?"today":"today"; return long?`${n} day${n===1?"":"s"} ago`:`${n}d ago`; }
+const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const fmtDate = s=>{const [y,m,d]=s.split("-").map(Number);return `${MONTHS[m-1]} ${d}, ${y}`};
+// ---- theme ----
 const savedTheme = store.get(LS.theme,null);
 function applyTheme(t){document.documentElement.dataset.theme=t}
 applyTheme(savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));
 $("#themeBtn").onclick=()=>{const t=document.documentElement.dataset.theme==="dark"?"light":"dark";applyTheme(t);store.set(LS.theme,t)};
-
-// ---------- model ----------
+// ---- model ----
 function items(){
   const base = BASE_ITEMS.map(p=>{
-    const o = overrides[p.id];
-    const stage = (o && STAGES.includes(o.stage)) ? o.stage : p.stage;
-    return Object.assign({}, p, {stage, botStage:p.stage, moved: !!(o && o.stage!==p.stage), mine:false, kind:"item"});
+    const o = overrides[p.id]; const stage = (o && STAGES.includes(o.stage)) ? o.stage : p.stage;
+    return Object.assign({}, p, {stage, botStage:p.stage, moved: !!(o && o.stage!==p.stage), mine:false});
   });
-  const m = mine.map(p=>Object.assign({owners:["Julius"],done:"",next:"",links:[],files:[]},p,{realm:realmOfMine(p),project:(p.project&&projById(p.project))?p.project:"",mine:true,botStage:p.stage,moved:false,kind:"item"}));
+  const m = mine.map(p=>{ const g=p.goal&&goalById(p.goal);
+    return Object.assign({owners:["Julius"],done:"",next:"",links:[],files:[],history:[]},p,{realm:g?g.realm:(REALMS.some(r=>r.id===p.realm)?p.realm:"OTHER"),goal:g?g.id:"",mine:true,botStage:p.stage,moved:false,
+      lastTouched:p.updated,history:(p.history&&p.history.length)?p.history:[{date:p.updated,approx:false,text:"Pinned by you",kind:"first"}]}); });
   return base.concat(m);
 }
-function autoStage(kids){
-  const by=s=>kids.filter(k=>k.stage===s);
-  const names=a=>a.slice(0,2).map(k=>k.title).join(", ")+(a.length>2?` +${a.length-2}`:"");
-  const ip=by("In Progress");
-  if(ip.length) return {stage:"In Progress",why:`${ip.length} sub-card${ip.length>1?"s":""} in progress (${names(ip)})`};
-  for(const s of ["Design","Planning"]){ const a=by(s); if(a.length) return {stage:s,why:`Furthest active piece is in ${s} (${names(a)})`}; }
-  const built=by("Built / Shipped"), paused=by("Paused"), idea=by("Idea");
-  if(built.length){
-    const extra=[paused.length?`${paused.length} paused`:"",idea.length?`${idea.length} idea${idea.length>1?"s":""} in backlog`:""].filter(Boolean).join(", ");
-    return {stage:"Built / Shipped",why:`Nothing in progress; ${built.length} built`+(extra?`, ${extra}`:"")};
-  }
-  if(paused.length) return {stage:"Paused",why:`All active pieces paused`+(idea.length?` (${idea.length} idea${idea.length>1?"s":""} too)`:"")};
-  return {stage:"Idea",why:kids.length?"Ideas only so far":"No sub-cards yet"};
-}
-function projects(all){
-  return BASE_PROJ.map(p=>{
-    const kids = all.filter(i=>i.project===p.id);
-    const a = autoStage(kids);
-    const o = overrides[p.id];
-    const stage = (o && STAGES.includes(o.stage) && o.stage!==a.stage) ? o.stage : a.stage;
-    const built = kids.filter(k=>k.stage==="Built / Shipped").length;
-    const waiting = kids.filter(k=>k.waitingOnJulius);
-    return Object.assign({},p,{kind:"project",kids,autoStage:a.stage,why:a.why,stage,moved:stage!==a.stage,built,waiting,waitingOnJulius:waiting.length>0});
-  });
-}
-const loose = all => all.filter(i=>i.mine && !i.project); // Julius's standalone sticky notes
-function textOf(p){return [p.title,p.summary,p.description,p.done,p.next,p.decision,p.note,p.stageNote,(p.owners||[]).join(" "),(p.files||[]).join(" "),(p.links||[]).map(l=>l.label+" "+l.url).join(" ")].join(" ").toLowerCase()}
+function textOf(p){const g=p.goal&&goalById(p.goal);return [p.title,p.summary,p.done,p.next,p.decision,p.note,p.stageNote,g?g.title:"",(p.owners||[]).join(" "),(p.files||[]).join(" "),(p.history||[]).map(h=>h.text).join(" "),(p.links||[]).map(l=>l.label+" "+l.url).join(" ")].join(" ").toLowerCase()}
 const words = ()=>state.q.toLowerCase().split(/\s+/).filter(Boolean);
-const itemMatch = i => (!state.owner || (i.owners||[]).includes(state.owner)) && (!state.q || words().every(w=>textOf(i).includes(w)));
-function inScope(x){ // realm + project filters
-  if(state.realm && x.realm!==state.realm) return false;
-  if(state.project){ if(x.kind==="project") return x.id===state.project; return x.project===state.project; }
-  return true;
-}
-function projMatch(p){
-  if(!state.owner && !state.q) return {ok:true,n:0};
-  const selfText = (!state.owner||(p.owners||[]).includes(state.owner)) && (!state.q || words().every(w=>textOf(p).includes(w)));
-  const n = p.kids.filter(itemMatch).length;
-  return {ok:selfText||n>0,n};
-}
-
-// ---------- render ----------
+const match = i => (!state.owner || (i.owners||[]).includes(state.owner)) && (!state.q || words().every(w=>textOf(i).includes(w)));
+const inScope = i => (!state.realm || i.realm===state.realm) && (!state.goal || i.goal===state.goal);
+// ---- render ----
+let snapNext=true;
+function stageBar(list,cls){ const n=list.length||1; return `<div class="${cls}">`+STAGES.map(s=>{const k=list.filter(i=>i.stage===s).length;return k?`<i style="width:${100*k/n}%;background:${STAGE_COLORS[s]}" title="${esc(s)}: ${k}"></i>`:""}).join("")+`</div>`; }
 function render(){
-  const all = items(), projs = projects(all);
-  const scopedItems = all.filter(i=>!state.realm||i.realm===state.realm);
-  const scopedProj = projs.filter(p=>!state.realm||p.realm===state.realm);
+  const all = items();
+  const realmItems = all.filter(i=>!state.realm||i.realm===state.realm);
+  const realmGoals = GOALS.filter(g=>!state.realm||g.realm===state.realm);
+  if(state.goal && !realmGoals.some(g=>g.id===state.goal)) state.goal="";
   $("#updated").textContent = META.updated;
-  const waitN = scopedItems.filter(i=>i.waitingOnJulius).length;
+  const scoped = all.filter(inScope);
+  const live = scoped.filter(i=>i.stage!==AB);
+  const waitN = live.filter(i=>i.waitingOnJulius).length;
   $("#waitN").textContent = waitN;
-  const rl = state.realm||"All realms";
-  $("#totals").innerHTML = `<span class="tot">${esc(rl)}</span><span class="tot"><b>${scopedProj.length}</b> projects</span><span class="tot"><b>${scopedItems.length}</b> cards</span><span class="tot"><b>${scopedItems.filter(i=>i.stage==="Built / Shipped").length}</b> built</span><span class="tot wt"><b>${waitN}</b> waiting on you</span>`;
-  // realm tabs
-  const rtab=(id,label,c,ps,is)=>`<button class="realm ${ps.length||is.length?"":"empty0"}" style="--c:${c}" data-realm="${id}" aria-pressed="${state.realm===id}"><span class="rn">${esc(label)}</span><span class="rs">${ps.length} projects · ${is.length} cards${is.filter(i=>i.waitingOnJulius).length?` · <span class="rw">⏳ ${is.filter(i=>i.waitingOnJulius).length}</span>`:""}</span></button>`;
-  $("#realms").innerHTML = rtab("","All","#ffb347",projs,all) + REALMS.map(r=>rtab(r.id,r.label,REALM_COLORS[r.id]||"#ccc",projs.filter(p=>p.realm===r.id),all.filter(i=>i.realm===r.id))).join("");
-  // project chips
-  if(state.project && !scopedProj.some(p=>p.id===state.project)) state.project="";
-  $("#chips").innerHTML = `<button class="chip all" data-proj="" aria-pressed="${!state.project}">All projects</button>`+
-    scopedProj.map(p=>`<button class="chip" style="--c:${REALM_COLORS[p.realm]}" data-proj="${p.id}" aria-pressed="${state.project===p.id}"><span class="sw"></span>${esc(p.title)} <span class="cnt">${p.kids.length}</span></button>`).join("");
+  const abN = scoped.filter(i=>i.stage===AB).length;
+  $("#abN").textContent = `(${abN})`;
+  $("#totals").innerHTML = `<span class="tot">${esc(state.goal?goalById(state.goal).title:(state.realm||"All realms"))}</span>`+
+    (state.goal?"":`<span class="tot"><b>${realmGoals.length}</b> goals</span>`)+
+    `<span class="tot"><b>${live.length}</b> notes</span><span class="tot"><b>${live.filter(i=>i.stage==="Built / Shipped").length}</b> built</span><span class="tot wt"><b>${waitN}</b> waiting on you</span>`;
+  // realms
+  const rtab=(id,label,c,gs,is)=>{const a=is.filter(i=>i.stage!==AB);const w=a.filter(i=>i.waitingOnJulius).length;
+    return `<button class="realm ${a.length?"":"empty0"}" style="--c:${c}" data-realm="${id}" aria-pressed="${state.realm===id}"><span class="rn">${esc(label)}</span><span class="rs">${gs.length} goal${gs.length===1?"":"s"} · ${a.length} notes${w?` · <span class="rw">⏳ ${w}</span>`:""}</span></button>`;};
+  $("#realms").innerHTML = rtab("","All","#ffb347",GOALS,all) + REALMS.map(r=>rtab(r.id,r.label,REALM_COLORS[r.id]||"#ccc",GOALS.filter(g=>g.realm===r.id),all.filter(i=>i.realm===r.id))).join("");
+  // goal banners
+  const gEl=$("#goals"); gEl.classList.toggle("dim",!!state.goal);
+  gEl.innerHTML = `<button class="goal allg" data-goal="" aria-pressed="${!state.goal}"><span class="gt">All goals</span><span class="gs">${realmGoals.length} banners</span></button>`+
+    realmGoals.map(g=>{ const ks=all.filter(i=>i.goal===g.id); const act=ks.filter(i=>i.stage!==AB); const w=act.filter(i=>i.waitingOnJulius).length;
+      return `<button class="goal" style="--gc:${g.color}" data-goal="${g.id}" aria-pressed="${state.goal===g.id}" title="${esc(g.description)}"><span class="gt">${esc(g.title)}</span>
+        <span class="gs">${act.length} note${act.length===1?"":"s"}${!state.realm?" · "+esc(g.realm):""}${w?`<span class="gw">⏳ ${w}</span>`:""}</span>${stageBar(ks,"gbar")}
+        <span class="tl" role="button" tabindex="0" data-tl="${g.id}" title="Open ${esc(g.title)}'s timeline" aria-label="Open ${esc(g.title)} timeline">🕑</span></button>`;}).join("");
+  // goal info strip
+  const gi=$("#goalinfo");
+  if(state.goal){ const g=goalById(state.goal); gi.innerHTML=`<div class="goalinfo" style="--gc:${g.color}"><b>🎯 ${esc(g.title)}</b><span>${esc(g.description)}</span><button class="pbtn" id="giTl">🕑 Goal timeline & overview</button><button class="pbtn" id="giX">× Show all goals</button></div>`;
+    $("#giTl").onclick=()=>openGoal(g.id); $("#giX").onclick=()=>{state.goal="";render()}; }
+  else gi.innerHTML="";
   // owners
   const owners=[...new Set(all.flatMap(c=>c.owners||[]))].sort((a,b)=>a.localeCompare(b));
   $("#ownerSel").innerHTML=`<option value="">All bots (${owners.length})</option>`+owners.map(o=>`<option ${o===state.owner?"selected":""} value="${esc(o)}">${esc(o)} · ${all.filter(c=>(c.owners||[]).includes(o)).length}</option>`).join("");
   document.body.classList.toggle("waitmode",state.wait);
   $("#waitBtn").setAttribute("aria-pressed",state.wait);
-  $("#flatBtn").setAttribute("aria-pressed",state.flat);
-  // what goes in the columns
-  let shown, counts;
-  if(state.flat){
-    shown = all.filter(i=>inScope(i) && itemMatch(i));
-  } else {
-    shown = projs.filter(inScope).map(p=>Object.assign(p,{m:projMatch(p)})).filter(p=>p.m.ok)
-      .concat(state.project?[]:loose(all).filter(i=>(!state.realm||i.realm===state.realm)&&itemMatch(i)));
-  }
-  const totalFor = s => state.flat ? all.filter(i=>inScope(i)&&i.stage===s).length
-     : projs.filter(inScope).filter(p=>p.stage===s).length + (state.project?0:loose(all).filter(i=>(!state.realm||i.realm===state.realm)&&i.stage===s).length);
-  // status
-  const parts=[state.flat?"Flat view: every sub-card":"Project view: one card per big project (tap to see its sub-cards)"];
-  if(state.wait) parts.push(state.flat?`${shown.filter(c=>c.waitingOnJulius).length} sub-card(s) waiting on you`:`${shown.filter(c=>c.waitingOnJulius).length} project(s) with something waiting on you`);
+  $("#abBtn").setAttribute("aria-pressed",state.ab);
+  const shown = scoped.filter(match);
+  const cols = state.ab ? STAGES : MAIN_STAGES;
+  const parts=[];
+  parts.push(state.goal?`Goal: ${goalById(state.goal).title}`:"Notes from every goal · tap a banner to focus one goal, 🕑 for its timeline");
+  if(state.wait) parts.push(`${shown.filter(c=>c.waitingOnJulius&&c.stage!==AB).length} note(s) waiting on you`);
   if(state.owner||state.q) parts.push(`${shown.length} match`);
-  const movedN = Object.keys(overrides).length; if(movedN) parts.push(`${movedN} card(s) moved by you`);
+  const movedN = Object.keys(overrides).length; if(movedN) parts.push(`${movedN} note(s) moved by you`);
+  if(!state.ab&&abN) parts.push(`${abN} abandoned/superseded hidden`);
   $("#status").textContent=parts.join(" · ");
-  const board=$("#board"); board.innerHTML="";
-  for(const s of STAGES){
+  const board=$("#board"); board.innerHTML=""; board.style.setProperty("--ncol",cols.length);
+  board.classList.toggle("withab",!state.ab);
+  for(const s of cols){
     let list=shown.filter(c=>c.stage===s);
-    if(state.wait) list=list.slice().sort((a,b)=>(b.waitingOnJulius?1:0)-(a.waitingOnJulius?1:0));
-    const total=totalFor(s);
-    const col=document.createElement("section"); col.className="col"; col.dataset.stage=s; col.style.setProperty("--sc",STAGE_COLORS[s]);
-    col.innerHTML=`<div class="colhead"><h2>${esc(s)}</h2><span class="count" title="${list.length} shown of ${total}">${list.length===total?total:list.length+"/"+total}</span></div><div class="cards"></div>`;
+    list.sort((a,b)=>(state.wait?((b.waitingOnJulius?1:0)-(a.waitingOnJulius?1:0)):0) || GOALS.findIndex(g=>g.id===a.goal)-GOALS.findIndex(g=>g.id===b.goal) || String(b.lastTouched||"").localeCompare(String(a.lastTouched||"")));
+    const total=scoped.filter(i=>i.stage===s).length;
+    const col=document.createElement("section"); col.className="col"+(s===AB?" ab":""); col.dataset.stage=s; col.style.setProperty("--sc",STAGE_COLORS[s]);
+    col.innerHTML=`<div class="colhead"><h2>${esc(s)}</h2>${s===AB?'<button class="pbtn" id="abHide" title="Hide this column" style="padding:1px 7px;font-size:12px">hide</button>':""}<span class="count" title="${list.length} shown of ${total}">${list.length===total?total:list.length+"/"+total}</span></div><div class="cards"></div>`;
     const wrap=col.querySelector(".cards");
-    if(!list.length) wrap.innerHTML=`<div class="empty">Nothing here${(state.owner||state.q||state.project)?" for this filter":""}</div>`;
-    for(const c of list) wrap.appendChild(c.kind==="project"?parentEl(c):noteEl(c));
+    if(!list.length) wrap.innerHTML=`<div class="empty">Nothing here${(state.owner||state.q||state.goal)?" for this filter":""}</div>`;
+    for(const c of list) wrap.appendChild(noteEl(c));
     board.appendChild(col);
   }
+  if(!state.ab){ const t=document.createElement("button"); t.className="abtoggle"; t.id="abShow"; t.title="Show the Abandoned / Superseded column"; t.innerHTML=`🗄 Abandoned / Superseded (${abN}) ▸`; t.onclick=()=>{state.ab=true;saveUI();render()}; board.appendChild(t); }
+  const h=$("#abHide"); if(h) h.onclick=()=>{state.ab=false;saveUI();render()};
   if(snapNext){ snapNext=false; if(window.innerWidth<=760){ const first=[...board.querySelectorAll(".col")].find(c=>c.querySelector(".note")); board.scrollLeft = first ? first.offsetLeft-12 : 0; } }
 }
-let snapNext=true;
-function baseNote(d,x,bgKey){
-  d.tabIndex=0; d.dataset.id=x.id;
-  d.style.setProperty("--c",x.mine&&!x.project?"#f0d84a":(REALM_COLORS[x.realm]||"#ccc"));
-  d.style.setProperty("--nb",x.mine?NOTE_BG.mine:(NOTE_BG[bgKey]||"#fffbe6"));
-  d.style.setProperty("--rot",((hash(x.id)%5)*0.45-0.9).toFixed(2)+"deg");
-}
-function parentEl(p){
-  const d=document.createElement("article");
-  d.className="note parent"+(p.waitingOnJulius?" waiting":"");
-  baseNote(d,p,p.realm);
-  const pct=p.kids.length?Math.round(100*p.built/p.kids.length):0;
-  const o=p.owners||[];
-  d.innerHTML=`<span class="pin"></span>${liveA(p)}<h3>${esc(p.title)}</h3><div class="sum">${esc(p.description)}</div>
-   <div class="prog" title="${p.built} of ${p.kids.length} built / shipped"><i style="width:${pct}%"></i></div>
-   <div class="progtxt"><span>${p.built}/${p.kids.length} built</span><span>${pct}%</span></div>
-   <div class="why">${p.moved?`↔ You moved this here (auto: ${esc(p.autoStage)})`:`Why here: ${esc(p.why)}`}</div>
-   <div class="foot"><span class="tag realm-t">${esc(p.realm)}</span><span class="cnt-kids">🗂 ${p.kids.length} card${p.kids.length===1?"":"s"}</span>
-   ${p.waiting.length?`<span class="badge-wait">⏳ ${p.waiting.length} waiting on you</span>`:""}
-   ${p.m&&p.m.n&&(state.q||state.owner)?`<span class="match">${p.m.n} match</span>`:""}
-   ${p.moved?'<span class="badge-moved">↔ moved by you</span>':""}
-   <span class="tag owner">🤖 ${esc(o[0]||"")}${o.length>1?" +"+(o.length-1):""}</span></div>`;
-  d.setAttribute("aria-label",`${p.title}, project, ${p.stage}, ${p.built} of ${p.kids.length} built`+(p.waiting.length?`, ${p.waiting.length} waiting on you`:""));
-  d.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openProject(p.id)}});
-  attachDrag(d,p.id,()=>openProject(p.id));
-  return d;
-}
+function stampOf(p){ const t=((p.history||[]).slice(-1)[0]||{}).text||""; return /supersed|replaced|successor/i.test(t+" "+(p.stageNote||""))?"superseded":"abandoned"; }
 function noteEl(p){
   const d=document.createElement("article");
-  d.className="note"+(p.waitingOnJulius?" waiting":"");
-  baseNote(d,p,p.realm);
-  const owners=p.owners||[]; const pr=p.project&&projById(p.project);
+  d.className="note"+(p.waitingOnJulius&&p.stage!==AB?" waiting":"");
+  d.tabIndex=0; d.dataset.id=p.id;
+  const g=p.goal&&goalById(p.goal);
+  d.style.setProperty("--c",g?g.color:"#f0d84a");
+  d.style.setProperty("--nb",p.mine?NOTE_BG.mine:(NOTE_BG[p.realm]||"#fffbe6"));
+  d.style.setProperty("--rot",((hash(p.id)%5)*0.45-0.9).toFixed(2)+"deg");
+  const owners=p.owners||[]; const n=daysAgo(p.lastTouched);
   d.innerHTML=`<span class="pin"></span>${liveA(p)}<h3>${esc(p.title)}</h3><div class="sum">${esc(p.summary||"")}</div>
-   <div class="foot">${pr?`<span class="tag proj" style="border-left:3px solid var(--c)">${esc(pr.title)}</span>`:`<span class="tag realm-t">${esc(p.realm)}</span>`}<span class="tag owner">🤖 ${esc(owners[0]||"")}${owners.length>1?" +"+(owners.length-1):""}</span>
-   ${p.waitingOnJulius?'<span class="badge-wait" title="'+esc(p.decision||"")+'">⏳ You</span>':""}${p.moved?'<span class="badge-moved" title="Bot data says: '+esc(p.botStage)+'">↔ moved by you</span>':""}${p.mine?'<span class="badge-mine">✎ yours</span>':""}</div>`;
-  d.setAttribute("aria-label",p.title+", "+p.stage+(p.waitingOnJulius?", waiting on you":""));
+   <div class="foot">${g?`<span class="gtag" style="--gc:${g.color}">${esc(g.title)}</span>`:`<span class="tag realm-t" style="--c:${REALM_COLORS[p.realm]}">${esc(p.realm)}</span>`}<span class="tag owner">🤖 ${esc(owners[0]||"")}${owners.length>1?" +"+(owners.length-1):""}</span>
+   ${n!=null?`<span class="ago${n>=7?" old":""}" title="Last touched ${esc(p.lastTouched)}">🕑 ${agoText(p.lastTouched)}</span>`:""}
+   ${p.waitingOnJulius&&p.stage!==AB?'<span class="badge-wait" title="'+esc(p.decision||"")+'">⏳ You</span>':""}${p.moved?'<span class="badge-moved" title="Bot data says: '+esc(p.botStage)+'">↔ moved</span>':""}${p.mine?'<span class="badge-mine">✎ yours</span>':""}</div>
+   ${p.stage===AB?`<span class="stamp">${stampOf(p)}</span>`:""}`;
+  d.setAttribute("aria-label",p.title+", "+p.stage+(g?", goal "+g.title:"")+(p.waitingOnJulius?", waiting on you":""));
   d.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openItem(p.id)}});
   attachDrag(d,p.id,()=>openItem(p.id));
   return d;
 }
-// ---------- drag & drop (pointer-based: mouse drag, touch long-press) ----------
+// ---- drag & drop (mouse drag, touch long-press) ----
 let drag=null, suppressClick=false;
 function attachDrag(el,id,onOpen){
   el.addEventListener("pointerdown",e=>{
     if(e.button!==0 || e.target.closest("[data-live]")) return;
-    const start={x:e.clientX,y:e.clientY}; let timer=null, started=false;
-    const isTouch=e.pointerType!=="mouse";
-    const begin=(x,y)=>{
-      started=true; const r=el.getBoundingClientRect();
+    const start={x:e.clientX,y:e.clientY}; let timer=null, started=false; const isTouch=e.pointerType!=="mouse";
+    const begin=(x,y)=>{ started=true; const r=el.getBoundingClientRect();
       const g=el.cloneNode(true); g.classList.add("ghost"); g.style.width=r.width+"px"; g.style.left=r.left+"px"; g.style.top=r.top+"px";
-      document.body.appendChild(g); el.classList.add("dragging-src");
-      drag={id,ghost:g,dx:x-r.left,dy:y-r.top,over:null};
-      if(navigator.vibrate&&isTouch) try{navigator.vibrate(15)}catch(_){}
-    };
+      document.body.appendChild(g); el.classList.add("dragging-src"); drag={id,ghost:g,dx:x-r.left,dy:y-r.top,over:null};
+      if(navigator.vibrate&&isTouch) try{navigator.vibrate(15)}catch(_){} };
     const move=ev=>{
-      if(!started){
-        const dist=Math.hypot(ev.clientX-start.x,ev.clientY-start.y);
-        if(isTouch){ if(dist>10) cleanup(); return; }
-        if(dist>6) begin(ev.clientX,ev.clientY); else return;
-      }
+      if(!started){ const dist=Math.hypot(ev.clientX-start.x,ev.clientY-start.y);
+        if(isTouch){ if(dist>10) cleanup(); return; } if(dist>6) begin(ev.clientX,ev.clientY); else return; }
       ev.preventDefault();
       drag.ghost.style.left=(ev.clientX-drag.dx)+"px"; drag.ghost.style.top=(ev.clientY-drag.dy)+"px";
       const under=document.elementFromPoint(ev.clientX,ev.clientY); const col=under&&under.closest(".col");
-      if(drag.over&&drag.over!==col) drag.over.classList.remove("over");
-      if(col) col.classList.add("over"); drag.over=col;
+      if(drag.over&&drag.over!==col) drag.over.classList.remove("over"); if(col) col.classList.add("over"); drag.over=col;
       const b=$("#board"),br=b.getBoundingClientRect();
       if(ev.clientX<br.left+40) b.scrollLeft-=14; else if(ev.clientX>br.right-40) b.scrollLeft+=14;
     };
-    const up=()=>{
-      clearTimeout(timer);
-      if(started){
-        suppressClick=true; setTimeout(()=>suppressClick=false,50);
-        const col=drag.over; drag.ghost.remove(); el.classList.remove("dragging-src");
-        if(col) col.classList.remove("over");
-        if(col&&col.dataset.stage) moveCard(drag.id,col.dataset.stage);
-        drag=null;
-      }
-      cleanup();
-    };
+    const up=()=>{ clearTimeout(timer);
+      if(started){ suppressClick=true; setTimeout(()=>suppressClick=false,50);
+        const col=drag.over; drag.ghost.remove(); el.classList.remove("dragging-src"); if(col) col.classList.remove("over");
+        if(col&&col.dataset.stage) moveCard(drag.id,col.dataset.stage); drag=null; }
+      cleanup(); };
     const blockScroll=ev=>{if(started)ev.preventDefault()};
     const cleanup=()=>{clearTimeout(timer);window.removeEventListener("pointermove",move);window.removeEventListener("pointerup",up);window.removeEventListener("pointercancel",up);el.removeEventListener("touchmove",blockScroll)};
     if(isTouch){ timer=setTimeout(()=>begin(start.x,start.y),380); el.addEventListener("touchmove",blockScroll,{passive:false}); }
-    window.addEventListener("pointermove",move,{passive:false});
-    window.addEventListener("pointerup",up); window.addEventListener("pointercancel",up);
+    window.addEventListener("pointermove",move,{passive:false}); window.addEventListener("pointerup",up); window.addEventListener("pointercancel",up);
   });
   el.addEventListener("click",e=>{ if(e.target.closest("[data-live]")) return; if(!suppressClick) onOpen() });
 }
 function moveCard(id,stage){
-  const all=items();
-  const pr=projects(all).find(p=>p.id===id);
-  if(pr){
-    if(pr.stage===stage) return;
-    if(stage===pr.autoStage) delete overrides[id]; else overrides[id]={stage,movedAt:new Date().toISOString()};
-    store.set(LS.ov,overrides); render(); toast(`Moved project “${pr.title}” → ${stage}`); refreshPanel(); return;
-  }
-  const c=all.find(x=>x.id===id); if(!c||c.stage===stage) return;
+  const c=items().find(x=>x.id===id); if(!c||c.stage===stage) return;
   if(c.mine){ mine=mine.map(m=>m.id===id?Object.assign({},m,{stage}):m); store.set(LS.mine,mine); }
-  else{
-    const base=BASE_ITEMS.find(b=>b.id===id);
+  else{ const base=BASE_ITEMS.find(b=>b.id===id);
     if(base.stage===stage) delete overrides[id]; else overrides[id]={stage,movedAt:new Date().toISOString()};
-    store.set(LS.ov,overrides);
-  }
+    store.set(LS.ov,overrides); }
   render(); toast(`Moved “${c.title}” → ${stage}`); refreshPanel();
 }
-// ---------- panel ----------
-let view=null; // {type:"project"|"item", id, from}
-function refreshPanel(){ if(!view) return; view.type==="project"?openProject(view.id,true):openItem(view.id,view.from,true); }
-function showPanel(color){
-  const pan=$("#panel"); pan.style.setProperty("--c",color);
-  pan.classList.add("open"); pan.setAttribute("aria-hidden","false"); $("#scrim").classList.add("open");
-  pan.querySelector(".close").onclick=closePanel;
-  return pan;
-}
+// ---- panels ----
+let view=null;
+function refreshPanel(){ if(!view) return; view.type==="goal"?openGoal(view.id,true):openItem(view.id,view.from,true); }
+function showPanel(color){ const pan=$("#panel"); pan.style.setProperty("--c",color);
+  pan.classList.add("open"); pan.setAttribute("aria-hidden","false"); $("#scrim").classList.add("open"); pan.querySelector(".close").onclick=closePanel; return pan; }
 function stageSelect(cur){return `<select id="mv" class="psel">${STAGES.map(s=>`<option ${s===cur?"selected":""}>${esc(s)}</option>`).join("")}</select>`}
-function openProject(id,keep){
-  const p=projects(items()).find(x=>x.id===id); if(!p) return;
-  view={type:"project",id};
-  const pan=$("#panel");
-  const pct=p.kids.length?Math.round(100*p.built/p.kids.length):0;
-  const groups=STAGES.map(s=>{
-    const ks=p.kids.filter(k=>k.stage===s); if(!ks.length) return "";
-    return `<div class="sg" style="--sc:${STAGE_COLORS[s]}"><h5><span class="dot"></span>${esc(s)} · ${ks.length}</h5>`+
-      ks.map(k=>`<button class="kid" data-kid="${esc(k.id)}" style="--c:${REALM_COLORS[p.realm]};--nb:${k.mine?NOTE_BG.mine:NOTE_BG[p.realm]}"><b>${esc(k.title)}${k.liveUrl?' <span title="Has a live site" style="font-size:12px">↗</span>':""}</b><span>${esc(k.summary||"")}</span>
-        <div class="kb">${k.waitingOnJulius?'<span class="badge-wait">⏳ You</span>':""}${k.moved?'<span class="badge-moved">↔ moved by you</span>':""}${k.mine?'<span class="badge-mine">✎ yours</span>':""}<span class="tag owner">🤖 ${esc((k.owners||[]).join(", "))}</span></div></button>`).join("")+`</div>`;
-  }).join("");
-  pan.innerHTML=`<div class="phead"><button class="close" aria-label="Close">×</button>
-    <span class="tag realm-t" style="border-radius:4px;padding:2px 7px;font-size:12px">${esc(p.realm)}</span> <span class="pmeta">Project · ${p.kids.length} sub-card${p.kids.length===1?"":"s"}</span>
-    <h2 id="pTitle">${esc(p.title)}</h2>
-    <div class="pmeta">🤖 ${esc((p.owners||[]).join(", "))}</div>
-    <div class="prow"><label class="pmeta" for="mv">Column</label>${stageSelect(p.stage)}
-    ${p.moved?`<button class="pbtn" id="undoMove">↺ Back to auto (“${esc(p.autoStage)}”)</button>`:""}</div>
-  </div>
-  <div class="pbody">
-    <p style="margin-top:10px">${esc(p.description)}</p>
-    ${p.liveUrl?`<div class="prow" style="margin-top:10px">${liveA(p,"livebtn")}</div>${p.liveNote?`<p class="pmeta" style="margin-top:4px">${esc(p.liveNote)}</p>`:""}`:""}
-    <div class="prog" style="height:10px"><i style="width:${pct}%"></i></div>
-    <div class="progtxt" style="color:var(--ink-soft)"><span>${p.built} of ${p.kids.length} built / shipped</span><span>${pct}%</span></div>
-    <h4>Why this column</h4><p class="pmeta" style="font-size:13.5px">${p.moved?`You moved it to ${esc(p.stage)}. Automatic placement would be ${esc(p.autoStage)}: ${esc(p.why)}.`:esc(p.why)+"."}</p>
-    ${p.waiting.length?`<div class="waitbox">⏳ ${p.waiting.length} waiting on you<ul class="wl">${p.waiting.map(k=>`<li><a data-kid="${esc(k.id)}">${esc(k.title)}</a>: ${esc(k.decision||k.next||"")}</li>`).join("")}</ul></div>`:""}
-    ${p.note?`<div class="notebox">${esc(p.note)}</div>`:""}
-    ${(()=>{const L=p.kids.filter(k=>k.liveUrl); return L.length>1?`<h4>Live sites in this project</h4><ul class="vlist">${L.map(k=>`<li><a href="${esc(k.liveUrl)}" target="_blank" rel="noopener noreferrer">↗ ${esc(k.title)}</a></li>`).join("")}</ul>`:""})()}
-    <h4>Sub-cards by stage</h4>${groups||'<p class="pmeta">No sub-cards yet.</p>'}
-    <h4>Updated</h4><p class="pmeta">${esc(p.updated||"")}</p>
-  </div>`;
-  showPanel(REALM_COLORS[p.realm]);
-  pan.querySelector("#mv").onchange=e=>moveCard(p.id,e.target.value);
-  const u=pan.querySelector("#undoMove"); if(u) u.onclick=()=>moveCard(p.id,p.autoStage);
-  pan.querySelectorAll("[data-kid]").forEach(b=>b.onclick=()=>openItem(b.dataset.kid,p.id));
-  if(!keep) setTimeout(()=>pan.querySelector(".close").focus(),50);
+function timeline(hist,opts){
+  opts=opts||{}; if(!hist||!hist.length) return `<p class="pmeta">${esc(opts.empty||"No history recorded.")}</p>`;
+  const t=todayStr();
+  return `<ol class="tline">`+hist.map((h,k)=>{ const fut=h.date>t; const first=h.kind==="first";
+    const lbl= first?"First discussed":(fut?"Scheduled":"");
+    const nn = h.note?`<button class="tn" style="--nc:${h.nc||"#8a7d70"}" data-kid="${esc(h.note)}">${esc(h.noteTitle)}</button>`:"";
+    return `<li class="${first?"first":""}${fut?" future":""}"><div class="td">${esc(fmtDate(h.date))}${h.approx?'<span class="ap" title="Approximate date">≈ approx</span>':""}${lbl&&!opts.combined?`<span class="tk">${lbl}</span>`:""}</div><div class="tt">${nn}${esc(h.text)}</div></li>`; }).join("")+`</ol>`;
 }
 function openItem(id,from,keep){
   const p=items().find(x=>x.id===id); if(!p) return;
   view={type:"item",id,from};
-  const pan=$("#panel");
-  const pr=p.project&&projById(p.project);
+  const pan=$("#panel"); const g=p.goal&&goalById(p.goal);
   const li=a=>a.length?`<ul>${a.join("")}</ul>`:"";
   const links=(p.links||[]).map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)}</a> <span class="pmeta">${esc(l.url.replace(/^https?:\/\//,""))}</span></li>`);
   const files=(p.files||[]).map(f=>`<li><code>${esc(f)}</code></li>`);
   pan.innerHTML=`<div class="phead"><button class="close" aria-label="Close">×</button>
-    ${pr?`<button class="back" id="backBtn">← ${esc(pr.title)}</button><br>`:""}
-    <span class="tag realm-t" style="border-radius:4px;padding:2px 7px;font-size:12px">${esc(p.realm)}</span>${pr?` <span class="pmeta">${esc(pr.title)}</span>`:""}
+    ${from&&g?`<button class="back" id="backBtn">← ${esc(g.title)}</button><br>`:""}
+    ${g?`<button class="gtag" id="goalBtn" style="--gc:${g.color}" title="Open this goal">🎯 ${esc(g.title)}</button> `:""}<span class="tag realm-t" style="--c:${REALM_COLORS[p.realm]};border-radius:4px;padding:2px 7px;font-size:12px">${esc(p.realm)}</span>
     <h2 id="pTitle">${esc(p.title)}</h2>
-    <div class="pmeta">🤖 ${esc((p.owners||[]).join(", "))}</div>
+    <div class="pmeta">🤖 ${esc((p.owners||[]).join(", "))} · 🕑 last touched ${esc(agoText(p.lastTouched,true))}${p.lastTouched?` (${esc(fmtDate(p.lastTouched))})`:""}</div>
     <div class="prow"><label class="pmeta" for="mv">Column</label>${stageSelect(p.stage)}
     ${p.moved?`<button class="pbtn" id="undoMove">↺ Back to bot's “${esc(p.botStage)}”</button>`:""}
     ${p.mine?`<button class="pbtn danger" id="delMine">Delete note</button>`:""}</div>
@@ -568,65 +525,92 @@ function openItem(id,from,keep){
     ${p.stageNote||p.moved?`<h4>Stage (bot's words)</h4><p>${esc(p.stageNote||p.botStage)}${p.moved?` <span class="pmeta">— you moved it to ${esc(p.stage)}</span>`:""}</p>`:""}
     ${p.done?`<h4>Done</h4><p>${esc(p.done)}</p>`:""}
     ${p.next?`<h4>Next / open</h4><p>${esc(p.next)}</p>`:""}
+    ${p.note?`<div class="notebox">${esc(p.note)}</div>`:""}
+    <h4>History</h4>${timeline(p.history,{empty:p.historyNote})}
+    ${p.source?`<div class="srcline">Source: ${esc(p.source)}</div>`:""}
     ${links.length?`<h4>Links</h4>${li(links)}`:""}
     ${files.length?`<h4>Files</h4>${li(files)}`:""}
-    ${p.note?`<div class="notebox">${esc(p.note)}</div>`:""}
-    <h4>Updated</h4><p class="pmeta">${esc(p.updated||"")}${p.mine?" · your sticky note":""}</p>
   </div>`;
-  showPanel(p.mine&&!pr?"#f0d84a":REALM_COLORS[p.realm]);
+  showPanel(g?g.color:"#f0d84a");
   pan.querySelector("#mv").onchange=e=>moveCard(p.id,e.target.value);
   const u=pan.querySelector("#undoMove"); if(u) u.onclick=()=>moveCard(p.id,p.botStage);
-  const bk=pan.querySelector("#backBtn"); if(bk) bk.onclick=()=>openProject(pr.id);
+  const bk=pan.querySelector("#backBtn"); if(bk) bk.onclick=()=>openGoal(g.id);
+  const gb=pan.querySelector("#goalBtn"); if(gb) gb.onclick=()=>openGoal(g.id);
   const del=pan.querySelector("#delMine"); if(del) del.onclick=()=>{ if(confirm("Delete this sticky note?")){mine=mine.filter(m=>m.id!==p.id);store.set(LS.mine,mine);closePanel();render();}};
+  if(!keep) setTimeout(()=>pan.querySelector(".close").focus(),50);
+}
+function openGoal(id,keep){
+  const g=goalById(id); if(!g) return; view={type:"goal",id};
+  const pan=$("#panel"); const ks=items().filter(i=>i.goal===id); const act=ks.filter(k=>k.stage!==AB);
+  const wait=act.filter(k=>k.waitingOnJulius); const lives=ks.filter(k=>k.liveUrl);
+  const groups=STAGES.map(s=>{ const a=ks.filter(k=>k.stage===s); if(!a.length) return "";
+    return `<div class="sg" style="--sc:${STAGE_COLORS[s]}"><h5><span class="dot"></span>${esc(s)} · ${a.length}</h5>`+a.map(k=>`<button class="kid" data-kid="${esc(k.id)}" style="--c:${g.color};--nb:${k.mine?NOTE_BG.mine:NOTE_BG[g.realm]}"><b>${esc(k.title)}${k.liveUrl?' <span title="Has a live site" style="font-size:12px">↗</span>':""}</b><span>${esc(k.summary||"")}</span>
+      <div class="kb">${k.waitingOnJulius&&k.stage!==AB?'<span class="badge-wait">⏳ You</span>':""}${k.moved?'<span class="badge-moved">↔ moved</span>':""}${k.mine?'<span class="badge-mine">✎ yours</span>':""}<span class="tag owner">🤖 ${esc((k.owners||[]).join(", "))}</span>${k.lastTouched?`<span class="ago">🕑 ${agoText(k.lastTouched)}</span>`:""}</div></button>`).join("")+`</div>`; }).join("");
+  // combined timeline: goal milestones + every note's entries, oldest first
+  const comb=[];
+  for(const k of ks) for(const h of (k.history||[])) comb.push(Object.assign({},h,{note:k.id,noteTitle:k.title,nc:STAGE_COLORS[k.stage]}));
+  comb.sort((a,b)=>a.date.localeCompare(b.date)||((a.kind==="first"?0:1)-(b.kind==="first"?0:1)));
+  const gm=(g.history||[]).map(h=>`<li class="first"><div class="td">${esc(fmtDate(h.date))}${h.approx?'<span class="ap">≈ approx</span>':""}</div><div class="tt">${esc(h.text)}</div></li>`).join("");
+  pan.innerHTML=`<div class="phead"><button class="close" aria-label="Close">×</button>
+    <span class="gtag" style="--gc:${g.color}">🎯 Goal</span> <span class="tag realm-t" style="--c:${REALM_COLORS[g.realm]};border-radius:4px;padding:2px 7px;font-size:12px">${esc(g.realm)}</span>
+    <h2 id="pTitle">${esc(g.title)}</h2><div class="pmeta">🤖 ${esc((g.owners||[]).join(", "))}</div>
+    <div class="prow"><button class="pbtn" id="focusGoal">${state.goal===g.id?"✓ Showing only this goal's notes":"Show only this goal's notes on the board"}</button></div></div>
+  <div class="pbody">
+    <p style="margin-top:10px">${esc(g.description)}</p>
+    ${stageBar(ks,"stbar")}<div class="stleg">${STAGES.map(s=>{const n=ks.filter(k=>k.stage===s).length;return n?`<span style="--sc:${STAGE_COLORS[s]}">${esc(s)} ${n}</span>`:""}).join("")}</div>
+    ${wait.length?`<div class="waitbox">⏳ ${wait.length} waiting on you<ul class="wl">${wait.map(k=>`<li><a data-kid="${esc(k.id)}">${esc(k.title)}</a>: ${esc(k.decision||k.next||"")}</li>`).join("")}</ul></div>`:""}
+    ${g.note?`<div class="notebox">${esc(g.note)}</div>`:""}
+    ${lives.length?`<h4>Live sites</h4><ul class="vlist">${lives.map(k=>`<li><a href="${esc(k.liveUrl)}" target="_blank" rel="noopener noreferrer">↗ ${esc(k.title)}</a></li>`).join("")}</ul>${g.liveNote?`<p class="pmeta">${esc(g.liveNote)}</p>`:""}`:""}
+    ${gm?`<h4>Milestones</h4><ol class="tline" style="--c:${g.color}">${gm}</ol>`:""}
+    <h4>Notes by stage</h4>${groups||'<p class="pmeta">No notes yet.</p>'}
+    <h4>Combined timeline (${comb.length} entries)</h4>${comb.length?timeline(comb,{combined:true}):'<p class="pmeta">History kept private.</p>'}
+  </div>`;
+  showPanel(g.color);
+  pan.querySelector("#focusGoal").onclick=()=>{state.goal=g.id;snapNext=true;render();openGoal(g.id,true);};
+  pan.querySelectorAll("[data-kid]").forEach(b=>b.onclick=()=>openItem(b.dataset.kid,g.id));
   if(!keep) setTimeout(()=>pan.querySelector(".close").focus(),50);
 }
 function closePanel(){ view=null; $("#panel").classList.remove("open"); $("#panel").setAttribute("aria-hidden","true"); $("#scrim").classList.remove("open"); }
 $("#scrim").onclick=closePanel;
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&view) closePanel(); if(e.key==="/"&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();$("#q").focus();} });
-// ---------- controls ----------
-$("#realms").addEventListener("click",e=>{const b=e.target.closest(".realm"); if(!b) return; state.realm=b.dataset.realm; state.project=""; saveUI(); snapNext=true; render();});
-$("#chips").addEventListener("click",e=>{const b=e.target.closest(".chip"); if(!b) return; const v=b.dataset.proj; state.project=(state.project===v?"":v); snapNext=true; render();});
+// ---- controls ----
+$("#realms").addEventListener("click",e=>{const b=e.target.closest(".realm"); if(!b) return; state.realm=b.dataset.realm; state.goal=""; saveUI(); snapNext=true; render();});
+$("#goals").addEventListener("click",e=>{ const t=e.target.closest("[data-tl]"); if(t){ e.stopPropagation(); openGoal(t.dataset.tl); return; }
+  const b=e.target.closest(".goal"); if(!b) return; const v=b.dataset.goal; state.goal=(state.goal===v?"":v); snapNext=true; render(); });
+$("#goals").addEventListener("keydown",e=>{ const t=e.target.closest("[data-tl]"); if(t&&(e.key==="Enter"||e.key===" ")){e.preventDefault();e.stopPropagation();openGoal(t.dataset.tl);} });
 $("#ownerSel").onchange=e=>{state.owner=e.target.value;render()};
 let qt; $("#q").addEventListener("input",e=>{clearTimeout(qt);qt=setTimeout(()=>{state.q=e.target.value.trim();render()},120)});
 $("#waitBtn").onclick=()=>{state.wait=!state.wait;render()};
-$("#flatBtn").onclick=()=>{state.flat=!state.flat;saveUI();snapNext=true;render()};
-$("#resetBtn").onclick=()=>{
-  const n=Object.keys(overrides).length;
+$("#abBtn").onclick=()=>{state.ab=!state.ab;saveUI();render()};
+$("#resetBtn").onclick=()=>{ const n=Object.keys(overrides).length;
   if(!n){toast("Nothing to reset — board matches bot data");return}
-  if(confirm(`Put ${n} moved card(s)/project(s) back where the bots placed them? (Your own sticky notes stay.)`)){overrides={};store.set(LS.ov,overrides);render();refreshPanel();toast("Reset to bot data")}
-};
+  if(confirm(`Put ${n} moved note(s) back where the bots placed them? (Your own sticky notes stay.)`)){overrides={};store.set(LS.ov,overrides);render();refreshPanel();toast("Reset to bot data")} };
 $("#exportBtn").onclick=()=>{
-  const all=items(), ps=projects(all);
-  const data={exported:new Date().toISOString(),title:META.title,botDataUpdated:META.updated,stages:STAGES,realms:REALMS,
-    projects:ps.map(p=>({id:p.id,realm:p.realm,title:p.title,description:p.description,owners:p.owners,column:p.stage,autoColumn:p.autoStage,autoReason:p.why,movedByJulius:p.moved,
-      builtCount:p.built,childCount:p.kids.length,waitingCount:p.waiting.length,children:p.kids.map(k=>k.id),note:p.note,updated:p.updated})),
-    items:all.map(({moved,botStage,mine,kind,...rest})=>Object.assign(rest,{column:rest.stage,botColumn:botStage,movedByJulius:moved,juliusNote:mine})),
-    overrides};
+  const all=items();
+  const data={exported:new Date().toISOString(),title:META.title,version:META.version,botDataUpdated:META.updated,stages:STAGES,realms:REALMS,
+    goals:GOALS.map(g=>Object.assign({},g,{notes:all.filter(i=>i.goal===g.id).map(i=>i.id)})),
+    items:all.map(({moved,botStage,mine,...rest})=>Object.assign(rest,{column:rest.stage,botColumn:botStage,movedByJulius:moved,juliusNote:mine,lastTouchedDaysAgo:daysAgo(rest.lastTouched)})),overrides};
   const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
-  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="ontology-kanban-"+new Date().toISOString().slice(0,10)+".json";
-  document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500); toast("Board exported");
-};
-// add-card dialog
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="ontology-kanban-v4-"+todayStr()+".json";
+  document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500); toast("Board exported"); };
 const dlg=$("#addDlg");
 $("#fRealm").innerHTML=REALMS.map(r=>`<option value="${r.id}">${esc(r.label)}</option>`).join("");
 $("#fStage").innerHTML=STAGES.map(s=>`<option>${esc(s)}</option>`).join("");
-const fillProj=()=>{const r=$("#fRealm").value;$("#fProj").innerHTML=`<option value="">— Standalone sticky note —</option>`+BASE_PROJ.filter(p=>p.realm===r).map(p=>`<option value="${p.id}" ${state.project===p.id?"selected":""}>${esc(p.title)}</option>`).join("")};
-$("#fRealm").onchange=fillProj;
-$("#addBtn").onclick=()=>{ $("#addForm").reset(); $("#fRealm").value=state.realm||(state.project&&projById(state.project)?projById(state.project).realm:"OTHER"); fillProj(); if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); $("#fTitle").focus(); };
+const fillGoal=()=>{const r=$("#fRealm").value;$("#fGoal").innerHTML=`<option value="">— No goal (loose note) —</option>`+GOALS.filter(g=>g.realm===r).map(g=>`<option value="${g.id}" ${state.goal===g.id?"selected":""}>${esc(g.title)}</option>`).join("")};
+$("#fRealm").onchange=fillGoal;
+$("#addBtn").onclick=()=>{ $("#addForm").reset(); $("#fRealm").value=state.goal?goalById(state.goal).realm:(state.realm||"OTHER"); fillGoal(); if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); $("#fTitle").focus(); };
 dlg.addEventListener("close",()=>{
-  if(dlg.returnValue!=="ok") return;
-  const t=$("#fTitle").value.trim(); if(!t) return;
-  const wait=$("#fWait").checked, next=$("#fNext").value.trim();
-  mine.push({id:"mine-"+Date.now().toString(36),title:t,realm:$("#fRealm").value,project:$("#fProj").value,owners:["Julius"],stage:$("#fStage").value,summary:$("#fSum").value.trim(),
-    done:"",next,links:[],files:[],updated:new Date().toISOString().slice(0,10),waitingOnJulius:wait,decision:wait?(next||t):undefined});
-  store.set(LS.mine,mine); render(); toast("Pinned your note");
-});
+  if(dlg.returnValue!=="ok") return; const t=$("#fTitle").value.trim(); if(!t) return;
+  const wait=$("#fWait").checked, next=$("#fNext").value.trim(), d=todayStr();
+  mine.push({id:"mine-"+Date.now().toString(36),title:t,realm:$("#fRealm").value,goal:$("#fGoal").value,owners:["Julius"],stage:$("#fStage").value,summary:$("#fSum").value.trim(),
+    done:"",next,links:[],files:[],updated:d,history:[{date:d,approx:false,text:"Pinned by you",kind:"first"}],waitingOnJulius:wait,decision:wait?(next||t):undefined});
+  store.set(LS.mine,mine); render(); toast("Pinned your note"); });
 function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),1800)}
 if(META.footer){const f=$("#footer");f.textContent=META.footer;f.hidden=false;}
 if(META.public){ $("#waitBtn").title="Highlight items waiting on a decision by Julius"; }
 render();
 if(!BASE_ITEMS.length){ $("#status").textContent="Couldn't load projects.js — keep it in the same folder as index.html."; }
-window.__kanban={items,projects,moveCard,state,render};
+window.__kanban={items,moveCard,state,render,openGoal,openItem,GOALS};
 })();
 </script>
 </body>
