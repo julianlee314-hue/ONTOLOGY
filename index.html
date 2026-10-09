@@ -202,6 +202,15 @@ html[data-theme="dark"] .kid{filter:saturate(.85) brightness(.92)}
 .goal .gbar i{display:block;height:100%}
 .goal .gw{background:#fff;color:#c2412c;border-radius:999px;padding:0 6px;font-weight:800;margin-left:4px}
 .goal .tl{position:absolute;top:6px;right:6px;width:24px;height:24px;border-radius:50%;border:none;background:rgba(255,255,255,.85);color:#2b2118;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.goal .lk{display:inline-block;margin-top:4px;background:rgba(255,255,255,.88);color:#3a2616;border-radius:999px;padding:0 7px;font-size:10.5px;font-weight:700}
+.goal.hascomp{max-width:none}
+.goal .comp{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;align-items:center;font-size:10.5px;color:#fff;font-weight:700}
+.goal .comp .cc{background:var(--cc);color:#fff;border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:1px 7px;cursor:pointer;text-shadow:0 1px 1px rgba(0,0,0,.3)}
+.goal .comp .cc:hover{filter:brightness(1.12)}
+.lkchip{display:inline-block;border:1px dashed var(--lc);color:var(--ink);background:color-mix(in srgb,var(--lc) 22%,transparent);border-radius:999px;padding:0 6px;font-size:10.5px;font-weight:700;cursor:pointer}
+.vlist2{list-style:none;padding:0;margin:6px 0}.vlist2 li{display:flex;gap:8px;align-items:baseline;padding:5px 0;border-bottom:1px dashed rgba(0,0,0,.12)}.vlist2 .vd{min-width:84px;font-size:12px;color:var(--ink-soft)}.vlist2 .vs{font-size:11px;color:var(--ink-soft)}
+.vgo{display:inline-block;text-decoration:none;font-weight:800;border-radius:6px;padding:0 6px;background:#2b2118;color:#fff;font-size:12px}
+.tline .vgo{margin-left:6px}
 .goal .tl:hover{background:#fff;transform:scale(1.08)}
 .goal:hover{opacity:1;transform:translateY(-1px)}
 .goal[aria-pressed="true"]{opacity:1;box-shadow:0 0 0 3px #fff,0 0 0 6px var(--gc),0 6px 14px rgba(0,0,0,.3)}
@@ -324,8 +333,11 @@ let mine = store.get(LS.mine,[]);
     if(Object.prototype.hasOwnProperty.call(mig,k)){ id=mig[k]; changed=true; if(!id) continue; }
     if(!ids.has(id)||!v||!STAGES.includes(v.stage)){ changed=true; continue; }
     const base=BASE_ITEMS.find(b=>b.id===id); if(base.stage===v.stage){ changed=true; continue; }
-    out[id]=v;
+    if(out[id]&&k!==id){ const o=out[id], keys=Object.keys(mig); const newer=(v.movedAt||"")>(o.movedAt||"") || ((v.movedAt||"")===(o.movedAt||"") && keys.indexOf(k)>keys.indexOf(o._from||""));
+      if(!newer) continue; }
+    out[id]=Object.assign({},v,k!==id?{_from:k}:{});
   }
+  for(const v of Object.values(out)) delete v._from;
   mine=mine.map(m=>{ if(m.project&&!m.goal){ changed=true; const o=Object.assign({},m); delete o.project; return o;} return m; });
   overrides=out; if(changed){ store.set(LS.ov,overrides); store.set(LS.mine,mine); }
 })();
@@ -388,8 +400,9 @@ function render(){
   const gEl=$("#goals"); gEl.classList.toggle("dim",!!state.goal);
   gEl.innerHTML = `<button class="goal allg" data-goal="" aria-pressed="${!state.goal}"><span class="gt">All goals</span><span class="gs">${realmGoals.length} banners</span></button>`+
     realmGoals.map(g=>{ const ks=all.filter(i=>i.goal===g.id); const act=ks.filter(i=>i.stage!==AB); const w=act.filter(i=>i.waitingOnJulius).length;
-      return `<button class="goal" style="--gc:${g.color}" data-goal="${g.id}" aria-pressed="${state.goal===g.id}" title="${esc(g.description)}"><span class="gt">${esc(g.title)}</span>
-        <span class="gs">${act.length} note${act.length===1?"":"s"}${!state.realm?" · "+esc(g.realm):""}${w?`<span class="gw">⏳ ${w}</span>`:""}</span>${stageBar(ks,"gbar")}
+      const lg=linkedOf({goal:g.id}), cs=companionsOf(g.id);
+      return `<button class="goal${cs.length?" hascomp":""}" style="--gc:${g.color}" data-goal="${g.id}" aria-pressed="${state.goal===g.id}" title="${esc(g.description)}"><span class="gt">${esc(g.title)}</span>
+        <span class="gs">${act.length} note${act.length===1?"":"s"}${!state.realm?" · "+esc(g.realm):""}${w?`<span class="gw">⏳ ${w}</span>`:""}</span>${stageBar(ks,"gbar")}${lg?`<span class="lk" title="Companion product linked to ${esc(lg.title)}">🔗 Linked to ${esc(lg.title)}</span>`:""}${cs.length?`<span class="comp">Companions:${cs.map(c=>`<span class="cc" role="link" tabindex="0" data-goto="${c.id}" style="--cc:${c.color}">${esc(c.title)}</span>`).join("")}</span>`:""}
         <span class="tl" role="button" tabindex="0" data-tl="${g.id}" title="Open ${esc(g.title)}'s timeline" aria-label="Open ${esc(g.title)} timeline">🕑</span></button>`;}).join("");
   // goal info strip
   const gi=$("#goalinfo");
@@ -428,6 +441,8 @@ function render(){
   const h=$("#abHide"); if(h) h.onclick=()=>{state.ab=false;saveUI();render()};
   if(snapNext){ snapNext=false; if(window.innerWidth<=760){ const first=[...board.querySelectorAll(".col")].find(c=>c.querySelector(".note")); board.scrollLeft = first ? first.offsetLeft-12 : 0; } }
 }
+function linkedOf(x){ const t=x&&(x.linkedTo||(x.goal&&goalById(x.goal)&&goalById(x.goal).linkedTo)); if(!t) return null; return goalById(t)||goalById("g-"+t)||null; }
+function companionsOf(id){ return GOALS.filter(g=>g.linkedTo===id||"g-"+g.linkedTo===id); }
 function stampOf(p){ const t=((p.history||[]).slice(-1)[0]||{}).text||""; const s=t+" "+(p.stageNote||""); return /merged/i.test(s)?"merged":/early exploration/i.test(s)?"explored":/supersed|replaced|successor/i.test(s)?"superseded":"abandoned"; }
 function noteEl(p){
   const d=document.createElement("article");
@@ -439,7 +454,7 @@ function noteEl(p){
   d.style.setProperty("--rot",((hash(p.id)%5)*0.45-0.9).toFixed(2)+"deg");
   const owners=p.owners||[]; const n=daysAgo(p.lastTouched);
   d.innerHTML=`<span class="pin"></span>${liveA(p)}<h3>${esc(p.title)}</h3><div class="sum">${esc(p.summary||"")}</div>
-   <div class="foot">${g?`<span class="gtag" style="--gc:${g.color}">${esc(g.title)}</span>`:`<span class="tag realm-t" style="--c:${REALM_COLORS[p.realm]}">${esc(p.realm)}</span>`}<span class="tag owner">🤖 ${esc(owners[0]||"")}${owners.length>1?" +"+(owners.length-1):""}</span>
+   <div class="foot">${g?`<span class="gtag" style="--gc:${g.color}">${esc(g.title)}</span>`:`<span class="tag realm-t" style="--c:${REALM_COLORS[p.realm]}">${esc(p.realm)}</span>`}${(()=>{const l=linkedOf(p);return l?`<span class="lkchip" style="--lc:${l.color}" title="Linked to ${esc(l.title)}">🔗 ${esc(l.title)}</span>`:""})()}<span class="tag owner">🤖 ${esc(owners[0]||"")}${owners.length>1?" +"+(owners.length-1):""}</span>
    ${n!=null?`<span class="ago${n>=7?" old":""}" title="Last touched ${esc(p.lastTouched)}">🕑 ${agoText(p.lastTouched)}</span>`:""}
    ${p.waitingOnJulius&&p.stage!==AB?'<span class="badge-wait" title="'+esc(p.decision||"")+'">⏳ You</span>':""}${p.moved?'<span class="badge-moved" title="Bot data says: '+esc(p.botStage)+'">↔ moved</span>':""}${p.mine?'<span class="badge-mine">✎ yours</span>':""}</div>
    ${p.stage===AB?`<span class="stamp">${stampOf(p)}</span>`:""}`;
@@ -499,8 +514,8 @@ function timeline(hist,opts){
   const t=todayStr();
   return `<ol class="tline">`+hist.map((h,k)=>{ const fut=h.date>t; const first=h.kind==="first";
     const lbl= first?"First discussed":(fut?"Scheduled":"");
-    const nn = h.note?`<button class="tn" style="--nc:${h.nc||"#8a7d70"}" data-kid="${esc(h.note)}">${esc(h.noteTitle)}</button>`:"";
-    return `<li class="${first?"first":""}${fut?" future":""}"><div class="td">${esc(fmtDate(h.date))}${h.approx?'<span class="ap" title="Approximate date">≈ approx</span>':""}${lbl&&!opts.combined?`<span class="tk">${lbl}</span>`:""}</div><div class="tt">${nn}${esc(h.text)}</div></li>`; }).join("")+`</ol>`;
+    const nn = (h.note&&opts.combined)?`<button class="tn" style="--nc:${h.nc||"#8a7d70"}" data-kid="${esc(h.note)}">${esc(h.noteTitle)}</button>`:"";
+    return `<li class="${first?"first":""}${fut?" future":""}"><div class="td">${esc(fmtDate(h.date))}${h.approx?'<span class="ap" title="Approximate date">≈ approx</span>':""}${lbl&&!opts.combined?`<span class="tk">${lbl}</span>`:""}</div><div class="tt">${nn}${esc(h.text)}${h.url?`<a class="vgo" href="${esc(h.url)}" target="_blank" rel="noopener noreferrer" title="Open this build">↗</a>`:""}${h.note&&!opts.combined&&opts.self!==h.note?` <button class="tn" data-kid="${esc(h.note)}">open note</button>`:""}</div></li>`; }).join("")+`</ol>`;
 }
 function openItem(id,from,keep){
   const p=items().find(x=>x.id===id); if(!p) return;
@@ -512,6 +527,7 @@ function openItem(id,from,keep){
   pan.innerHTML=`<div class="phead"><button class="close" aria-label="Close">×</button>
     ${from&&g?`<button class="back" id="backBtn">← ${esc(g.title)}</button><br>`:""}
     ${g?`<button class="gtag" id="goalBtn" style="--gc:${g.color}" title="Open this goal">🎯 ${esc(g.title)}</button> `:""}<span class="tag realm-t" style="--c:${REALM_COLORS[p.realm]};border-radius:4px;padding:2px 7px;font-size:12px">${esc(p.realm)}</span>
+    ${(()=>{const l=linkedOf(p);return l?` <button class="lkchip" id="lkBtn" style="--lc:${l.color}">🔗 Linked to ${esc(l.title)}</button>`:""})()}
     <h2 id="pTitle">${esc(p.title)}</h2>
     <div class="pmeta">🤖 ${esc((p.owners||[]).join(", "))} · 🕑 last touched ${esc(agoText(p.lastTouched,true))}${p.lastTouched?` (${esc(fmtDate(p.lastTouched))})`:""}</div>
     <div class="prow"><label class="pmeta" for="mv">Column</label>${stageSelect(p.stage)}
@@ -526,7 +542,8 @@ function openItem(id,from,keep){
     ${p.done?`<h4>Done</h4><p>${esc(p.done)}</p>`:""}
     ${p.next?`<h4>Next / open</h4><p>${esc(p.next)}</p>`:""}
     ${p.note?`<div class="notebox">${esc(p.note)}</div>`:""}
-    <h4>History</h4>${timeline(p.history,{empty:p.historyNote})}
+    ${p.versions&&p.versions.length?`<h4>Versions (${p.versions.length})</h4><ul class="vlist2" id="vlist">${p.versions.map(v=>`<li><span class="vd">${esc(fmtDate(v.date))}</span><span style="flex:1"><b>${esc(v.label)}</b> <span class="vs">· ${esc(v.stage)}</span><br><span class="vs">${esc(v.summary||"")}</span></span>${v.url?`<a class="vgo" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer" title="Open ${esc(v.label)}">↗</a>`:(v.note?`<button class="tn" data-kid="${esc(v.note)}">note</button>`:"")}</li>`).join("")}</ul>`:""}
+    <h4>${p.versions?"Version timeline":"History"}</h4>${timeline(p.history,{empty:p.historyNote,self:p.id})}
     ${p.source?`<div class="srcline">Source: ${esc(p.source)}</div>`:""}
     ${links.length?`<h4>Links</h4>${li(links)}`:""}
     ${files.length?`<h4>Files</h4>${li(files)}`:""}
@@ -536,6 +553,8 @@ function openItem(id,from,keep){
   const u=pan.querySelector("#undoMove"); if(u) u.onclick=()=>moveCard(p.id,p.botStage);
   const bk=pan.querySelector("#backBtn"); if(bk) bk.onclick=()=>openGoal(g.id);
   const gb=pan.querySelector("#goalBtn"); if(gb) gb.onclick=()=>openGoal(g.id);
+  const lb=pan.querySelector("#lkBtn"); if(lb) lb.onclick=()=>openGoal(linkedOf(p).id);
+  pan.querySelectorAll(".pbody [data-kid]").forEach(b=>b.onclick=()=>openItem(b.dataset.kid,p.goal));
   const del=pan.querySelector("#delMine"); if(del) del.onclick=()=>{ if(confirm("Delete this sticky note?")){mine=mine.filter(m=>m.id!==p.id);store.set(LS.mine,mine);closePanel();render();}};
   if(!keep) setTimeout(()=>pan.querySelector(".close").focus(),50);
 }
@@ -556,7 +575,9 @@ function openGoal(id,keep){
     <h2 id="pTitle">${esc(g.title)}</h2><div class="pmeta">🤖 ${esc((g.owners||[]).join(", "))}</div>
     <div class="prow"><button class="pbtn" id="focusGoal">${state.goal===g.id?"✓ Showing only this goal's notes":"Show only this goal's notes on the board"}</button></div></div>
   <div class="pbody">
+    ${(()=>{const l=linkedOf({goal:g.id});return l?`<p style="margin-top:10px"><button class="lkchip" data-goal-open="${l.id}" style="--lc:${l.color}">🔗 Linked to ${esc(l.title)}</button></p>`:""})()}
     <p style="margin-top:10px">${esc(g.description)}</p>
+    ${companionsOf(g.id).length?`<h4>Companions (${companionsOf(g.id).length})</h4><div class="prow">${companionsOf(g.id).map(c=>`<button class="gtag" data-goal-open="${c.id}" style="--gc:${c.color}">🔗 ${esc(c.title)}</button>`).join(" ")}</div>`:""}
     ${stageBar(ks,"stbar")}<div class="stleg">${STAGES.map(s=>{const n=ks.filter(k=>k.stage===s).length;return n?`<span style="--sc:${STAGE_COLORS[s]}">${esc(s)} ${n}</span>`:""}).join("")}</div>
     ${wait.length?`<div class="waitbox">⏳ ${wait.length} waiting on you<ul class="wl">${wait.map(k=>`<li><a data-kid="${esc(k.id)}">${esc(k.title)}</a>: ${esc(k.decision||k.next||"")}</li>`).join("")}</ul></div>`:""}
     ${g.note?`<div class="notebox">${esc(g.note)}</div>`:""}
@@ -568,6 +589,7 @@ function openGoal(id,keep){
   showPanel(g.color);
   pan.querySelector("#focusGoal").onclick=()=>{state.goal=g.id;snapNext=true;render();openGoal(g.id,true);};
   pan.querySelectorAll("[data-kid]").forEach(b=>b.onclick=()=>openItem(b.dataset.kid,g.id));
+  pan.querySelectorAll("[data-goal-open]").forEach(b=>b.onclick=()=>openGoal(b.dataset.goalOpen));
   if(!keep) setTimeout(()=>pan.querySelector(".close").focus(),50);
 }
 function closePanel(){ view=null; $("#panel").classList.remove("open"); $("#panel").setAttribute("aria-hidden","true"); $("#scrim").classList.remove("open"); }
@@ -575,9 +597,10 @@ $("#scrim").onclick=closePanel;
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&view) closePanel(); if(e.key==="/"&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();$("#q").focus();} });
 // ---- controls ----
 $("#realms").addEventListener("click",e=>{const b=e.target.closest(".realm"); if(!b) return; state.realm=b.dataset.realm; state.goal=""; saveUI(); snapNext=true; render();});
-$("#goals").addEventListener("click",e=>{ const t=e.target.closest("[data-tl]"); if(t){ e.stopPropagation(); openGoal(t.dataset.tl); return; }
+function gotoGoal(id){ const g=goalById(id); if(!g) return; if(state.realm&&state.realm!==g.realm) state.realm=g.realm; state.goal=id; saveUI(); snapNext=true; render(); }
+$("#goals").addEventListener("click",e=>{ const c=e.target.closest("[data-goto]"); if(c){ e.stopPropagation(); gotoGoal(c.dataset.goto); return; } const t=e.target.closest("[data-tl]"); if(t){ e.stopPropagation(); openGoal(t.dataset.tl); return; }
   const b=e.target.closest(".goal"); if(!b) return; const v=b.dataset.goal; state.goal=(state.goal===v?"":v); snapNext=true; render(); });
-$("#goals").addEventListener("keydown",e=>{ const t=e.target.closest("[data-tl]"); if(t&&(e.key==="Enter"||e.key===" ")){e.preventDefault();e.stopPropagation();openGoal(t.dataset.tl);} });
+$("#goals").addEventListener("keydown",e=>{ const c=e.target.closest("[data-goto]"); if(c&&(e.key==="Enter"||e.key===" ")){e.preventDefault();e.stopPropagation();gotoGoal(c.dataset.goto);return;} const t=e.target.closest("[data-tl]"); if(t&&(e.key==="Enter"||e.key===" ")){e.preventDefault();e.stopPropagation();openGoal(t.dataset.tl);} });
 $("#ownerSel").onchange=e=>{state.owner=e.target.value;render()};
 let qt; $("#q").addEventListener("input",e=>{clearTimeout(qt);qt=setTimeout(()=>{state.q=e.target.value.trim();render()},120)});
 $("#waitBtn").onclick=()=>{state.wait=!state.wait;render()};

@@ -3,7 +3,7 @@
 window.BOARD_META = {
  "title": "ONTOLOGY Kanban",
  "version": 4,
- "updated": "2026-10-09",
+ "updated": "2026-10-10",
  "stages": [
   "Idea",
   "Planning",
@@ -52,7 +52,12 @@ window.BOARD_META = {
  "public": true,
  "migrate": {
   "chef-help": null,
-  "property-explainers": null
+  "property-explainers": null,
+  "math-garden": "mathera",
+  "mathera-v05": "mathera",
+  "mathera-v06": "mathera",
+  "mathera-v061": "mathera",
+  "mathera-v062": "mathera"
  },
  "footer": "Public view of Julius's ONTOLOGY project board. Personal projects are summarized and their histories kept private."
 };
@@ -62,11 +67,11 @@ window.GOALS = [
   "realm": "EDUCATION",
   "title": "Mathera",
   "color": "#f2b705",
-  "description": "The big goal: a complete, beautiful math platform across seven eras. Its pieces are the builds, the curriculum spine, exam mode, placement, history and tools.",
+  "description": "The core math platform across seven eras: the Mathera site (all versions), the curriculum spine, exam mode, concepts and the planning docs. Companion products are linked below.",
   "owners": [
    "Math Website Administrator",
-   "Math Sensei",
    "Unreported (GitHub history)",
+   "Math Sensei",
    "Math Historian",
    "Mathera Artist"
   ],
@@ -135,7 +140,8 @@ window.GOALS = [
     "kind": "goal"
    }
   ],
-  "liveNote": "Wayfinder isn't live yet; ForgePath Prequel is the playable shell."
+  "liveNote": "Wayfinder isn't live yet; ForgePath Prequel is the playable shell.",
+  "linkedTo": "g-mathera"
  },
  {
   "id": "g-worldart",
@@ -167,46 +173,136 @@ window.GOALS = [
     "text": "Era VI options re-sent to Julius",
     "kind": "goal"
    }
-  ]
+  ],
+  "linkedTo": "g-mathera"
  },
  {
-  "id": "g-games",
+  "id": "g-mh101",
   "realm": "EDUCATION",
-  "title": "Math games",
-  "color": "#e85d75",
-  "description": "Standalone math games: the ForgePath RPG, racers, puzzles and minigames.",
+  "title": "Math History 101",
+  "color": "#8d6e63",
+  "description": "Companion history site: Epochs, the 12×12 Concept Wall, 144 artefact portraits and concept-history essays.",
   "owners": [
-   "Math Website Administrator",
    "Math Sensei",
-   "Math Historian",
-   "Grok Bot"
+   "Math Website Administrator"
   ],
   "history": [
    {
-    "date": "2026-10-02",
+    "date": "2026-10-01",
     "approx": false,
-    "text": "OPERATE! prototype; Numera v0.1 → Forgepath RPG shell",
+    "text": "v0 hub, Epochs landing, Concept Wall; 144 portraits and essays",
     "kind": "goal"
    },
    {
     "date": "2026-10-03",
     "approx": false,
-    "text": "ForgePath Prequel; Precedence and The Road start the same night; Newton vs Leibniz factions floated",
+    "text": "Handed to Math Website Administrator",
+    "kind": "goal"
+   }
+  ],
+  "linkedTo": "g-mathera"
+ },
+ {
+  "id": "g-graphlab",
+  "realm": "EDUCATION",
+  "title": "Graph Lab",
+  "color": "#26a69a",
+  "description": "Companion tool: a Desmos-style, education-first graphing calculator.",
+  "owners": [
+   "Math Website Administrator"
+  ],
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "Graph Lab v1 MVP ships",
+    "kind": "goal"
+   }
+  ],
+  "linkedTo": "g-mathera"
+ },
+ {
+  "id": "g-forgepath",
+  "realm": "EDUCATION",
+  "title": "ForgePath",
+  "color": "#6d4c41",
+  "description": "Companion RPG (formerly Numera): a wordless math RPG, separate from Wayfinder.",
+  "owners": [
+   "Math Website Administrator",
+   "Math Historian"
+  ],
+  "history": [
+   {
+    "date": "2026-10-02",
+    "approx": false,
+    "text": "Numera v0.1 → Forgepath",
     "kind": "goal"
    },
    {
-    "date": "2026-10-05",
+    "date": "2026-10-03",
     "approx": false,
-    "text": "The Road career mode chapters 1–2; The Sky named as sequel",
+    "text": "ForgePath Prequel; Newton vs Leibniz factions floated",
     "kind": "goal"
    },
    {
     "date": "2026-10-09",
     "approx": false,
-    "text": "Julius confirms ForgePath is its own RPG, separate from Wayfinder",
+    "text": "Julius confirms it's a separate RPG, not replaced by Wayfinder",
     "kind": "goal"
    }
-  ]
+  ],
+  "linkedTo": "g-mathera"
+ },
+ {
+  "id": "g-road",
+  "realm": "EDUCATION",
+  "title": "The Road",
+  "color": "#e85d75",
+  "description": "Companion algebra racer, merged with Precedence, plus its calculus sequel The Sky.",
+  "owners": [
+   "Math Sensei",
+   "Math Website Administrator"
+  ],
+  "history": [
+   {
+    "date": "2026-10-03",
+    "approx": false,
+    "text": "The Road and Precedence start the same night",
+    "kind": "goal"
+   },
+   {
+    "date": "2026-10-05",
+    "approx": false,
+    "text": "Career mode chapters 1–2; The Sky named as sequel",
+    "kind": "goal"
+   },
+   {
+    "date": "2026-10-09",
+    "approx": false,
+    "text": "Julius merges Precedence into The Road",
+    "kind": "goal"
+   }
+  ],
+  "linkedTo": "g-mathera"
+ },
+ {
+  "id": "g-operate",
+  "realm": "EDUCATION",
+  "title": "OPERATE!",
+  "color": "#ef6c00",
+  "description": "Companion puzzle: make-24 style four-tile target-number game.",
+  "owners": [
+   "Math Website Administrator"
+  ],
+  "history": [
+   {
+    "date": "2026-10-02",
+    "approx": false,
+    "text": "Prototype ships from the Primary-mode research",
+    "kind": "goal"
+   }
+  ],
+  "linkedTo": "g-mathera"
  },
  {
   "id": "g-memes",
@@ -222,6 +318,25 @@ window.GOALS = [
     "date": "2026-10-06",
     "approx": false,
     "text": "Memes Wall and the Meme Atlas PDF",
+    "kind": "goal"
+   }
+  ],
+  "linkedTo": "g-mathera"
+ },
+ {
+  "id": "g-games",
+  "realm": "EDUCATION",
+  "title": "Math minigames",
+  "color": "#e85d75",
+  "description": "Other standalone math minigame ideas.",
+  "owners": [
+   "Grok Bot"
+  ],
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "AI minigames idea floated",
     "kind": "goal"
    }
   ]
@@ -641,6 +756,149 @@ window.GOALS = [
 ];
 window.ITEMS = [
  {
+  "id": "mathera",
+  "title": "Mathera (platform)",
+  "realm": "EDUCATION",
+  "goal": "g-mathera",
+  "owners": [
+   "Math Website Administrator"
+  ],
+  "stage": "Built / Shipped",
+  "summary": "The Mathera site itself, across every version: v0.5 is the main URL; v0.6, v0.6.1 and v0.6.2 are test builds. Open the note for the version timeline and links.",
+  "done": "",
+  "next": "Julius picks the canonical 0.6.x build; then retire or redirect v0.5.",
+  "history": [
+   {
+    "date": "2026-09-24",
+    "approx": false,
+    "text": "Quintile, an early exploration (math map + drill rooms) that inspired Mathera",
+    "url": "https://julianlee314-hue.github.io/quintile/",
+    "note": "quintile",
+    "kind": "first"
+   },
+   {
+    "date": "2026-09-28",
+    "approx": false,
+    "text": "Mathera repo work starts",
+    "kind": "step"
+   },
+   {
+    "date": "2026-09-29",
+    "approx": false,
+    "text": "Math Garden tapestry / Living Grove homepage: the first Mathera homepage (later superseded)",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-01",
+    "approx": false,
+    "text": "v0.5 beta replaces the garden site: splash, Skills-first nav; 1.0 defined as Eras I–V with real practice",
+    "url": "https://julianlee314-hue.github.io/mathera/",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-02",
+    "approx": false,
+    "text": "Testing Mode beta, The Notebooks: exam overlay content (1,000 skills, 3,000 questions)",
+    "note": "notebooks",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "v0.6 test build: seven-worlds landing, Spotlight, Practice / Learn / Map tabs",
+    "url": "https://julianlee314-hue.github.io/mathera-v06/",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "v0.6.1 test build: world-tree look, curtain intro, Era VI = The Spiral Isle",
+    "url": "https://julianlee314-hue.github.io/mathera-v061/",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "v0.6.2 test build: 3200×1800 era paintings",
+    "url": "https://julianlee314-hue.github.io/mathera-v062/",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-10",
+    "approx": false,
+    "text": "Per-version notes merged into this one platform note",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-10",
+  "source": "Bot reports (2026-10-09)",
+  "links": [
+   {
+    "label": "Open Mathera (main site, v0.5)",
+    "url": "https://julianlee314-hue.github.io/mathera/"
+   }
+  ],
+  "files": [],
+  "updated": "2026-10-10",
+  "waitingOnJulius": true,
+  "decision": "Pick the canonical Mathera build (v0.6 / v0.6.1 / v0.6.2), then retire or redirect v0.5",
+  "versions": [
+   {
+    "label": "Quintile (early exploration)",
+    "date": "2026-09-24",
+    "url": "https://julianlee314-hue.github.io/quintile/",
+    "stage": "Abandoned / Superseded",
+    "summary": "Super-early seven-era math map + drill rooms that inspired Mathera."
+   },
+   {
+    "label": "Math Garden / Living Grove homepage",
+    "date": "2026-09-29",
+    "url": null,
+    "stage": "Abandoned / Superseded",
+    "summary": "First Mathera homepage: zoomable garden tapestry with painted Living Grove worlds; replaced by v0.5."
+   },
+   {
+    "label": "v0.5 (main site)",
+    "date": "2026-10-01",
+    "url": "https://julianlee314-hue.github.io/mathera/",
+    "stage": "Paused",
+    "summary": "Current public URL: seven-era landing, land doors, Skills-first nav, skill search."
+   },
+   {
+    "label": "Testing Mode beta (The Notebooks)",
+    "date": "2026-10-02",
+    "url": null,
+    "stage": "Paused",
+    "summary": "UK / IB / US exam overlay content (1,000 skills, 3,000 questions); no app UI yet.",
+    "note": "notebooks"
+   },
+   {
+    "label": "v0.6",
+    "date": "2026-10-06",
+    "url": "https://julianlee314-hue.github.io/mathera-v06/",
+    "stage": "Built / Shipped",
+    "summary": "Test build: seven-worlds landing, skill Spotlight, Practice / Learn / Map tabs (761 skills)."
+   },
+   {
+    "label": "v0.6.1 (Era VI: The Spiral Isle)",
+    "date": "2026-10-06",
+    "url": "https://julianlee314-hue.github.io/mathera-v061/",
+    "stage": "Built / Shipped",
+    "summary": "The devs' build: world-tree look, curtain intro, Era VI = The Spiral Isle."
+   },
+   {
+    "label": "v0.6.2 (high-res paintings)",
+    "date": "2026-10-06",
+    "url": "https://julianlee314-hue.github.io/mathera-v062/",
+    "stage": "Built / Shipped",
+    "summary": "Test build with 3200×1800 era paintings and new world paintings for every era."
+   }
+  ],
+  "stageNote": "Built (v0.6.x test builds); waiting on the canonical-build pick",
+  "liveUrl": "https://julianlee314-hue.github.io/mathera/",
+  "liveLabel": "Open Mathera (main site, v0.5)"
+ },
+ {
   "id": "quintile",
   "title": "Quintile (early exploration)",
   "realm": "EDUCATION",
@@ -681,7 +939,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
   "stageNote": "Early exploration that inspired Mathera",
@@ -723,7 +981,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
   "stageNote": "Early exploration that inspired Mathera",
@@ -765,206 +1023,12 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
   "stageNote": "Early exploration that inspired Mathera",
   "liveUrl": "https://julianlee314-hue.github.io/course-exam-drills/",
   "liveLabel": "Open Course Exam Drills"
- },
- {
-  "id": "math-garden",
-  "title": "Math Garden tapestry / Living Grove homepage",
-  "realm": "EDUCATION",
-  "goal": "g-mathera",
-  "owners": [
-   "Math Website Administrator"
-  ],
-  "stage": "Abandoned / Superseded",
-  "summary": "The first Mathera homepage: a zoomable garden tapestry with painted Living Grove worlds.",
-  "done": "",
-  "next": "",
-  "history": [
-   {
-    "date": "2026-09-29",
-    "approx": false,
-    "text": "First built: Math Garden tapestry landing with zoomable world paintings",
-    "kind": "first"
-   },
-   {
-    "date": "2026-09-29",
-    "approx": false,
-    "text": "Living Grove world view for Era I, then pointillist grove styles (Mass / Veins / Stars)",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-01",
-    "approx": false,
-    "text": "Replaced by the Mathera v0.5 beta",
-    "kind": "step"
-   }
-  ],
-  "lastTouched": "2026-10-01",
-  "source": "Bot reports (2026-10-09)",
-  "links": [],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "stageNote": "Abandoned (MWA round 2)"
- },
- {
-  "id": "mathera-v05",
-  "title": "Mathera v0.5 (main site)",
-  "realm": "EDUCATION",
-  "goal": "g-mathera",
-  "owners": [
-   "Math Website Administrator"
-  ],
-  "stage": "Paused",
-  "summary": "The current public Mathera site: seven-era landing, land doors, skills and tree navigation.",
-  "done": "",
-  "next": "Julius picks the canonical build.",
-  "history": [
-   {
-    "date": "2026-09-28",
-    "approx": true,
-    "text": "First started (before 2026-09-29)",
-    "kind": "first"
-   },
-   {
-    "date": "2026-09-29",
-    "approx": false,
-    "text": "Eras II–III skills, 1,132-skill PDF, Math Garden tapestry, Living Grove",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-01",
-    "approx": false,
-    "text": "v0.5 beta, splash, Skills-first nav; 1.0 defined as Eras I–V with real practice",
-    "kind": "step"
-   }
-  ],
-  "lastTouched": "2026-10-01",
-  "source": "Bot reports (2026-10-09)",
-  "links": [
-   {
-    "label": "Open Mathera v0.5 (main site)",
-    "url": "https://julianlee314-hue.github.io/mathera/"
-   }
-  ],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": true,
-  "decision": "Retire/redirect v0.5 or replace it with a 0.6.x build",
-  "stageNote": "Paused; last work 2026-10-01",
-  "liveUrl": "https://julianlee314-hue.github.io/mathera/",
-  "liveLabel": "Open Mathera v0.5 (main site)"
- },
- {
-  "id": "mathera-v06",
-  "title": "Mathera v0.6",
-  "realm": "EDUCATION",
-  "goal": "g-mathera",
-  "owners": [
-   "Math Website Administrator"
-  ],
-  "stage": "Built / Shipped",
-  "summary": "Test build: seven-worlds landing, skill Spotlight, Practice / Learn / Map search tabs (761 skills).",
-  "done": "",
-  "next": "The Map still lacks prerequisite links.",
-  "history": [
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "First built: seven-worlds homepage, Spotlight search, Practice / Learn / Map tabs",
-    "kind": "first"
-   }
-  ],
-  "lastTouched": "2026-10-06",
-  "source": "Bot reports (2026-10-09)",
-  "links": [
-   {
-    "label": "Open Mathera v0.6",
-    "url": "https://julianlee314-hue.github.io/mathera-v06/"
-   }
-  ],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "stageNote": "Built (test)",
-  "liveUrl": "https://julianlee314-hue.github.io/mathera-v06/",
-  "liveLabel": "Open Mathera v0.6"
- },
- {
-  "id": "mathera-v061",
-  "title": "Mathera v0.6.1 (Era VI: The Spiral Isle)",
-  "realm": "EDUCATION",
-  "goal": "g-mathera",
-  "owners": [
-   "Math Website Administrator"
-  ],
-  "stage": "Built / Shipped",
-  "summary": "The devs' build: world-tree look, curtain intro, Era VI = The Spiral Isle.",
-  "done": "",
-  "next": "",
-  "history": [
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "First built: world-tree look, curtain intro, Era VI = Spiral Isle",
-    "kind": "first"
-   }
-  ],
-  "lastTouched": "2026-10-06",
-  "source": "Bot reports (2026-10-09)",
-  "links": [
-   {
-    "label": "Open Mathera v0.6.1",
-    "url": "https://julianlee314-hue.github.io/mathera-v061/"
-   }
-  ],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "stageNote": "Built (test)",
-  "liveUrl": "https://julianlee314-hue.github.io/mathera-v061/",
-  "liveLabel": "Open Mathera v0.6.1"
- },
- {
-  "id": "mathera-v062",
-  "title": "Mathera v0.6.2 (high-res paintings)",
-  "realm": "EDUCATION",
-  "goal": "g-mathera",
-  "owners": [
-   "Math Website Administrator"
-  ],
-  "stage": "Built / Shipped",
-  "summary": "Test build with 3200×1800 era paintings and new world paintings for every era.",
-  "done": "",
-  "next": "Julius picks the canonical build.",
-  "history": [
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "First built: 3200×1800 paintings and new era paintings",
-    "kind": "first"
-   }
-  ],
-  "lastTouched": "2026-10-06",
-  "source": "Bot reports (2026-10-09)",
-  "links": [
-   {
-    "label": "Open Mathera v0.6.2",
-    "url": "https://julianlee314-hue.github.io/mathera-v062/"
-   }
-  ],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": true,
-  "decision": "Pick the canonical Mathera build (v0.6 / v0.6.1 / v0.6.2)",
-  "stageNote": "Built (test)",
-  "liveUrl": "https://julianlee314-hue.github.io/mathera-v062/",
-  "liveLabel": "Open Mathera v0.6.2"
  },
  {
   "id": "mathera-spine",
@@ -1010,7 +1074,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Paused (Design); last work 2026-10-05"
  },
@@ -1038,7 +1102,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -1072,7 +1136,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Triage the curriculum gaps file"
  },
@@ -1113,7 +1177,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Design (research + design PDFs only), paused since ~2026-10-01"
  },
@@ -1147,7 +1211,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Design, parked until after 1.0"
  },
@@ -1181,7 +1245,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "note": "MWA couldn't confirm delivery. A finished Primary-mode vision PDF exists on the box, so it was very likely delivered."
  },
@@ -1215,7 +1279,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Paused (Design): content only, no UI"
  },
@@ -1223,7 +1287,7 @@ window.ITEMS = [
   "id": "graph-lab",
   "title": "Graph Lab",
   "realm": "EDUCATION",
-  "goal": "g-mathera",
+  "goal": "g-graphlab",
   "owners": [
    "Math Website Administrator"
   ],
@@ -1248,7 +1312,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Built/Shipped (MVP)",
   "liveUrl": "https://julianlee314-hue.github.io/graph-lab/",
@@ -1258,7 +1322,7 @@ window.ITEMS = [
   "id": "math-history-101",
   "title": "Math History 101",
   "realm": "EDUCATION",
-  "goal": "g-mathera",
+  "goal": "g-mh101",
   "owners": [
    "Math Website Administrator",
    "Math Sensei"
@@ -1302,7 +1366,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "note": "Conflict: Math Sensei (round 1) said Built/Shipped; MWA (owner since 2026-10-03) says Paused, last commit 2026-10-01. Owner's call used.",
   "liveUrl": "https://julianlee314-hue.github.io/math-history-101/",
@@ -1332,7 +1396,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Paused, waiting on Julius"
  },
@@ -1379,7 +1443,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -1418,7 +1482,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Design"
  },
@@ -1426,7 +1490,7 @@ window.ITEMS = [
   "id": "forgepath",
   "title": "ForgePath Prequel (formerly Numera)",
   "realm": "EDUCATION",
-  "goal": "g-games",
+  "goal": "g-forgepath",
   "owners": [
    "Math Website Administrator"
   ],
@@ -1469,7 +1533,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Paused; last work 2026-10-03",
   "liveUrl": "https://julianlee314-hue.github.io/forgepath/",
@@ -1501,7 +1565,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Design"
  },
@@ -1537,7 +1601,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Answer the Era II redo offer (it reads like a village)",
   "stageNote": "Design"
@@ -1568,7 +1632,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Design"
  },
@@ -1604,7 +1668,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Review the Era IV v2 (steam-engine mountain city)",
   "stageNote": "Design"
@@ -1641,7 +1705,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Review the Era V v2 (terraced marble citadel)",
   "stageNote": "Design"
@@ -1690,7 +1754,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Pick the Era VI concept (recommended: cascade gardens; runner-up: river delta)",
   "stageNote": "Design"
@@ -1721,7 +1785,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Design"
  },
@@ -1749,14 +1813,14 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
   "id": "newton-leibniz",
   "title": "Newton vs Leibniz factions",
   "realm": "EDUCATION",
-  "goal": "g-games",
+  "goal": "g-forgepath",
   "owners": [
    "Math Historian"
   ],
@@ -1782,7 +1846,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Decide where the factions idea lives: ForgePath or a minigame"
  },
@@ -1790,7 +1854,7 @@ window.ITEMS = [
   "id": "precedence",
   "title": "Precedence (merged into The Road)",
   "realm": "EDUCATION",
-  "goal": "g-games",
+  "goal": "g-road",
   "owners": [
    "Math Sensei"
   ],
@@ -1827,7 +1891,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Merged into The Road",
   "liveUrl": "https://julianlee314-hue.github.io/precedence/",
@@ -1837,7 +1901,7 @@ window.ITEMS = [
   "id": "the-road",
   "title": "The Road (merged with Precedence)",
   "realm": "EDUCATION",
-  "goal": "g-games",
+  "goal": "g-road",
   "owners": [
    "Math Website Administrator",
    "Math Sensei"
@@ -1899,7 +1963,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Play The Road and send feedback before chapter 3",
   "stageNote": "Planning (merge of The Road and Precedence)",
@@ -1910,7 +1974,7 @@ window.ITEMS = [
   "id": "the-sky",
   "title": "The Sky",
   "realm": "EDUCATION",
-  "goal": "g-games",
+  "goal": "g-road",
   "owners": [
    "Math Website Administrator"
   ],
@@ -1936,14 +2000,14 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
   "id": "operate",
   "title": "OPERATE!",
   "realm": "EDUCATION",
-  "goal": "g-games",
+  "goal": "g-operate",
   "owners": [
    "Math Website Administrator"
   ],
@@ -1980,7 +2044,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Revive OPERATE! or fold it into Primary mode",
   "liveUrl": "https://julianlee314-hue.github.io/operate/",
@@ -2016,7 +2080,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2054,7 +2118,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "liveUrl": "https://julianlee314-hue.github.io/math-memes/",
   "liveLabel": "Open the math-memes gallery"
@@ -2083,7 +2147,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2121,7 +2185,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "liveUrl": "https://julianlee314-hue.github.io/chronographs/",
   "liveLabel": "Open the Chronographs hub"
@@ -2167,7 +2231,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "liveUrl": "https://julianlee314-hue.github.io/dow-timeline/v0.2/",
   "liveLabel": "Open Chronograph I"
@@ -2219,7 +2283,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "liveUrl": "https://julianlee314-hue.github.io/the-bank-1694/",
   "liveLabel": "Open Chronograph II"
@@ -2248,7 +2312,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2275,7 +2339,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2319,7 +2383,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Paused 2026-10-08",
   "liveUrl": "https://julianlee314-hue.github.io/ww2-strat-map/",
@@ -2349,7 +2413,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2376,7 +2440,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2409,7 +2473,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2459,7 +2523,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Paused: 'finish with the third plot for now'",
   "liveUrl": "https://julianlee314-hue.github.io/ziyuan/",
@@ -2495,7 +2559,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Plots 4–5 are on hold until you give the go-ahead",
   "stageNote": "Planning; scoped 2026-10-01 and parked"
@@ -2530,7 +2594,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2563,7 +2627,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Running"
  },
@@ -2597,7 +2661,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2624,7 +2688,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2658,7 +2722,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2685,7 +2749,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2712,7 +2776,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2762,7 +2826,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "liveUrl": "https://julianlee314-hue.github.io/recipe-playlist-digests/",
   "liveLabel": "Open Recipes Worth Rewatching"
@@ -2792,7 +2856,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "note": "Reported by both RE/MAX and Carl the Chef; merged.",
   "stageNote": "Built (private repo)"
@@ -2821,7 +2885,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Built in private repo, not live"
  },
@@ -2856,7 +2920,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "note": "Pages link now returns 404 (repo private), so no live button.",
   "stageNote": "Built (private repo)"
@@ -2886,7 +2950,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Built (private repo)"
  },
@@ -2914,7 +2978,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2941,7 +3005,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -2974,7 +3038,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3001,7 +3065,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3028,7 +3092,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Choose WHOOP's official API or the in-app data export"
  },
@@ -3057,7 +3121,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Idea (floated by Fitbot, not started)"
  },
@@ -3078,7 +3142,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3099,7 +3163,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3120,7 +3184,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3148,7 +3212,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3168,7 +3232,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3189,7 +3253,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3210,7 +3274,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3231,7 +3295,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3252,7 +3316,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3292,7 +3356,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Decide the next intake (more Logistics/Body/Republic posters, bigger Antiquity?)",
   "liveUrl": "https://opal-raven-polar-cinder.grok.me",
@@ -3322,7 +3386,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3349,7 +3413,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3382,7 +3446,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Decide whether to publish the off-wire house media"
  },
@@ -3404,7 +3468,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3432,7 +3496,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Pick a name for TRASK / Fake Film School",
   "stageNote": "Paused; had reached Planning"
@@ -3461,7 +3525,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "Sign off yes/no on the director's 12 proposals so storyboarding can start",
   "note": "Grok Bot (owner) said 'effectively Paused', but the last work was 2026-10-08, inside the 7-day rule, so it stays in Design.",
@@ -3491,7 +3555,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3518,7 +3582,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3551,7 +3615,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3571,7 +3635,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3592,7 +3656,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3613,7 +3677,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3634,7 +3698,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3655,7 +3719,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3677,7 +3741,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3711,7 +3775,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": true,
   "decision": "OK downloading the Prelinger ads into decade folders (and send any of your own clips)"
  },
@@ -3739,7 +3803,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3772,7 +3836,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Paused"
  },
@@ -3800,7 +3864,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3833,7 +3897,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3866,7 +3930,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3893,7 +3957,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3913,7 +3977,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -3941,7 +4005,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -3968,7 +4032,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Built, running"
  },
@@ -3996,7 +4060,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4016,7 +4080,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4037,7 +4101,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4058,7 +4122,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4079,7 +4143,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4100,7 +4164,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4121,7 +4185,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4155,7 +4219,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4182,7 +4246,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4202,7 +4266,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4223,7 +4287,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4257,7 +4321,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4290,7 +4354,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4323,7 +4387,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4355,7 +4419,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "liveUrl": "https://julianlee314-hue.github.io/ONTOLOGY/",
   "liveLabel": "Open the public ONTOLOGY Kanban"
@@ -4384,7 +4448,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4417,7 +4481,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Built, running"
  },
@@ -4445,14 +4509,14 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
   "id": "concept-histories",
   "title": "Concept Histories (144 essays)",
   "realm": "EDUCATION",
-  "goal": "g-mathera",
+  "goal": "g-mh101",
   "owners": [
    "Math Sensei"
   ],
@@ -4483,7 +4547,7 @@ window.ITEMS = [
    }
   ],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "liveUrl": "https://julianlee314-hue.github.io/math-history-101/",
   "liveLabel": "Open Math History 101"
@@ -4492,7 +4556,7 @@ window.ITEMS = [
   "id": "wall-icons",
   "title": "Math-symbol Wall icons",
   "realm": "EDUCATION",
-  "goal": "g-mathera",
+  "goal": "g-mh101",
   "owners": [
    "Math Sensei"
   ],
@@ -4518,7 +4582,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "note": "Conflict: Math Sensei calls this icon set Abandoned; MWA still lists '~128 Wall icons' as Math History 101's next step. Both are kept: this note is the abandoned style, the remaining icons stay on Math History 101."
  },
@@ -4546,7 +4610,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4573,7 +4637,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4600,7 +4664,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4627,7 +4691,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4654,7 +4718,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4681,7 +4745,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4701,7 +4765,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4722,7 +4786,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4750,7 +4814,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4783,7 +4847,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Superseded"
  },
@@ -4817,7 +4881,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Superseded"
  },
@@ -4851,7 +4915,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Superseded"
  },
@@ -4885,7 +4949,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "stageNote": "Superseded"
  },
@@ -4913,7 +4977,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -4933,7 +4997,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4954,7 +5018,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -4975,7 +5039,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -5003,7 +5067,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -5030,7 +5094,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  },
  {
@@ -5050,7 +5114,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "historyNote": "History kept private."
  },
@@ -5084,7 +5148,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false,
   "note": "Round 1 said the plates were handed to another bot; RE/MAX's round 2 says Abandoned on its side."
  },
@@ -5092,7 +5156,7 @@ window.ITEMS = [
   "id": "graph-lab-extras",
   "title": "Graph Lab extras",
   "realm": "EDUCATION",
-  "goal": "g-mathera",
+  "goal": "g-graphlab",
   "owners": [
    "Math Website Administrator"
   ],
@@ -5112,7 +5176,7 @@ window.ITEMS = [
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "waitingOnJulius": false
  }
 ];
