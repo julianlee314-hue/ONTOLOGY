@@ -28,6 +28,11 @@ window.BOARD_META = {
    "folder": ""
   },
   {
+   "id": "HEALTH",
+   "label": "HEALTH",
+   "folder": ""
+  },
+  {
    "id": "MEDIA",
    "label": "MEDIA",
    "folder": ""
@@ -344,18 +349,6 @@ window.GOALS = [
   ]
  },
  {
-  "id": "g-fitness",
-  "realm": "LIFE",
-  "title": "Fitness",
-  "color": "#26a69a",
-  "description": "Training plan and endurance goals (details private).",
-  "owners": [
-   "Fitbot",
-   "Carl the Chef"
-  ],
-  "history": []
- },
- {
   "id": "g-property",
   "realm": "LIFE",
   "title": "Property",
@@ -374,8 +367,30 @@ window.GOALS = [
   "description": "Personal admin and advice (private).",
   "owners": [
    "Lawyer/Business Advisor",
-   "Kronos",
+   "Kronos"
+  ],
+  "history": []
+ },
+ {
+  "id": "g-fitness",
+  "realm": "HEALTH",
+  "title": "Fitness & routines",
+  "color": "#26a69a",
+  "description": "Training plan, endurance goals and routine reminders (details private).",
+  "owners": [
    "Fitbot"
+  ],
+  "history": []
+ },
+ {
+  "id": "g-nutrition",
+  "realm": "HEALTH",
+  "title": "Nutrition & meal plans",
+  "color": "#7cb342",
+  "description": "Meal planning and nutrition (details private).",
+  "owners": [
+   "Fitbot",
+   "Carl the Chef"
   ],
   "history": []
  },
@@ -2906,7 +2921,7 @@ window.ITEMS = [
  {
   "id": "training-plan",
   "title": "Weekly training plan",
-  "realm": "LIFE",
+  "realm": "HEALTH",
   "goal": "g-fitness",
   "owners": [
    "Fitbot"
@@ -2933,7 +2948,7 @@ window.ITEMS = [
  {
   "id": "endurance-goal",
   "title": "Endurance goal",
-  "realm": "LIFE",
+  "realm": "HEALTH",
   "goal": "g-fitness",
   "owners": [
    "Fitbot"
@@ -2960,7 +2975,7 @@ window.ITEMS = [
  {
   "id": "tracker-data",
   "title": "Tracker data hookup",
-  "realm": "LIFE",
+  "realm": "HEALTH",
   "goal": "g-fitness",
   "owners": [
    "Fitbot"
@@ -2987,8 +3002,8 @@ window.ITEMS = [
  {
   "id": "nutrition",
   "title": "Nutrition coordination",
-  "realm": "LIFE",
-  "goal": "g-fitness",
+  "realm": "HEALTH",
+  "goal": "g-nutrition",
   "owners": [
    "Fitbot",
    "Carl the Chef"
@@ -4680,8 +4695,8 @@ window.ITEMS = [
  {
   "id": "weekly-reminder",
   "title": "Weekly reminder (private)",
-  "realm": "LIFE",
-  "goal": "g-admin",
+  "realm": "HEALTH",
+  "goal": "g-fitness",
   "owners": [
    "Fitbot"
   ],

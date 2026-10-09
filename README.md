@@ -1,6 +1,6 @@
 # ONTOLOGY Kanban (public view)
 
-A sticky-note Kanban board of Julius's ONTOLOGY projects. Version 4 is organized as realm (EDUCATION, LIFE, MEDIA, TOOLS, OTHER), then goal (the coloured banners), then note (the sticky notes in the columns).
+A sticky-note Kanban board of Julius's ONTOLOGY projects. Version 4 is organized as realm (EDUCATION, LIFE, HEALTH, MEDIA, TOOLS, OTHER), then goal (the coloured banners), then note (the sticky notes in the columns).
 
 **Live:** https://julianlee314-hue.github.io/ONTOLOGY/
 
