@@ -376,23 +376,49 @@ window.GOALS = [
   "realm": "HEALTH",
   "title": "Fitness & routines",
   "color": "#26a69a",
-  "description": "Training plan, endurance goals and routine reminders (details private).",
+  "description": "Swim + rowing training, the 60-minute erg goal, tracker data, the Sunday check-in and personal routine reminders.",
   "owners": [
    "Fitbot"
   ],
-  "history": []
+  "history": [
+   {
+    "date": "2026-10-08",
+    "approx": false,
+    "text": "Fitbot created; weekly plan, erg plan and WHOOP idea; Monday laundry reminder set up",
+    "kind": "goal"
+   },
+   {
+    "date": "2026-10-09",
+    "approx": false,
+    "text": "Moved into the new HEALTH realm",
+    "kind": "goal"
+   }
+  ]
  },
  {
   "id": "g-nutrition",
   "realm": "HEALTH",
   "title": "Nutrition & meal plans",
   "color": "#7cb342",
-  "description": "Meal planning and nutrition (details private).",
+  "description": "Meal plans and nutrition tied to training: Fitbot and Carl the Chef coordinating what to eat around workouts.",
   "owners": [
    "Fitbot",
    "Carl the Chef"
   ],
-  "history": []
+  "history": [
+   {
+    "date": "2026-10-08",
+    "approx": false,
+    "text": "Fitbot floats diet coordination with Carl the Chef",
+    "kind": "goal"
+   },
+   {
+    "date": "2026-10-09",
+    "approx": false,
+    "text": "Nutrition & meal plans goal created in HEALTH",
+    "kind": "goal"
+   }
+  ]
  },
  {
   "id": "g-trask",
@@ -2920,22 +2946,28 @@ window.ITEMS = [
  },
  {
   "id": "training-plan",
-  "title": "Weekly training plan",
+  "title": "Weekly swim + row plan",
   "realm": "HEALTH",
   "goal": "g-fitness",
   "owners": [
    "Fitbot"
   ],
   "stage": "Planning",
-  "summary": "Weekly training plan (details private).",
+  "summary": "Weekly training built around swimming and rowing, with a Sunday check-in.",
   "done": "",
-  "next": "",
+  "next": "First Sunday check-in Oct 11.",
   "history": [
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "First discussed",
+    "text": "First discussed: check-in moved to Sun 4:45 AM; pool closed Mon/Thu; 30-min swims, row + sauna 3×/week",
     "kind": "first"
+   },
+   {
+    "date": "2026-10-11",
+    "approx": false,
+    "text": "First Sunday check-in (scheduled)",
+    "kind": "step"
    }
   ],
   "lastTouched": "2026-10-08",
@@ -2947,21 +2979,21 @@ window.ITEMS = [
  },
  {
   "id": "endurance-goal",
-  "title": "Endurance goal",
+  "title": "Erg endurance: 30 → 60 min",
   "realm": "HEALTH",
   "goal": "g-fitness",
   "owners": [
    "Fitbot"
   ],
   "stage": "Planning",
-  "summary": "Endurance goal with a 9-week plan (details private).",
+  "summary": "9-week plan to row 60 continuous minutes; long Friday row grows weekly.",
   "done": "",
-  "next": "",
+  "next": "Week 1: 30-minute long row.",
   "history": [
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "First discussed",
+    "text": "First discussed: 9-week plan from 30 to 60 minutes",
     "kind": "first"
    }
   ],
@@ -2974,21 +3006,21 @@ window.ITEMS = [
  },
  {
   "id": "tracker-data",
-  "title": "Tracker data hookup",
+  "title": "WHOOP data hookup",
   "realm": "HEALTH",
   "goal": "g-fitness",
   "owners": [
    "Fitbot"
   ],
   "stage": "Idea",
-  "summary": "Connect fitness-tracker data (idea).",
+  "summary": "Track recovery, strain and sleep from WHOOP.",
   "done": "",
-  "next": "",
+  "next": "Choose WHOOP's official API vs the in-app export.",
   "history": [
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "First discussed",
+    "text": "First discussed: no connector; API vs export undecided",
     "kind": "first"
    }
   ],
@@ -2997,11 +3029,12 @@ window.ITEMS = [
   "links": [],
   "files": [],
   "updated": "2026-10-09",
-  "waitingOnJulius": false
+  "waitingOnJulius": true,
+  "decision": "Choose WHOOP's official API or the in-app data export"
  },
  {
   "id": "nutrition",
-  "title": "Nutrition coordination",
+  "title": "Diet coordination: Fitbot × Carl the Chef",
   "realm": "HEALTH",
   "goal": "g-nutrition",
   "owners": [
@@ -3009,14 +3042,14 @@ window.ITEMS = [
    "Carl the Chef"
   ],
   "stage": "Idea",
-  "summary": "Nutrition alongside training (idea).",
+  "summary": "Fitbot and Carl the Chef coordinating meals and a meal plan around the training week.",
   "done": "",
-  "next": "",
+  "next": "Decide whether Carl drafts a weekly meal plan around the swim/row schedule.",
   "history": [
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "First floated",
+    "text": "First floated by Fitbot; not started",
     "kind": "first"
    }
   ],
@@ -3025,7 +3058,8 @@ window.ITEMS = [
   "links": [],
   "files": [],
   "updated": "2026-10-09",
-  "waitingOnJulius": false
+  "waitingOnJulius": false,
+  "stageNote": "Idea (floated by Fitbot, not started)"
  },
  {
   "id": "property-a",
@@ -4694,24 +4728,30 @@ window.ITEMS = [
  },
  {
   "id": "weekly-reminder",
-  "title": "Weekly reminder (private)",
+  "title": "Monday laundry reminder (6:14 AM)",
   "realm": "HEALTH",
   "goal": "g-fitness",
   "owners": [
    "Fitbot"
   ],
   "stage": "Built / Shipped",
-  "summary": "Personal reminder (private).",
+  "summary": "Weekly Monday reminder.",
   "done": "",
   "next": "",
-  "history": [],
-  "lastTouched": null,
+  "history": [
+   {
+    "date": "2026-10-08",
+    "approx": false,
+    "text": "First set up",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-08",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
   "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "historyNote": "History kept private."
+  "waitingOnJulius": false
  },
  {
   "id": "era-art-4-v1",
