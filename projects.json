@@ -66,7 +66,7 @@
     {
      "date": "2026-09-24",
      "approx": false,
-     "text": "Quintile, the first seven-era math map + drill site, goes up (repo history; predecessor)",
+     "text": "Quintile, an early exploration (math map + drill rooms) that inspired Mathera",
      "kind": "goal"
     },
     {
@@ -95,64 +95,95 @@
    "realm": "EDUCATION",
    "title": "Wayfinder",
    "color": "#e0892b",
-   "description": "The math RPG that links into Mathera. Wayfinder is the locked brand; ForgePath Prequel is its older playable shell.",
+   "description": "Mathera's testing and placement system: placement gates, a diagnostic, and the pedagogy briefs behind them.",
    "owners": [
-    "Mathera Artist",
     "Math Sensei",
-    "Grok Bot",
     "Math Website Administrator",
-    "Math Historian"
+    "Grok Bot"
    ],
    "history": [
     {
-     "date": "2026-10-02",
-     "approx": false,
-     "text": "Numera v0.1 → Forgepath (playable RPG shell)",
-     "kind": "goal"
-    },
-    {
-     "date": "2026-10-03",
-     "approx": false,
-     "text": "Newton vs Leibniz factions floated",
+     "date": "2026-10-01",
+     "approx": true,
+     "text": "Root Check placement diagnostic researched (ALEKS-style)",
      "kind": "goal"
     },
     {
      "date": "2026-10-05",
      "approx": false,
-     "text": "Pedagogy briefs; Wayfinder locked as the brand",
+     "text": "Pedagogy briefs; coverage review: ~23% of the curriculum spine",
      "kind": "goal"
     },
     {
      "date": "2026-10-06",
      "approx": false,
-     "text": "Mathera Artist created; v1 heroes for 7 eras, IV/V/VI redone, Era VI 10 options",
+     "text": "Briefs renamed Wayfinder; placement gates and gate dependency map",
+     "kind": "goal"
+    },
+    {
+     "date": "2026-10-09",
+     "approx": false,
+     "text": "Julius confirms Wayfinder is Mathera's testing/placement system, separate from ForgePath",
      "kind": "goal"
     }
    ],
    "liveNote": "Wayfinder isn't live yet; ForgePath Prequel is the playable shell."
   },
   {
+   "id": "g-worldart",
+   "realm": "EDUCATION",
+   "title": "Mathera world art",
+   "color": "#c9a227",
+   "description": "Wallpaper-size hero art for Mathera's seven eras, with room for skill paths, plus landmarks and extras.",
+   "owners": [
+    "Mathera Artist",
+    "Grok Bot",
+    "Math Sensei"
+   ],
+   "history": [
+    {
+     "date": "2026-10-06",
+     "approx": false,
+     "text": "Mathera Artist created; Julius sends the 7-era monument table; v1 heroes for all eras",
+     "kind": "goal"
+    },
+    {
+     "date": "2026-10-06",
+     "approx": false,
+     "text": "Eras IV, V, VI redone; Era VI rethink with 10 options",
+     "kind": "goal"
+    },
+    {
+     "date": "2026-10-09",
+     "approx": false,
+     "text": "Era VI options re-sent to Julius",
+     "kind": "goal"
+    }
+   ]
+  },
+  {
    "id": "g-games",
    "realm": "EDUCATION",
    "title": "Math games",
    "color": "#e85d75",
-   "description": "Standalone math games: racers, puzzles and minigames.",
+   "description": "Standalone math games: the ForgePath RPG, racers, puzzles and minigames.",
    "owners": [
     "Math Website Administrator",
     "Math Sensei",
+    "Math Historian",
     "Grok Bot"
    ],
    "history": [
     {
      "date": "2026-10-02",
      "approx": false,
-     "text": "OPERATE! prototype",
+     "text": "OPERATE! prototype; Numera v0.1 → Forgepath RPG shell",
      "kind": "goal"
     },
     {
      "date": "2026-10-03",
      "approx": false,
-     "text": "Precedence and The Road both start the same night",
+     "text": "ForgePath Prequel; Precedence and The Road start the same night; Newton vs Leibniz factions floated",
      "kind": "goal"
     },
     {
@@ -160,9 +191,14 @@
      "approx": false,
      "text": "The Road career mode chapters 1–2; The Sky named as sequel",
      "kind": "goal"
+    },
+    {
+     "date": "2026-10-09",
+     "approx": false,
+     "text": "Julius confirms ForgePath is its own RPG, separate from Wayfinder",
+     "kind": "goal"
     }
-   ],
-   "note": "Possible merge: Precedence and The Road are both algebra racers; The Road's plate 1 is called 'Precedence'."
+   ]
   },
   {
    "id": "g-memes",
@@ -562,21 +598,21 @@
  "items": [
   {
    "id": "quintile",
-   "title": "Quintile (first math map)",
+   "title": "Quintile (early exploration)",
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
     "Unreported (GitHub history)"
    ],
    "stage": "Abandoned / Superseded",
-   "summary": "Seven-era course map with drills, mastery levels and a plant-grove skills tree. The first public math site, before Mathera.",
+   "summary": "Seven-era course map with drills, mastery levels and a plant-grove skills tree. An early exploration that inspired Mathera.",
    "done": "",
    "next": "",
    "history": [
     {
      "date": "2026-09-24",
      "approx": false,
-     "text": "First published: seven-era math map on GitHub Pages",
+     "text": "First built: Quintile math map mirrored to GitHub Pages",
      "kind": "first"
     },
     {
@@ -588,7 +624,7 @@
     {
      "date": "2026-09-29",
      "approx": false,
-     "text": "Mathera begins with the same seven eras and grove idea (inferred successor)",
+     "text": "Its ideas inspire Mathera, which starts 5 days later",
      "kind": "step"
     }
    ],
@@ -603,21 +639,21 @@
    "files": [],
    "updated": "2026-10-09",
    "waitingOnJulius": false,
-   "note": "Not listed by any bot; placed in Superseded because Mathera took over its seven-era design.",
-   "stageNote": "Superseded (inferred from repo history; no bot reported it)",
+   "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
+   "stageNote": "Early exploration that inspired Mathera",
    "liveUrl": "https://julianlee314-hue.github.io/quintile/",
    "liveLabel": "Open Quintile (old)"
   },
   {
    "id": "quintile-aa-hl",
-   "title": "Quintile AA HL drill room",
+   "title": "Quintile AA HL drill room (early exploration)",
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
     "Unreported (GitHub history)"
    ],
-   "stage": "Paused",
-   "summary": "IB Math AA HL paper drills plus an Easy/Medium/Hard skills builder (120 items).",
+   "stage": "Abandoned / Superseded",
+   "summary": "IB Math AA HL paper drills plus an Easy/Medium/Hard skills builder (120 items), forked from Quintile. Part of the early exploration that inspired Mathera.",
    "done": "",
    "next": "",
    "history": [
@@ -645,20 +681,21 @@
    "files": [],
    "updated": "2026-10-09",
    "waitingOnJulius": false,
-   "stageNote": "Paused (no work since 2026-09-24; not reported by any bot)",
+   "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
+   "stageNote": "Early exploration that inspired Mathera",
    "liveUrl": "https://julianlee314-hue.github.io/quintile-aa-hl/",
    "liveLabel": "Open the AA HL drill room"
   },
   {
    "id": "course-exam-drills",
-   "title": "Course Exam Drills",
+   "title": "Course Exam Drills (early exploration)",
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
     "Unreported (GitHub history)"
    ],
-   "stage": "Paused",
-   "summary": "Randomized practice exams with 1,024+ themed questions per course.",
+   "stage": "Abandoned / Superseded",
+   "summary": "Randomized practice exams with 1,024+ themed questions per course, built the same day as Quintile. Part of the early exploration that inspired Mathera.",
    "done": "",
    "next": "",
    "history": [
@@ -686,7 +723,8 @@
    "files": [],
    "updated": "2026-10-09",
    "waitingOnJulius": false,
-   "stageNote": "Paused (no work since 2026-09-24; not reported by any bot)",
+   "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
+   "stageNote": "Early exploration that inspired Mathera",
    "liveUrl": "https://julianlee314-hue.github.io/course-exam-drills/",
    "liveLabel": "Open Course Exam Drills"
   },
@@ -998,7 +1036,7 @@
    "id": "root-check",
    "title": "Root Check placement diagnostic",
    "realm": "EDUCATION",
-   "goal": "g-mathera",
+   "goal": "g-wayfinder",
    "owners": [
     "Math Website Administrator",
     "Math Sensei"
@@ -1006,7 +1044,7 @@
    "stage": "Paused",
    "summary": "ALEKS-style placement check built on Skills (Eras I–V).",
    "done": "",
-   "next": "",
+   "next": "Fold into Wayfinder placement.",
    "history": [
     {
      "date": "2026-10-01",
@@ -1256,30 +1294,23 @@
   },
   {
    "id": "wayfinder",
-   "title": "Wayfinder RPG (MVP)",
+   "title": "Wayfinder testing & placement (MVP)",
    "realm": "EDUCATION",
    "goal": "g-wayfinder",
    "owners": [
     "Math Sensei",
-    "Mathera Artist",
     "Grok Bot"
    ],
    "stage": "Design",
-   "summary": "The RPG app that links to Mathera. Battle briefs for Eras I–II and a gate dependency map.",
+   "summary": "Mathera's testing and placement system: placement gates for Eras I–II and a gate dependency map.",
    "done": "",
-   "next": "Pick the MVP slice for the Unity game.",
+   "next": "Pick the MVP slice.",
    "history": [
-    {
-     "date": "2026-10-02",
-     "approx": false,
-     "text": "First discussed as the RPG spin-off from OPERATE!'s tile duels (Numera → Forgepath)",
-     "kind": "first"
-    },
     {
      "date": "2026-10-05",
      "approx": false,
-     "text": "Pedagogy briefs; brand locked as Wayfinder",
-     "kind": "step"
+     "text": "First discussed: Math Sensei's pedagogy briefs (written as MathForge)",
+     "kind": "first"
     },
     {
      "date": "2026-10-05",
@@ -1290,11 +1321,17 @@
     {
      "date": "2026-10-06",
      "approx": false,
-     "text": "Mathera Artist created for the era art",
+     "text": "Briefs renamed Wayfinder; placement gates for Eras I–II",
+     "kind": "step"
+    },
+    {
+     "date": "2026-10-09",
+     "approx": false,
+     "text": "Julius confirms Wayfinder is the testing/placement system, not the RPG",
      "kind": "step"
     }
    ],
-   "lastTouched": "2026-10-06",
+   "lastTouched": "2026-10-09",
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
@@ -1310,26 +1347,26 @@
     "Math Sensei"
    ],
    "stage": "Design",
-   "summary": "Battle Design v2, Brief Review & Gates, and the Gate Dependency Map (PDFs).",
+   "summary": "Design v2, Brief Review & Gates, and the Gate Dependency Map (PDFs) for placement.",
    "done": "",
-   "next": "Pick the MVP slice for the Unity game.",
+   "next": "Pick the MVP slice.",
    "history": [
     {
      "date": "2026-10-05",
      "approx": false,
-     "text": "First written: Wayfinder pedagogy / battle design briefs",
+     "text": "First written: Wayfinder pedagogy briefs (as MathForge)",
      "kind": "first"
-    },
-    {
-     "date": "2026-10-05",
-     "approx": false,
-     "text": "Brand locked as Wayfinder (from MathForge / ForgePath)",
-     "kind": "step"
     },
     {
      "date": "2026-10-06",
      "approx": false,
      "text": "Brief review, gates and dependency map",
+     "kind": "step"
+    },
+    {
+     "date": "2026-10-06",
+     "approx": false,
+     "text": "Renamed Wayfinder editions",
      "kind": "step"
     }
    ],
@@ -1345,14 +1382,14 @@
    "id": "forgepath",
    "title": "ForgePath Prequel (formerly Numera)",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-games",
    "owners": [
     "Math Website Administrator"
    ],
    "stage": "Paused",
    "summary": "Wordless math RPG shell: Seed Grove overworld, tile duels, Workshop Isles, familiars.",
    "done": "",
-   "next": "Decide its relationship to Wayfinder.",
+   "next": "Resume when Julius picks it back up.",
    "history": [
     {
      "date": "2026-10-02",
@@ -1373,13 +1410,13 @@
      "kind": "step"
     },
     {
-     "date": "2026-10-06",
+     "date": "2026-10-09",
      "approx": false,
-     "text": "Wayfinder locked as the brand (via Math Sensei)",
+     "text": "Julius confirmed it's a separate RPG, not replaced by Wayfinder",
      "kind": "step"
     }
    ],
-   "lastTouched": "2026-10-06",
+   "lastTouched": "2026-10-09",
    "source": "Bot reports (2026-10-09)",
    "links": [
     {
@@ -1389,9 +1426,8 @@
    ],
    "files": [],
    "updated": "2026-10-09",
-   "waitingOnJulius": true,
-   "decision": "Decide whether ForgePath Prequel folds into Wayfinder",
-   "note": "Conflict: MWA (owner) says Paused and 'may be superseded'; Math Sensei says Wayfinder is the locked brand. Kept in Paused per the owner until Julius decides.",
+   "waitingOnJulius": false,
+   "stageNote": "Paused; last work 2026-10-03",
    "liveUrl": "https://julianlee314-hue.github.io/forgepath/",
    "liveLabel": "Open ForgePath Prequel"
   },
@@ -1399,7 +1435,7 @@
    "id": "era-art-1",
    "title": "Era I · Count: First Tree",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist",
     "Grok Bot",
@@ -1429,7 +1465,7 @@
    "id": "era-art-2",
    "title": "Era II · Operate: Great Banyan",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist",
     "Grok Bot",
@@ -1466,7 +1502,7 @@
    "id": "era-art-3",
    "title": "Era III · Relate: World Tree",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist",
     "Grok Bot",
@@ -1496,7 +1532,7 @@
    "id": "era-art-4",
    "title": "Era IV · Solve: steam-engine mountain city",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist",
     "Grok Bot",
@@ -1533,7 +1569,7 @@
    "id": "era-art-5",
    "title": "Era V · Prove: terraced marble citadel",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist",
     "Grok Bot",
@@ -1570,7 +1606,7 @@
    "id": "era-art",
    "title": "Era VI · Change: pick a concept",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist",
     "Grok Bot",
@@ -1619,7 +1655,7 @@
    "id": "era-art-7",
    "title": "Era VII · Space: Celestial Tree",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist",
     "Grok Bot",
@@ -1649,7 +1685,7 @@
    "id": "era-landmarks",
    "title": "Branch-mapped landmark versions",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist"
    ],
@@ -1676,14 +1712,14 @@
    "id": "newton-leibniz",
    "title": "Newton vs Leibniz factions",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-games",
    "owners": [
     "Math Historian"
    ],
    "stage": "Idea",
-   "summary": "A factions game element built on the Newton / Leibniz rivalry.",
+   "summary": "A factions game element built on the Newton / Leibniz rivalry, a fit for ForgePath or a minigame.",
    "done": "",
-   "next": "Decide where it lives: Wayfinder, Mathera, or a minigame.",
+   "next": "Decide where it lives: ForgePath or a standalone minigame.",
    "history": [
     {
      "date": "2026-10-03",
@@ -1704,20 +1740,20 @@
    "files": [],
    "updated": "2026-10-09",
    "waitingOnJulius": true,
-   "decision": "Decide where the factions idea lives: Wayfinder, Mathera, or a minigame"
+   "decision": "Decide where the factions idea lives: ForgePath or a minigame"
   },
   {
    "id": "precedence",
-   "title": "Precedence",
+   "title": "Precedence (merged into The Road)",
    "realm": "EDUCATION",
    "goal": "g-games",
    "owners": [
     "Math Sensei"
    ],
-   "stage": "Paused",
-   "summary": "OutRun-style order-of-operations racer; Eras 1–4 playable.",
+   "stage": "Abandoned / Superseded",
+   "summary": "OutRun-style order-of-operations racer (Eras 1–4 playable). Merged into The Road.",
    "done": "",
-   "next": "Demo polish, pixel vehicles.",
+   "next": "",
    "history": [
     {
      "date": "2026-10-02",
@@ -1730,9 +1766,15 @@
      "approx": false,
      "text": "GitHub Pages with Eras 1–4 playable; Flight Eras 11–20 as stubs",
      "kind": "step"
+    },
+    {
+     "date": "2026-10-09",
+     "approx": false,
+     "text": "Merged into The Road (Julius's decision)",
+     "kind": "step"
     }
    ],
-   "lastTouched": "2026-10-03",
+   "lastTouched": "2026-10-09",
    "source": "Bot reports (2026-10-09)",
    "links": [
     {
@@ -1743,23 +1785,23 @@
    "files": [],
    "updated": "2026-10-09",
    "waitingOnJulius": false,
-   "note": "Overlap: The Road is also an algebra racer and its plate 1 is called 'Precedence'.",
-   "stageNote": "Paused; last work 2026-10-03",
+   "stageNote": "Merged into The Road",
    "liveUrl": "https://julianlee314-hue.github.io/precedence/",
    "liveLabel": "Play Precedence"
   },
   {
    "id": "the-road",
-   "title": "The Road",
+   "title": "The Road (merged with Precedence)",
    "realm": "EDUCATION",
    "goal": "g-games",
    "owners": [
-    "Math Website Administrator"
+    "Math Website Administrator",
+    "Math Sensei"
    ],
-   "stage": "Built / Shipped",
-   "summary": "Phone-first algebra racer in a 60s cartoon style. Plates 1–15, career chapters 1–2.",
+   "stage": "Planning",
+   "summary": "Phone-first algebra racer in a 60s cartoon style (plates 1–15, career chapters 1–2), merging in Precedence's OutRun-style order-of-operations eras.",
    "done": "",
-   "next": "Julius's feedback, then chapter 3.",
+   "next": "Plan the merged game, then chapter 3.",
    "history": [
     {
      "date": "2026-10-02",
@@ -1768,9 +1810,21 @@
      "kind": "first"
     },
     {
+     "date": "2026-10-02",
+     "approx": false,
+     "text": "Precedence: First discussed: ten-era vehicle ladder; 'Miami Burnout' defined as 1.0",
+     "kind": "step"
+    },
+    {
      "date": "2026-10-03",
      "approx": false,
      "text": "Live: plates 1–11, then 12–15",
+     "kind": "step"
+    },
+    {
+     "date": "2026-10-03",
+     "approx": false,
+     "text": "Precedence: GitHub Pages with Eras 1–4 playable; Flight Eras 11–20 as stubs",
      "kind": "step"
     },
     {
@@ -1784,9 +1838,15 @@
      "approx": false,
      "text": "Restyle + PRESS START; career story bible; chapters 1–2",
      "kind": "step"
+    },
+    {
+     "date": "2026-10-09",
+     "approx": false,
+     "text": "Julius decided to merge Precedence and The Road into one game",
+     "kind": "step"
     }
    ],
-   "lastTouched": "2026-10-05",
+   "lastTouched": "2026-10-09",
    "source": "Bot reports (2026-10-09)",
    "links": [
     {
@@ -1798,7 +1858,7 @@
    "updated": "2026-10-09",
    "waitingOnJulius": true,
    "decision": "Play The Road and send feedback before chapter 3",
-   "stageNote": "Built (plates 1–15, career ch 1–2); waiting on Julius before ch 3",
+   "stageNote": "Planning (merge of The Road and Precedence)",
    "liveUrl": "https://julianlee314-hue.github.io/the-road/",
    "liveLabel": "Play The Road"
   },
@@ -4639,7 +4699,7 @@
    "id": "era-art-4-v1",
    "title": "Era IV v1: Great Engine",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist"
    ],
@@ -4673,7 +4733,7 @@
    "id": "era-art-5-v1",
    "title": "Era V v1: marble-castle tree",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist"
    ],
@@ -4707,7 +4767,7 @@
    "id": "era-art-6-v1",
    "title": "Era VI v1: cosmic tree",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist"
    ],
@@ -4741,7 +4801,7 @@
    "id": "era-art-6-v2",
    "title": "Era VI v2: sky city",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist"
    ],
@@ -4775,7 +4835,7 @@
    "id": "era-extras",
    "title": "Portrait shots, zoomed details, era transition spaces",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-worldart",
    "owners": [
     "Mathera Artist"
    ],

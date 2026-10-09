@@ -428,7 +428,7 @@ function render(){
   const h=$("#abHide"); if(h) h.onclick=()=>{state.ab=false;saveUI();render()};
   if(snapNext){ snapNext=false; if(window.innerWidth<=760){ const first=[...board.querySelectorAll(".col")].find(c=>c.querySelector(".note")); board.scrollLeft = first ? first.offsetLeft-12 : 0; } }
 }
-function stampOf(p){ const t=((p.history||[]).slice(-1)[0]||{}).text||""; return /supersed|replaced|successor/i.test(t+" "+(p.stageNote||""))?"superseded":"abandoned"; }
+function stampOf(p){ const t=((p.history||[]).slice(-1)[0]||{}).text||""; const s=t+" "+(p.stageNote||""); return /merged/i.test(s)?"merged":/early exploration/i.test(s)?"explored":/supersed|replaced|successor/i.test(s)?"superseded":"abandoned"; }
 function noteEl(p){
   const d=document.createElement("article");
   d.className="note"+(p.waitingOnJulius&&p.stage!==AB?" waiting":"");
