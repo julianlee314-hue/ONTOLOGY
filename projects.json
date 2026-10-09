@@ -1,0 +1,2120 @@
+{
+ "title": "ONTOLOGY Kanban",
+ "updated": "2026-10-09",
+ "stages": [
+  "Idea",
+  "Planning",
+  "Design",
+  "In Progress",
+  "Built / Shipped",
+  "Paused"
+ ],
+ "realms": [
+  {
+   "id": "EDUCATION",
+   "label": "EDUCATION",
+   "folder": ""
+  },
+  {
+   "id": "LIFE",
+   "label": "LIFE",
+   "folder": ""
+  },
+  {
+   "id": "MEDIA",
+   "label": "MEDIA",
+   "folder": ""
+  },
+  {
+   "id": "TOOLS",
+   "label": "TOOLS",
+   "folder": ""
+  },
+  {
+   "id": "OTHER",
+   "label": "OTHER",
+   "folder": ""
+  }
+ ],
+ "areas": [
+  {
+   "id": "mathera",
+   "label": "Mathera & Wayfinder"
+  },
+  {
+   "id": "games",
+   "label": "Math games"
+  },
+  {
+   "id": "chrono",
+   "label": "Chronographs"
+  },
+  {
+   "id": "life",
+   "label": "Life apps"
+  },
+  {
+   "id": "lang",
+   "label": "Languages (字園)"
+  },
+  {
+   "id": "books",
+   "label": "Books & Comics"
+  },
+  {
+   "id": "cooking",
+   "label": "Cooking"
+  },
+  {
+   "id": "media",
+   "label": "Media & Home tech"
+  },
+  {
+   "id": "creative",
+   "label": "Creative / TRASK & TOWER 9"
+  },
+  {
+   "id": "property",
+   "label": "Property & Travel"
+  },
+  {
+   "id": "legal",
+   "label": "Legal & Money advice"
+  },
+  {
+   "id": "fitness",
+   "label": "Fitness"
+  },
+  {
+   "id": "mac",
+   "label": "Mac/IT & Security"
+  }
+ ],
+ "storagePrefix": "ontologyPublic",
+ "public": true,
+ "footer": "Public view of Julius's ONTOLOGY project board. Some personal projects are summarized.",
+ "projects": [
+  {
+   "id": "p-mathera",
+   "realm": "EDUCATION",
+   "title": "Mathera platform",
+   "description": "The Mathera site and its builds (v0.5 → v0.6.2), plus the curriculum spine and planning docs.",
+   "owners": [
+    "Math Website Administrator",
+    "Math Sensei",
+    "Math Historian",
+    "Mathera Artist"
+   ],
+   "children": [
+    "mathera-v05",
+    "mathera-v06",
+    "mathera-v061",
+    "mathera-v062",
+    "mathera-spine",
+    "spotlight-pdf",
+    "curriculum-pack"
+   ],
+   "updated": "2026-10-09",
+   "liveUrl": "https://julianlee314-hue.github.io/mathera/",
+   "liveLabel": "Open Mathera v0.5 (main site)",
+   "liveNote": "Main site is v0.5 (/mathera/); Julius hasn't picked the canonical build yet, so every version is listed in the panel."
+  },
+  {
+   "id": "p-wayfinder",
+   "realm": "EDUCATION",
+   "title": "Wayfinder",
+   "description": "RPG app linked to Mathera, with its era art, the older ForgePath shell and game ideas.",
+   "owners": [
+    "Math Sensei",
+    "Mathera Artist",
+    "Grok Bot",
+    "Math Website Administrator",
+    "Math Historian"
+   ],
+   "children": [
+    "wayfinder",
+    "forgepath",
+    "era-art",
+    "newton-leibniz"
+   ],
+   "updated": "2026-10-09",
+   "note": "Wayfinder is the locked brand; ForgePath Prequel is the older playable shell.",
+   "liveUrl": "https://julianlee314-hue.github.io/forgepath/",
+   "liveLabel": "Open ForgePath Prequel",
+   "liveNote": "Wayfinder itself isn't live yet; this opens ForgePath Prequel, the older playable shell."
+  },
+  {
+   "id": "p-games",
+   "realm": "EDUCATION",
+   "title": "Math games",
+   "description": "Playable math games and tools: racers, a number puzzle and the Graph Lab.",
+   "owners": [
+    "Math Website Administrator",
+    "Math Sensei",
+    "Grok Bot"
+   ],
+   "children": [
+    "precedence",
+    "the-road",
+    "the-sky",
+    "operate",
+    "graph-lab",
+    "ai-minigames"
+   ],
+   "updated": "2026-10-09",
+   "note": "Possible merge: Precedence and The Road are both algebra racers, and The Road's plate 1 is called \"Precedence\".",
+   "liveUrl": "https://julianlee314-hue.github.io/the-road/",
+   "liveLabel": "Play The Road"
+  },
+  {
+   "id": "p-exam",
+   "realm": "EDUCATION",
+   "title": "Exam prep",
+   "description": "The Notebooks: UK / IB / US exam overlay with 1000 skills and 3000 questions.",
+   "owners": [
+    "Math Sensei"
+   ],
+   "children": [
+    "notebooks"
+   ],
+   "updated": "2026-10-09"
+  },
+  {
+   "id": "p-history",
+   "realm": "EDUCATION",
+   "title": "Math history & culture",
+   "description": "Math History 101, the math-memes gallery and atlas, and the Mathera Worlds screensaver.",
+   "owners": [
+    "Math Sensei",
+    "Math Website Administrator"
+   ],
+   "children": [
+    "math-history-101",
+    "math-memes",
+    "meme-atlas",
+    "screensaver"
+   ],
+   "updated": "2026-10-09",
+   "liveUrl": "https://julianlee314-hue.github.io/math-history-101/",
+   "liveLabel": "Open Math History 101"
+  },
+  {
+   "id": "p-chrono",
+   "realm": "EDUCATION",
+   "title": "Chronographs",
+   "description": "Interactive history timelines: the hub page plus Chronographs I–VI.",
+   "owners": [
+    "Math Sensei"
+   ],
+   "children": [
+    "chronographs-home",
+    "chrono-1",
+    "chrono-2",
+    "chrono-3",
+    "chrono-4",
+    "chrono-5",
+    "chrono-6"
+   ],
+   "updated": "2026-10-09",
+   "liveUrl": "https://julianlee314-hue.github.io/chronographs/",
+   "liveLabel": "Open the Chronographs hub"
+  },
+  {
+   "id": "p-ziyuan",
+   "realm": "EDUCATION",
+   "title": "字園 Zìyuán",
+   "description": "Traditional Chinese character garden, plus the 成語 idiom study and daily lesson.",
+   "owners": [
+    "Taiwan/Chinese Webmaster"
+   ],
+   "children": [
+    "ziyuan",
+    "chengyu-study",
+    "chengyu-daily"
+   ],
+   "updated": "2026-10-09",
+   "liveUrl": "https://julianlee314-hue.github.io/ziyuan/",
+   "liveLabel": "Open 字園 Zìyuán"
+  },
+  {
+   "id": "p-lifeapps",
+   "realm": "LIFE",
+   "title": "Life apps",
+   "description": "Personal apps: Meridian, TENDER, a home page and an income-app idea (some private).",
+   "owners": [
+    "KEEP Finance Bot",
+    "MacOS/Tech Expert"
+   ],
+   "children": [
+    "meridian",
+    "tender",
+    "life-homepage",
+    "income-app"
+   ],
+   "updated": "2026-10-09"
+  },
+  {
+   "id": "p-cookbooks",
+   "realm": "LIFE",
+   "title": "Cookbooks",
+   "description": "Recipe sites and everyday cooking help (some private).",
+   "owners": [
+    "Carl the Chef",
+    "RE/MAX"
+   ],
+   "children": [
+    "recipes-rewatch",
+    "southern-cookbook",
+    "golden-wok",
+    "border-mesa",
+    "chef-help"
+   ],
+   "updated": "2026-10-09",
+   "liveUrl": "https://julianlee314-hue.github.io/recipe-playlist-digests/",
+   "liveLabel": "Open Recipes Worth Rewatching"
+  },
+  {
+   "id": "p-fitness",
+   "realm": "LIFE",
+   "title": "Fitness",
+   "description": "Swimming and rowing training, plus a tracker-data idea.",
+   "owners": [
+    "Fitbot",
+    "Carl the Chef"
+   ],
+   "children": [
+    "fitness-plan",
+    "erg",
+    "whoop"
+   ],
+   "updated": "2026-10-09"
+  },
+  {
+   "id": "p-admin",
+   "realm": "LIFE",
+   "title": "Life admin",
+   "description": "Personal admin: property research, travel, calendar, advice (private).",
+   "owners": [
+    "RE/MAX",
+    "Lawyer/Business Advisor",
+    "Kronos"
+   ],
+   "children": [
+    "property-a",
+    "property-b",
+    "property-rentals",
+    "property-explainers",
+    "trip",
+    "calendar",
+    "finance-advice",
+    "creator-advice",
+    "lecturer"
+   ],
+   "updated": "2026-10-09"
+  },
+  {
+   "id": "p-trask",
+   "realm": "MEDIA",
+   "title": "TRASK & Fake Film School",
+   "description": "The TRASK satire wire, its off-wire house media, and the domain + accounts.",
+   "owners": [
+    "TRASK CORP",
+    "Lawyer/Business Advisor"
+   ],
+   "children": [
+    "trask-wire",
+    "trask-house-media",
+    "trask-domain"
+   ],
+   "updated": "2026-10-09",
+   "liveUrl": "https://opal-raven-polar-cinder.grok.me",
+   "liveLabel": "Open the live TRASK Wire"
+  },
+  {
+   "id": "p-tower9",
+   "realm": "MEDIA",
+   "title": "TOWER 9",
+   "description": "Original 90s beach-rescue cutout cartoon shorts.",
+   "owners": [
+    "Grok Bot"
+   ],
+   "children": [
+    "tower-9"
+   ],
+   "updated": "2026-10-09",
+   "note": "The David director bot no longer exists; Grok Bot owns TOWER 9."
+  },
+  {
+   "id": "p-homemedia",
+   "realm": "MEDIA",
+   "title": "Home media",
+   "description": "Home media library organization, a private movie app and the retro commercials project (some private).",
+   "owners": [
+    "MacOS/Tech Expert",
+    "Grok Bot",
+    "Video Grabber"
+   ],
+   "children": [
+    "cm-movies",
+    "cm-tv",
+    "tv-gaps",
+    "artwork",
+    "drive-sleep",
+    "thin-cinema",
+    "retro-commercials"
+   ],
+   "updated": "2026-10-09"
+  },
+  {
+   "id": "p-comics",
+   "realm": "MEDIA",
+   "title": "Comics",
+   "description": "COMIX READER and the How to Read a Comic guide.",
+   "owners": [
+    "Bookworm"
+   ],
+   "children": [
+    "comix-reader",
+    "read-comic-pdf"
+   ],
+   "updated": "2026-10-09"
+  },
+  {
+   "id": "p-books",
+   "realm": "TOOLS",
+   "title": "Books",
+   "description": "Book catalog sites and reading tools (some private).",
+   "owners": [
+    "Bookworm"
+   ],
+   "children": [
+    "books-library",
+    "citadel",
+    "orbit-archive",
+    "books-recovery",
+    "books-home",
+    "book-checkins"
+   ],
+   "updated": "2026-10-09"
+  },
+  {
+   "id": "p-mac",
+   "realm": "TOOLS",
+   "title": "Mac, network & security",
+   "description": "Mac & security upkeep (private).",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "children": [
+    "disk-cleanup",
+    "ontology-reorg",
+    "weekly-digest",
+    "security",
+    "home-network",
+    "remote-access"
+   ],
+   "updated": "2026-10-09"
+  },
+  {
+   "id": "p-dev",
+   "realm": "TOOLS",
+   "title": "Dev setup",
+   "description": "Game development toolchain.",
+   "owners": [
+    "Grok Bot"
+   ],
+   "children": [
+    "dev-setup"
+   ],
+   "updated": "2026-10-09"
+  },
+  {
+   "id": "p-publishing",
+   "realm": "TOOLS",
+   "title": "Publishing & legal hygiene",
+   "description": "Review of what's published (private notes).",
+   "owners": [
+    "Lawyer/Business Advisor"
+   ],
+   "children": [
+    "publish-review"
+   ],
+   "updated": "2026-10-09"
+  },
+  {
+   "id": "p-kanban",
+   "realm": "TOOLS",
+   "title": "ONTOLOGY Kanban & routines",
+   "description": "This board and the Monday AI check-in routine.",
+   "owners": [
+    "Grok Bot"
+   ],
+   "children": [
+    "kanban",
+    "monday-checkin"
+   ],
+   "updated": "2026-10-09"
+  }
+ ],
+ "items": [
+  {
+   "id": "trask-wire",
+   "title": "TRASK Wire",
+   "realm": "MEDIA",
+   "project": "p-trask",
+   "area": "creative",
+   "owners": [
+    "TRASK CORP",
+    "Lawyer/Business Advisor"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "69-plate satire meme wire in a Burroughs voice.",
+   "done": "Rewrite published 2026-09-28.",
+   "next": "New intake decision: more Logistics / Body / Republic posters, bigger Antiquity.",
+   "links": [
+    {
+     "label": "Open the live TRASK Wire",
+     "url": "https://opal-raven-polar-cinder.grok.me"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": true,
+   "decision": "Decide the next intake (more Logistics/Body/Republic posters, bigger Antiquity?)",
+   "liveUrl": "https://opal-raven-polar-cinder.grok.me",
+   "liveLabel": "Open the live TRASK Wire"
+  },
+  {
+   "id": "trask-house-media",
+   "title": "TRASK off-wire house media",
+   "realm": "MEDIA",
+   "project": "p-trask",
+   "area": "creative",
+   "owners": [
+    "TRASK CORP"
+   ],
+   "stage": "Idea",
+   "summary": "Off-wire TRASK media pieces (unpublished).",
+   "done": "",
+   "next": "Publish decision pending.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": true,
+   "decision": "Decide whether to publish the off-wire house media"
+  },
+  {
+   "id": "trask-domain",
+   "title": "TRASK / Fake Film School accounts + domain",
+   "realm": "MEDIA",
+   "project": "p-trask",
+   "area": "creative",
+   "owners": [
+    "Lawyer/Business Advisor"
+   ],
+   "stage": "In Progress",
+   "summary": "Accounts and a domain for TRASK / Fake Film School.",
+   "done": "",
+   "next": "Pick a domain.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "In progress (barely)",
+   "waitingOnJulius": true,
+   "decision": "Pick a domain for TRASK / Fake Film School"
+  },
+  {
+   "id": "tower-9",
+   "title": "TOWER 9 animated shorts",
+   "realm": "MEDIA",
+   "project": "p-tower9",
+   "area": "creative",
+   "owners": [
+    "Grok Bot"
+   ],
+   "stage": "Design",
+   "summary": "Original 90s beach-rescue cutout cartoon, ~90-second episodes.",
+   "done": "Cast of 8 drafted. Director's edit delivered as 12 yes/no proposals; ~90s episodes.",
+   "next": "Julius signs off on the proposals, then storyboard.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": true,
+   "decision": "Sign off yes/no on the director's 12 proposals so storyboarding can start",
+   "note": "The David director bot no longer exists; Grok Bot now owns TOWER 9."
+  },
+  {
+   "id": "mathera-spine",
+   "title": "Mathera curriculum spine",
+   "realm": "EDUCATION",
+   "project": "p-mathera",
+   "area": "mathera",
+   "owners": [
+    "Math Sensei",
+    "Math Historian",
+    "Mathera Artist"
+   ],
+   "stage": "Design",
+   "summary": "144 concepts organised into lineages and eras.",
+   "done": "Spine of 144 concepts, lineages and eras.",
+   "next": "Map it onto Wayfinder.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "notebooks",
+   "title": "The Notebooks (Testing / Exam Mode)",
+   "realm": "EDUCATION",
+   "project": "p-exam",
+   "area": "mathera",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "UK / IB / US exam overlay: 1000 skills, 3000 questions, PDF.",
+   "done": "Content built: 1000 skills, 3000 questions, PDF.",
+   "next": "Build the app UI.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built (content)",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "wayfinder",
+   "title": "Wayfinder",
+   "realm": "EDUCATION",
+   "project": "p-wayfinder",
+   "area": "mathera",
+   "owners": [
+    "Math Sensei",
+    "Mathera Artist",
+    "Grok Bot"
+   ],
+   "stage": "Design",
+   "summary": "RPG app that links to Mathera. Wayfinder is the locked brand.",
+   "done": "Battle briefs for Eras I and II; dependency map.",
+   "next": "Pick the MVP slice.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "era-art",
+   "title": "Wayfinder Era World Art (Mathera Artist)",
+   "realm": "EDUCATION",
+   "project": "p-wayfinder",
+   "area": "mathera",
+   "owners": [
+    "Mathera Artist",
+    "Grok Bot",
+    "Math Sensei"
+   ],
+   "stage": "Design",
+   "summary": "Hero wallpaper art for the 7 eras, with room for skill paths.",
+   "done": "Hero art for 7 eras; Eras IV/V/VI redone as structures. Era VI is now \"Change\" (calculus, 12 branches, 174 skills) with 10 alternative concepts.",
+   "next": "Julius picks the Era VI concept (artist recommends cascade gardens; runner-up river delta), then branch-matched landmarks. Style guide pending.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": true,
+   "decision": "Pick the Era VI concept (recommended: cascade gardens; runner-up: river delta)"
+  },
+  {
+   "id": "math-history-101",
+   "title": "Math History 101",
+   "realm": "EDUCATION",
+   "project": "p-history",
+   "area": "mathera",
+   "owners": [
+    "Math Website Administrator",
+    "Math Sensei"
+   ],
+   "stage": "In Progress",
+   "summary": "Math history site, built by Math Sensei, now run by Math Website Administrator.",
+   "done": "Built and handed from Math Sensei to Math Website Administrator on 2026-10-03.",
+   "next": "~128 of 144 Wall icons, evolution drawers, pixel trophies.",
+   "links": [
+    {
+     "label": "Open Math History 101",
+     "url": "https://julianlee314-hue.github.io/math-history-101/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false,
+   "note": "Conflict resolved: Math Sensei listed it as Built/Shipped; MWA says the Wall icons are unfinished, so it sits in In Progress, owned by MWA.",
+   "liveUrl": "https://julianlee314-hue.github.io/math-history-101/",
+   "liveLabel": "Open Math History 101"
+  },
+  {
+   "id": "math-memes",
+   "title": "math-memes gallery",
+   "realm": "EDUCATION",
+   "project": "p-history",
+   "area": "mathera",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Gallery of 936 math meme images.",
+   "done": "936 images live.",
+   "next": "Optional: map memes to the curriculum.",
+   "links": [
+    {
+     "label": "Open the math-memes gallery",
+     "url": "https://julianlee314-hue.github.io/math-memes/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false,
+   "liveUrl": "https://julianlee314-hue.github.io/math-memes/",
+   "liveLabel": "Open the math-memes gallery"
+  },
+  {
+   "id": "meme-atlas",
+   "title": "Mathematical Meme Atlas (PDF)",
+   "realm": "EDUCATION",
+   "project": "p-history",
+   "area": "mathera",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "PDF atlas of the math memes.",
+   "done": "Built.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "newton-leibniz",
+   "title": "Newton vs Leibniz factions",
+   "realm": "EDUCATION",
+   "project": "p-wayfinder",
+   "area": "mathera",
+   "owners": [
+    "Math Historian"
+   ],
+   "stage": "Idea",
+   "summary": "A factions game element built on the Newton / Leibniz rivalry.",
+   "done": "Idea only. Related story seeds: Archimedes, Thales' olive presses, Hypatia, Columbus's 1504 eclipse, a made-up banking house's Waterloo beat.",
+   "next": "Decide where it lives: Wayfinder, Mathera, or a minigame.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": true,
+   "decision": "Decide where the factions idea lives: Wayfinder, Mathera, or a minigame"
+  },
+  {
+   "id": "mathera-v05",
+   "title": "Mathera v0.5 main site",
+   "realm": "EDUCATION",
+   "project": "p-mathera",
+   "area": "mathera",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "The current public Mathera site.",
+   "done": "Live.",
+   "next": "Retire/redirect it, or replace it with a 0.6.x build.",
+   "links": [
+    {
+     "label": "Open Mathera v0.5 (main site)",
+     "url": "https://julianlee314-hue.github.io/mathera/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": true,
+   "decision": "Retire/redirect v0.5 or replace it with a 0.6.x build",
+   "liveUrl": "https://julianlee314-hue.github.io/mathera/",
+   "liveLabel": "Open Mathera v0.5 (main site)"
+  },
+  {
+   "id": "mathera-v06",
+   "title": "Mathera v0.6 test site",
+   "realm": "EDUCATION",
+   "project": "p-mathera",
+   "area": "mathera",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Test build with Spotlight search and Practice / Learn / Map tabs (761 skills).",
+   "done": "Spotlight search; Practice, Learn and Map tabs covering 761 skills.",
+   "next": "The Map still lacks prerequisite links.",
+   "links": [
+    {
+     "label": "Open Mathera v0.6",
+     "url": "https://julianlee314-hue.github.io/mathera-v06/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built (test)",
+   "waitingOnJulius": false,
+   "liveUrl": "https://julianlee314-hue.github.io/mathera-v06/",
+   "liveLabel": "Open Mathera v0.6"
+  },
+  {
+   "id": "mathera-v061",
+   "title": "Mathera v0.6.1 (Era VI: The Spiral Isle)",
+   "realm": "EDUCATION",
+   "project": "p-mathera",
+   "area": "mathera",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "The devs' build featuring Era VI, The Spiral Isle.",
+   "done": "Test build live.",
+   "next": "",
+   "links": [
+    {
+     "label": "Open Mathera v0.6.1",
+     "url": "https://julianlee314-hue.github.io/mathera-v061/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built (test)",
+   "waitingOnJulius": false,
+   "liveUrl": "https://julianlee314-hue.github.io/mathera-v061/",
+   "liveLabel": "Open Mathera v0.6.1"
+  },
+  {
+   "id": "mathera-v062",
+   "title": "Mathera v0.6.2 (high-res paintings)",
+   "realm": "EDUCATION",
+   "project": "p-mathera",
+   "area": "mathera",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Test build with 3200×1800 era paintings.",
+   "done": "Test build live.",
+   "next": "Julius picks the canonical build.",
+   "links": [
+    {
+     "label": "Open Mathera v0.6.2",
+     "url": "https://julianlee314-hue.github.io/mathera-v062/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built (test)",
+   "waitingOnJulius": true,
+   "decision": "Pick the canonical Mathera build (v0.6 / v0.6.1 / v0.6.2)",
+   "liveUrl": "https://julianlee314-hue.github.io/mathera-v062/",
+   "liveLabel": "Open Mathera v0.6.2"
+  },
+  {
+   "id": "spotlight-pdf",
+   "title": "Mathera Spotlight search ideas (PDF)",
+   "realm": "EDUCATION",
+   "project": "p-mathera",
+   "area": "mathera",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "Planning",
+   "summary": "Ideas document for Mathera's Spotlight search.",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "graph-lab",
+   "title": "Mathera Graph Lab",
+   "realm": "EDUCATION",
+   "project": "p-games",
+   "area": "mathera",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Desmos-style educational grapher (MVP).",
+   "done": "MVP live.",
+   "next": "Inequalities, slope triangle, transform animation.",
+   "links": [
+    {
+     "label": "Open Graph Lab",
+     "url": "https://julianlee314-hue.github.io/graph-lab/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built/Shipped (MVP)",
+   "waitingOnJulius": false,
+   "liveUrl": "https://julianlee314-hue.github.io/graph-lab/",
+   "liveLabel": "Open Graph Lab"
+  },
+  {
+   "id": "curriculum-pack",
+   "title": "Curriculum comparison pack",
+   "realm": "EDUCATION",
+   "project": "p-mathera",
+   "area": "mathera",
+   "owners": [
+    "Math Website Administrator",
+    "Math Sensei"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Comparison of 10 platforms across UK / IB / Common Core.",
+   "done": "Docs delivered.",
+   "next": "Math Sensei decides which gaps to add.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "forgepath",
+   "title": "ForgePath Prequel",
+   "realm": "EDUCATION",
+   "project": "p-wayfinder",
+   "area": "mathera",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "Paused",
+   "summary": "Wordless math RPG, the older playable shell before Wayfinder.",
+   "done": "Playable prequel shell.",
+   "next": "16-bit pixel upgrade.",
+   "links": [
+    {
+     "label": "Open ForgePath Prequel",
+     "url": "https://julianlee314-hue.github.io/forgepath/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Paused/Design",
+   "waitingOnJulius": false,
+   "note": "Conflict resolved: Wayfinder is the locked brand; ForgePath Prequel is the older playable shell.",
+   "liveUrl": "https://julianlee314-hue.github.io/forgepath/",
+   "liveLabel": "Open ForgePath Prequel"
+  },
+  {
+   "id": "precedence",
+   "title": "Precedence",
+   "realm": "EDUCATION",
+   "project": "p-games",
+   "area": "games",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Paused",
+   "summary": "OutRun-style order-of-operations racer.",
+   "done": "Eras 1–4 playable.",
+   "next": "Demo polish, pixel vehicles.",
+   "links": [
+    {
+     "label": "Play Precedence",
+     "url": "https://julianlee314-hue.github.io/precedence/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "In progress (paused on content)",
+   "waitingOnJulius": false,
+   "note": "Possible overlap: The Road (MWA) is also an algebra racer, and its plate 1 is called \"Precedence\".",
+   "liveUrl": "https://julianlee314-hue.github.io/precedence/",
+   "liveLabel": "Play Precedence"
+  },
+  {
+   "id": "the-road",
+   "title": "The Road",
+   "realm": "EDUCATION",
+   "project": "p-games",
+   "area": "games",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "In Progress",
+   "summary": "Phone-first algebra racer in a 60s cartoon style.",
+   "done": "Plates 1–15 playable; career chapters 1–2.",
+   "next": "Julius's feedback, then chapter 3.",
+   "links": [
+    {
+     "label": "Play The Road",
+     "url": "https://julianlee314-hue.github.io/the-road/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": true,
+   "decision": "Play The Road and send feedback before chapter 3",
+   "note": "Possible overlap with Precedence: The Road's plate 1 is \"Precedence\".",
+   "liveUrl": "https://julianlee314-hue.github.io/the-road/",
+   "liveLabel": "Play The Road"
+  },
+  {
+   "id": "the-sky",
+   "title": "The Sky",
+   "realm": "EDUCATION",
+   "project": "p-games",
+   "area": "games",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "Idea",
+   "summary": "Calculus sequel to The Road.",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "operate",
+   "title": "OPERATE!",
+   "realm": "EDUCATION",
+   "project": "p-games",
+   "area": "games",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Four-tile target-number puzzle (Era II).",
+   "done": "Prototype built.",
+   "next": "Duels, pets.",
+   "links": [
+    {
+     "label": "Play OPERATE!",
+     "url": "https://julianlee314-hue.github.io/operate/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built (prototype)",
+   "waitingOnJulius": false,
+   "liveUrl": "https://julianlee314-hue.github.io/operate/",
+   "liveLabel": "Play OPERATE!"
+  },
+  {
+   "id": "ai-minigames",
+   "title": "AI minigames",
+   "realm": "EDUCATION",
+   "project": "p-games",
+   "area": "games",
+   "owners": [
+    "Grok Bot"
+   ],
+   "stage": "Idea",
+   "summary": "Minigames tracked through the Monday check-ins.",
+   "done": "No details reported yet.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Idea/Planning",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "chronographs-home",
+   "title": "Chronographs home",
+   "realm": "EDUCATION",
+   "project": "p-chrono",
+   "area": "chrono",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Hub page for the Chronograph timelines.",
+   "done": "Live.",
+   "next": "",
+   "links": [
+    {
+     "label": "Open the Chronographs hub",
+     "url": "https://julianlee314-hue.github.io/chronographs/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false,
+   "liveUrl": "https://julianlee314-hue.github.io/chronographs/",
+   "liveLabel": "Open the Chronographs hub"
+  },
+  {
+   "id": "chrono-1",
+   "title": "Chronograph I: The Dow 1896–2026",
+   "realm": "EDUCATION",
+   "project": "p-chrono",
+   "area": "chrono",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Timeline of the Dow, 1896–2026 (v0.2).",
+   "done": "v0.2 live.",
+   "next": "Fix the president strip.",
+   "links": [
+    {
+     "label": "Open Chronograph I",
+     "url": "https://julianlee314-hue.github.io/dow-timeline/v0.2/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false,
+   "liveUrl": "https://julianlee314-hue.github.io/dow-timeline/v0.2/",
+   "liveLabel": "Open Chronograph I"
+  },
+  {
+   "id": "chrono-2",
+   "title": "Chronograph II: The Bank 1694–1994",
+   "realm": "EDUCATION",
+   "project": "p-chrono",
+   "area": "chrono",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Three centuries of the Bank, 1694–1994.",
+   "done": "Live.",
+   "next": "Ideas: South Sea inset, VOC check, headline dash gap.",
+   "links": [
+    {
+     "label": "Open Chronograph II",
+     "url": "https://julianlee314-hue.github.io/the-bank-1694/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false,
+   "liveUrl": "https://julianlee314-hue.github.io/the-bank-1694/",
+   "liveLabel": "Open Chronograph II"
+  },
+  {
+   "id": "chrono-3",
+   "title": "Chronograph III: WW2 Week by Week",
+   "realm": "EDUCATION",
+   "project": "p-chrono",
+   "area": "chrono",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Paused",
+   "summary": "Week-by-week WW2 strategic map.",
+   "done": "Work paused 2026-10-08.",
+   "next": "Monthly control areas, front lines, Ruler/Logbook layout.",
+   "links": [
+    {
+     "label": "Open Chronograph III",
+     "url": "https://julianlee314-hue.github.io/ww2-strat-map/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "In progress, paused 2026-10-08",
+   "waitingOnJulius": false,
+   "liveUrl": "https://julianlee314-hue.github.io/ww2-strat-map/",
+   "liveLabel": "Open Chronograph III"
+  },
+  {
+   "id": "chrono-4",
+   "title": "Chronograph IV: Company-States 1492–1874",
+   "realm": "EDUCATION",
+   "project": "p-chrono",
+   "area": "chrono",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Idea",
+   "summary": "Company-states from 1492 to 1874.",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "chrono-5",
+   "title": "Chronograph V: WWII Asia & Pacific 1937–45",
+   "realm": "EDUCATION",
+   "project": "p-chrono",
+   "area": "chrono",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Idea",
+   "summary": "The Asia & Pacific war, 1937–45.",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "chrono-6",
+   "title": "Chronograph VI: Korea & Vietnam 1950–75",
+   "realm": "EDUCATION",
+   "project": "p-chrono",
+   "area": "chrono",
+   "owners": [
+    "Math Sensei"
+   ],
+   "stage": "Idea",
+   "summary": "The Korea and Vietnam wars, 1950–75.",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "meridian",
+   "title": "Meridian (formerly KEEP)",
+   "realm": "LIFE",
+   "project": "p-lifeapps",
+   "area": "life",
+   "owners": [
+    "KEEP Finance Bot"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Personal finance app (private).",
+   "done": "Built.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "tender",
+   "title": "TENDER",
+   "realm": "LIFE",
+   "project": "p-lifeapps",
+   "area": "life",
+   "owners": [
+    "KEEP Finance Bot",
+    "MacOS/Tech Expert"
+   ],
+   "stage": "In Progress",
+   "summary": "Value converter for currencies, crypto, metals and custom units.",
+   "done": "Web prototype built.",
+   "next": "Publish it, then a native Mac app and a trademark check.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "life-homepage",
+   "title": "Life homepage",
+   "realm": "LIFE",
+   "project": "p-lifeapps",
+   "area": "life",
+   "owners": [
+    "KEEP Finance Bot"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Personal home page (private).",
+   "done": "Built locally.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built (local)",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "income-app",
+   "title": "Income app",
+   "realm": "LIFE",
+   "project": "p-lifeapps",
+   "area": "life",
+   "owners": [
+    "KEEP Finance Bot"
+   ],
+   "stage": "Idea",
+   "summary": "Personal finance idea (private).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "calendar",
+   "title": "Calendar setup",
+   "realm": "LIFE",
+   "project": "p-admin",
+   "area": "life",
+   "owners": [
+    "Kronos"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Calendar and reminders setup (private).",
+   "done": "Set up and in use.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "monday-checkin",
+   "title": "Monday AI check-in routine",
+   "realm": "TOOLS",
+   "project": "p-kanban",
+   "area": "life",
+   "owners": [
+    "Grok Bot"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Weekly Monday check-in on projects.",
+   "done": "Running.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built, running",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "kanban",
+   "title": "ONTOLOGY Kanban (this board)",
+   "realm": "TOOLS",
+   "project": "p-kanban",
+   "area": "life",
+   "owners": [
+    "Grok Bot"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "This board: every project from every bot, in one place.",
+   "done": "Built from all bots' summaries on 2026-10-09; restructured into realms, projects and sub-cards the same day.",
+   "next": "Grok Bot keeps the cards updated.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "ziyuan",
+   "title": "字園 Zìyuán",
+   "realm": "EDUCATION",
+   "project": "p-ziyuan",
+   "area": "lang",
+   "owners": [
+    "Taiwan/Chinese Webmaster"
+   ],
+   "stage": "In Progress",
+   "summary": "Traditional Chinese, Zhuyin-first character garden.",
+   "done": "Plots 1–3 shipped (3,600 characters). Live.",
+   "next": "Plots 4–5 are on hold by Julius.",
+   "links": [
+    {
+     "label": "Open 字園 Zìyuán",
+     "url": "https://julianlee314-hue.github.io/ziyuan/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "In progress, live",
+   "waitingOnJulius": true,
+   "decision": "Plots 4–5 are on hold until you give the go-ahead",
+   "liveUrl": "https://julianlee314-hue.github.io/ziyuan/",
+   "liveLabel": "Open 字園 Zìyuán"
+  },
+  {
+   "id": "chengyu-study",
+   "title": "成語 coverage study + idiom list",
+   "realm": "EDUCATION",
+   "project": "p-ziyuan",
+   "area": "lang",
+   "owners": [
+    "Taiwan/Chinese Webmaster"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Coverage study and a greedy list of 744 idioms.",
+   "done": "Spreadsheet of 744 idioms.",
+   "next": "Maybe a phrase bed later.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "chengyu-daily",
+   "title": "Daily 成語 lesson (8:14 AM)",
+   "realm": "EDUCATION",
+   "project": "p-ziyuan",
+   "area": "lang",
+   "owners": [
+    "Taiwan/Chinese Webmaster"
+   ],
+   "stage": "In Progress",
+   "summary": "A daily idiom lesson routine.",
+   "done": "Running: 14 of 744 taught.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "In progress, running",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "books-library",
+   "title": "Personal Books Library",
+   "realm": "TOOLS",
+   "project": "p-books",
+   "area": "books",
+   "owners": [
+    "Bookworm"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Local catalog of Julius's ebook collection (private).",
+   "done": "Built, local only.",
+   "next": "Small metadata fixes; idea: reading status.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built (local only)",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "citadel",
+   "title": "Citadel Library",
+   "realm": "TOOLS",
+   "project": "p-books",
+   "area": "books",
+   "owners": [
+    "Bookworm"
+   ],
+   "stage": "Paused",
+   "summary": "Catalog site for books Julius owns (private).",
+   "done": "Built; kept private.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "orbit-archive",
+   "title": "Orbit Archive",
+   "realm": "TOOLS",
+   "project": "p-books",
+   "area": "books",
+   "owners": [
+    "Bookworm"
+   ],
+   "stage": "Paused",
+   "summary": "Wishlist catalog site (private).",
+   "done": "Built; kept private.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "books-recovery",
+   "title": "Desktop books recovery",
+   "realm": "TOOLS",
+   "project": "p-books",
+   "area": "books",
+   "owners": [
+    "Bookworm"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "File housekeeping for the book collection (private).",
+   "done": "Done.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Done",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "comix-reader",
+   "title": "COMIX READER",
+   "realm": "MEDIA",
+   "project": "p-comics",
+   "area": "books",
+   "owners": [
+    "Bookworm"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Local comics reader (private).",
+   "done": "Built Oct 7.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "read-comic-pdf",
+   "title": "How to Read a Comic (PDF)",
+   "realm": "MEDIA",
+   "project": "p-comics",
+   "area": "books",
+   "owners": [
+    "Bookworm"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "13-page guide to reading comics.",
+   "done": "Built; delivery paused.",
+   "next": "Deliver it alongside COMIX READER.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built, delivery paused",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "books-home",
+   "title": "ONTOLOGY books + comics home page",
+   "realm": "TOOLS",
+   "project": "p-books",
+   "area": "books",
+   "owners": [
+    "Bookworm"
+   ],
+   "stage": "Idea",
+   "summary": "One home page for books and comics in ONTOLOGY.",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "book-checkins",
+   "title": "Book sites check-in routine",
+   "realm": "TOOLS",
+   "project": "p-books",
+   "area": "books",
+   "owners": [
+    "Bookworm"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Regular check-ins on the book sites.",
+   "done": "Running.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built, running",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "recipes-rewatch",
+   "title": "Recipes Worth Rewatching",
+   "realm": "LIFE",
+   "project": "p-cookbooks",
+   "area": "cooking",
+   "owners": [
+    "Carl the Chef"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Cookbook site of 460 cards from the YouTube Recipes playlist.",
+   "done": "460 cards live.",
+   "next": "",
+   "links": [
+    {
+     "label": "Open Recipes Worth Rewatching",
+     "url": "https://julianlee314-hue.github.io/recipe-playlist-digests/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false,
+   "liveUrl": "https://julianlee314-hue.github.io/recipe-playlist-digests/",
+   "liveLabel": "Open Recipes Worth Rewatching"
+  },
+  {
+   "id": "southern-cookbook",
+   "title": "Chef's Southern cookbook",
+   "realm": "LIFE",
+   "project": "p-cookbooks",
+   "area": "cooking",
+   "owners": [
+    "Carl the Chef",
+    "RE/MAX"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Southern cookbook site, now with Instant Pot additions.",
+   "done": "Built; Instant Pot recipes added. Not public.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false,
+   "note": "Merged: RE/MAX and Carl the Chef both reported this cookbook."
+  },
+  {
+   "id": "golden-wok",
+   "title": "Golden Wok Digests",
+   "realm": "LIFE",
+   "project": "p-cookbooks",
+   "area": "cooking",
+   "owners": [
+    "RE/MAX",
+    "Carl the Chef"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Chinese American recipe collection.",
+   "done": "Built; not public.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false,
+   "note": "Merged: RE/MAX and Carl the Chef both reported this cookbook."
+  },
+  {
+   "id": "border-mesa",
+   "title": "Border & Mesa Digests",
+   "realm": "LIFE",
+   "project": "p-cookbooks",
+   "area": "cooking",
+   "owners": [
+    "RE/MAX",
+    "Carl the Chef"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Tex-Mex / Mexican recipe collection.",
+   "done": "Built; not public.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false,
+   "note": "Merged: RE/MAX and Carl the Chef both reported this cookbook."
+  },
+  {
+   "id": "chef-help",
+   "title": "Ongoing personal chef help",
+   "realm": "LIFE",
+   "project": "p-cookbooks",
+   "area": "cooking",
+   "owners": [
+    "Carl the Chef"
+   ],
+   "stage": "In Progress",
+   "summary": "Everyday cooking Q&A (private).",
+   "done": "Ongoing.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "In progress, ongoing",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "retro-commercials",
+   "title": "Retro TV commercials experience",
+   "realm": "MEDIA",
+   "project": "p-homemedia",
+   "area": "media",
+   "owners": [
+    "Video Grabber"
+   ],
+   "stage": "Planning",
+   "summary": "Personal film-editing practice built from public-domain ads.",
+   "done": "Public-domain sources surveyed (Prelinger ~130 ads).",
+   "next": "Julius OKs downloading the Prelinger set into decade folders; may send his own clips.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": true,
+   "decision": "OK downloading the Prelinger ads into decade folders (and send any of your own clips)"
+  },
+  {
+   "id": "cm-movies",
+   "title": "Cache Money movie library",
+   "realm": "MEDIA",
+   "project": "p-homemedia",
+   "area": "media",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Home media library organization (private).",
+   "done": "Built.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "cm-tv",
+   "title": "Cache Money TV library",
+   "realm": "MEDIA",
+   "project": "p-homemedia",
+   "area": "media",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Home media library organization (private).",
+   "done": "Built.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "tv-gaps",
+   "title": "TV episode gaps + 100 movie recs",
+   "realm": "MEDIA",
+   "project": "p-homemedia",
+   "area": "media",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Home media library upkeep (private).",
+   "done": "Built.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "artwork",
+   "title": "Local artwork for Infuse / Plex",
+   "realm": "MEDIA",
+   "project": "p-homemedia",
+   "area": "media",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "Paused",
+   "summary": "Artwork for the home media library (private).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "drive-sleep",
+   "title": "Cache Money drive sleep fix",
+   "realm": "MEDIA",
+   "project": "p-homemedia",
+   "area": "media",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Home media upkeep (private).",
+   "done": "Built.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built, watching",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "thin-cinema",
+   "title": "Thin Cinema data pipeline",
+   "realm": "MEDIA",
+   "project": "p-homemedia",
+   "area": "media",
+   "owners": [
+    "MacOS/Tech Expert",
+    "Grok Bot"
+   ],
+   "stage": "In Progress",
+   "summary": "Data pipeline for a private movie app.",
+   "done": "Data ready for import.",
+   "next": "Run the import.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Design/In progress",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "screensaver",
+   "title": "Mathera Worlds screensaver",
+   "realm": "EDUCATION",
+   "project": "p-history",
+   "area": "media",
+   "owners": [
+    "Math Website Administrator"
+   ],
+   "stage": "In Progress",
+   "summary": "Mac screensaver of the Mathera era paintings.",
+   "done": "Paintings ready; the newest v0.6.2 paintings aren't added yet.",
+   "next": "Turn it on in Screen Saver settings.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "trip",
+   "title": "Trip planning (private)",
+   "realm": "LIFE",
+   "project": "p-admin",
+   "area": "property",
+   "owners": [
+    "Kronos"
+   ],
+   "stage": "Planning",
+   "summary": "Travel plans (private).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "property-a",
+   "title": "Property research A (private)",
+   "realm": "LIFE",
+   "project": "p-admin",
+   "area": "property",
+   "owners": [
+    "RE/MAX"
+   ],
+   "stage": "In Progress",
+   "summary": "Property research (private).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "property-b",
+   "title": "Property research B (private)",
+   "realm": "LIFE",
+   "project": "p-admin",
+   "area": "property",
+   "owners": [
+    "RE/MAX"
+   ],
+   "stage": "In Progress",
+   "summary": "Property research (private).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "property-rentals",
+   "title": "Property research: rentals (private)",
+   "realm": "LIFE",
+   "project": "p-admin",
+   "area": "property",
+   "owners": [
+    "RE/MAX"
+   ],
+   "stage": "Paused",
+   "summary": "Property research (private).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "property-explainers",
+   "title": "Property explainers",
+   "realm": "LIFE",
+   "project": "p-admin",
+   "area": "property",
+   "owners": [
+    "RE/MAX"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Property research (private).",
+   "done": "Delivered.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "finance-advice",
+   "title": "Finance advice (private)",
+   "realm": "LIFE",
+   "project": "p-admin",
+   "area": "legal",
+   "owners": [
+    "Lawyer/Business Advisor"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Personal finance advice (private).",
+   "done": "Delivered.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "lecturer",
+   "title": "Visiting-lecturer math courses",
+   "realm": "LIFE",
+   "project": "p-admin",
+   "area": "legal",
+   "owners": [
+    "Lawyer/Business Advisor"
+   ],
+   "stage": "Planning",
+   "summary": "Teaching math courses abroad as a visiting lecturer.",
+   "done": "",
+   "next": "Find hosts, send the pitch.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "publish-review",
+   "title": "Publish review of GitHub Pages sites",
+   "realm": "TOOLS",
+   "project": "p-publishing",
+   "area": "legal",
+   "owners": [
+    "Lawyer/Business Advisor"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Review of what's published on GitHub Pages (private notes).",
+   "done": "Review done.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "creator-advice",
+   "title": "Creator advice (private)",
+   "realm": "LIFE",
+   "project": "p-admin",
+   "area": "legal",
+   "owners": [
+    "Lawyer/Business Advisor"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Advice for creator work (private).",
+   "done": "Delivered.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "fitness-plan",
+   "title": "Fitness regimen and coaching",
+   "realm": "LIFE",
+   "project": "p-fitness",
+   "area": "fitness",
+   "owners": [
+    "Fitbot",
+    "Carl the Chef"
+   ],
+   "stage": "In Progress",
+   "summary": "Weekly swimming and rowing training plan.",
+   "done": "Weekly plan set.",
+   "next": "Weekly check-ins.",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "erg",
+   "title": "Erg endurance: 30 → 60 min",
+   "realm": "LIFE",
+   "project": "p-fitness",
+   "area": "fitness",
+   "owners": [
+    "Fitbot"
+   ],
+   "stage": "In Progress",
+   "summary": "Build up to 60 continuous minutes of rowing.",
+   "done": "9-week plan built.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "whoop",
+   "title": "WHOOP data hookup",
+   "realm": "LIFE",
+   "project": "p-fitness",
+   "area": "fitness",
+   "owners": [
+    "Fitbot"
+   ],
+   "stage": "Idea",
+   "summary": "Connect fitness-tracker data (idea).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "dev-setup",
+   "title": "Unity 6.3 LTS + Xcode 27 setup",
+   "realm": "TOOLS",
+   "project": "p-dev",
+   "area": "mac",
+   "owners": [
+    "Grok Bot"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Game development toolchain.",
+   "done": "Installed.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "disk-cleanup",
+   "title": "Disk cleanup",
+   "realm": "TOOLS",
+   "project": "p-mac",
+   "area": "mac",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "In Progress",
+   "summary": "Mac & security upkeep (private).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "ontology-reorg",
+   "title": "Desktop / ONTOLOGY reorg",
+   "realm": "TOOLS",
+   "project": "p-mac",
+   "area": "mac",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Mac & security upkeep (private).",
+   "done": "Done.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "weekly-digest",
+   "title": "Weekly org & security digest",
+   "realm": "TOOLS",
+   "project": "p-mac",
+   "area": "mac",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Mac & security upkeep (private).",
+   "done": "Running.",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "stageNote": "Built, running",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "security",
+   "title": "Security tune-up",
+   "realm": "TOOLS",
+   "project": "p-mac",
+   "area": "mac",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "In Progress",
+   "summary": "Mac & security upkeep (private).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "home-network",
+   "title": "Home network upkeep",
+   "realm": "TOOLS",
+   "project": "p-mac",
+   "area": "mac",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "Planning",
+   "summary": "Mac & security upkeep (private).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "remote-access",
+   "title": "Remote access",
+   "realm": "TOOLS",
+   "project": "p-mac",
+   "area": "mac",
+   "owners": [
+    "MacOS/Tech Expert"
+   ],
+   "stage": "Planning",
+   "summary": "Mac & security upkeep (private).",
+   "done": "",
+   "next": "",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-09",
+   "waitingOnJulius": false
+  }
+ ]
+}
