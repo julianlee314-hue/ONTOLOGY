@@ -46,7 +46,8 @@ window.BOARD_META = {
  "storagePrefix": "ontologyPublic",
  "public": true,
  "migrate": {
-  "chef-help": null
+  "chef-help": null,
+  "property-explainers": null
  },
  "footer": "Public view of Julius's ONTOLOGY project board. Personal projects are summarized and their histories kept private."
 };
@@ -99,8 +100,8 @@ window.GOALS = [
   "color": "#e0892b",
   "description": "The math RPG that links into Mathera. Wayfinder is the locked brand; ForgePath Prequel is its older playable shell.",
   "owners": [
-   "Math Sensei",
    "Mathera Artist",
+   "Math Sensei",
    "Grok Bot",
    "Math Website Administrator",
    "Math Historian"
@@ -113,15 +114,21 @@ window.GOALS = [
     "kind": "goal"
    },
    {
+    "date": "2026-10-03",
+    "approx": false,
+    "text": "Newton vs Leibniz factions floated",
+    "kind": "goal"
+   },
+   {
     "date": "2026-10-05",
     "approx": false,
-    "text": "ForgePath battle design brief",
+    "text": "Pedagogy briefs; Wayfinder locked as the brand",
     "kind": "goal"
    },
    {
     "date": "2026-10-06",
     "approx": false,
-    "text": "MathForge briefs renamed: Wayfinder locked as the brand; Mathera Artist bot created for era art",
+    "text": "Mathera Artist created; v1 heroes for 7 eras, IV/V/VI redone, Era VI 10 options",
     "kind": "goal"
    }
   ],
@@ -227,13 +234,13 @@ window.GOALS = [
    {
     "date": "2026-10-01",
     "approx": false,
-    "text": "Plots 1–3 ship (3,600 characters)",
+    "text": "Plots 1–3 ship (3,600 characters); 'finish with the third plot for now'",
     "kind": "goal"
    },
    {
-    "date": "2026-10-05",
-    "approx": true,
-    "text": "成語 coverage study; daily lesson routine running",
+    "date": "2026-10-03",
+    "approx": false,
+    "text": "成語 coverage study; daily lesson routine starts",
     "kind": "goal"
    }
   ]
@@ -331,7 +338,8 @@ window.GOALS = [
   "description": "Personal admin and advice (private).",
   "owners": [
    "Lawyer/Business Advisor",
-   "Kronos"
+   "Kronos",
+   "Fitbot"
   ],
   "history": []
  },
@@ -733,37 +741,31 @@ window.ITEMS = [
   "owners": [
    "Math Website Administrator"
   ],
-  "stage": "Built / Shipped",
+  "stage": "Paused",
   "summary": "The current public Mathera site: seven-era landing, land doors, skills and tree navigation.",
   "done": "",
-  "next": "Retire/redirect it, or replace it with a 0.6.x build.",
+  "next": "Julius picks the canonical build.",
   "history": [
    {
-    "date": "2026-09-29",
-    "approx": false,
-    "text": "First discussed as the Mathera repo: Era II/III skills, full curriculum PDF",
+    "date": "2026-09-28",
+    "approx": true,
+    "text": "First started (before 2026-09-29)",
     "kind": "first"
    },
    {
-    "date": "2026-10-01",
+    "date": "2026-09-29",
     "approx": false,
-    "text": "v0.5 beta replaces the garden site; seven-era homepage; experimental Web Audio",
+    "text": "Eras II–III skills, 1,132-skill PDF, Math Garden tapestry, Living Grove",
     "kind": "step"
    },
    {
     "date": "2026-10-01",
     "approx": false,
-    "text": "Picture-only land splash; land doors use Julius's composite art; Skills · Tree · ID · Rules tabs; skill search",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "v0.6.x test builds appear; v0.5 stays the main URL",
+    "text": "v0.5 beta, splash, Skills-first nav; 1.0 defined as Eras I–V with real practice",
     "kind": "step"
    }
   ],
-  "lastTouched": "2026-10-06",
+  "lastTouched": "2026-10-01",
   "source": "Bot reports (2026-10-09)",
   "links": [
    {
@@ -775,6 +777,7 @@ window.ITEMS = [
   "updated": "2026-10-09",
   "waitingOnJulius": true,
   "decision": "Retire/redirect v0.5 or replace it with a 0.6.x build",
+  "stageNote": "Paused; last work 2026-10-01",
   "liveUrl": "https://julianlee314-hue.github.io/mathera/",
   "liveLabel": "Open Mathera v0.5 (main site)"
  },
@@ -794,20 +797,8 @@ window.ITEMS = [
    {
     "date": "2026-10-06",
     "approx": false,
-    "text": "First built as 'Mathera 0.6'",
+    "text": "First built: seven-worlds homepage, Spotlight search, Practice / Learn / Map tabs",
     "kind": "first"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "Seven-worlds landing + skill spotlight",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "Search gets Practice / Learn / Map tabs",
-    "kind": "step"
    }
   ],
   "lastTouched": "2026-10-06",
@@ -834,14 +825,14 @@ window.ITEMS = [
    "Math Website Administrator"
   ],
   "stage": "Built / Shipped",
-  "summary": "The devs' build featuring Era VI, The Spiral Isle.",
+  "summary": "The devs' build: world-tree look, curtain intro, Era VI = The Spiral Isle.",
   "done": "",
   "next": "",
   "history": [
    {
     "date": "2026-10-06",
     "approx": false,
-    "text": "First built: dev build with Era VI 'The Spiral Isle'",
+    "text": "First built: world-tree look, curtain intro, Era VI = Spiral Isle",
     "kind": "first"
    }
   ],
@@ -876,14 +867,8 @@ window.ITEMS = [
    {
     "date": "2026-10-06",
     "approx": false,
-    "text": "First built: era paintings upscaled to 3200×1800",
+    "text": "First built: 3200×1800 paintings and new era paintings",
     "kind": "first"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "New world paintings: Era I world tree, then Eras II–VII; changelog",
-    "kind": "step"
    }
   ],
   "lastTouched": "2026-10-06",
@@ -912,7 +897,7 @@ window.ITEMS = [
    "Math Historian",
    "Mathera Artist"
   ],
-  "stage": "Design",
+  "stage": "Paused",
   "summary": "The backbone: 144 concepts in lineages across seven eras, behind 1,132 skills.",
   "done": "",
   "next": "Map it onto Wayfinder.",
@@ -920,28 +905,35 @@ window.ITEMS = [
    {
     "date": "2026-09-29",
     "approx": false,
-    "text": "First discussed: complete curriculum PDF for all seven eras (1,080 skills, then 1,132)",
+    "text": "First built in the mathera repo: complete curriculum PDF, 1,080 then 1,132 skills",
     "kind": "first"
    },
    {
     "date": "2026-10-01",
-    "approx": true,
-    "text": "Concepts and lineages tied to Math History 101's 144 concepts",
+    "approx": false,
+    "text": "Spine and lineages locked; History Network V2 with 144 concepts",
     "kind": "step"
    },
    {
-    "date": "2026-10-06",
+    "date": "2026-10-02",
     "approx": false,
-    "text": "276-page Curriculum Guide reviewed alongside the Wayfinder placement briefs",
+    "text": "Exam Mode defined as an overlay on the spine",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-05",
+    "approx": false,
+    "text": "Wayfinder coverage review: ~23% of the spine covered",
     "kind": "step"
    }
   ],
-  "lastTouched": "2026-10-06",
+  "lastTouched": "2026-10-05",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
   "updated": "2026-10-09",
-  "waitingOnJulius": false
+  "waitingOnJulius": false,
+  "stageNote": "Paused (Design); last work 2026-10-05"
  },
  {
   "id": "spotlight-pdf",
@@ -951,15 +943,15 @@ window.ITEMS = [
   "owners": [
    "Math Website Administrator"
   ],
-  "stage": "Planning",
+  "stage": "Built / Shipped",
   "summary": "Ideas document for Mathera's Spotlight skill search.",
   "done": "",
   "next": "",
   "history": [
    {
     "date": "2026-10-06",
-    "approx": true,
-    "text": "First discussed with the v0.6 skill spotlight; ideas written up as a PDF",
+    "approx": false,
+    "text": "First written and delivered",
     "kind": "first"
    }
   ],
@@ -968,8 +960,7 @@ window.ITEMS = [
   "links": [],
   "files": [],
   "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "stageNote": "Planning (round 1)"
+  "waitingOnJulius": false
  },
  {
   "id": "curriculum-pack",
@@ -1123,7 +1114,7 @@ window.ITEMS = [
   "owners": [
    "Math Sensei"
   ],
-  "stage": "Built / Shipped",
+  "stage": "Paused",
   "summary": "UK / IB / US exam overlay: 1,000 skills, 3,000 questions, PDFs.",
   "done": "",
   "next": "Build the app UI.",
@@ -1131,23 +1122,23 @@ window.ITEMS = [
    {
     "date": "2026-10-02",
     "approx": false,
-    "text": "First built: Testing Mode beta 'The Notebooks' with 1,000 skills, 3,000 questions, PDFs and docs",
+    "text": "First built: Exam Mode overlay content, 1,000 skills and 3,000 questions",
     "kind": "first"
    },
    {
-    "date": "2026-10-02",
-    "approx": false,
-    "text": "GitHub Pages marked shipped",
+    "date": "2026-10-03",
+    "approx": true,
+    "text": "Content finished; no app UI built",
     "kind": "step"
    }
   ],
-  "lastTouched": "2026-10-02",
+  "lastTouched": "2026-10-03",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
   "updated": "2026-10-09",
   "waitingOnJulius": false,
-  "stageNote": "Built (content)"
+  "stageNote": "Paused (Design): content only, no UI"
  },
  {
   "id": "graph-lab",
@@ -1160,12 +1151,12 @@ window.ITEMS = [
   "stage": "Built / Shipped",
   "summary": "Desmos-style, education-first graphing calculator (MVP).",
   "done": "",
-  "next": "Inequalities, slope triangle, transform animation.",
+  "next": "",
   "history": [
    {
     "date": "2026-10-06",
     "approx": false,
-    "text": "First built: education-first graphing calculator MVP",
+    "text": "First built: v1",
     "kind": "first"
    }
   ],
@@ -1207,13 +1198,19 @@ window.ITEMS = [
    {
     "date": "2026-10-01",
     "approx": false,
-    "text": "All 144 artefact portraits, 144 multi-epoch essays (then tightened ~50%), first 16 Wall icons",
+    "text": "All 144 artefact portraits, 144 multi-epoch essays (tightened ~50%), first 16 Wall icons",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-02",
+    "approx": false,
+    "text": "Epoch numerals fixed",
     "kind": "step"
    },
    {
     "date": "2026-10-03",
     "approx": false,
-    "text": "Handed to Math Website Administrator",
+    "text": "Handed to Math Website Administrator; no commits since 2026-10-01",
     "kind": "step"
    }
   ],
@@ -1273,7 +1270,7 @@ window.ITEMS = [
   "stage": "Design",
   "summary": "The RPG app that links to Mathera. Battle briefs for Eras I–II and a gate dependency map.",
   "done": "",
-  "next": "Pick the MVP slice.",
+  "next": "Pick the MVP slice for the Unity game.",
   "history": [
    {
     "date": "2026-10-02",
@@ -1284,13 +1281,19 @@ window.ITEMS = [
    {
     "date": "2026-10-05",
     "approx": false,
-    "text": "ForgePath Battle Design brief",
+    "text": "Pedagogy briefs; brand locked as Wayfinder",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-05",
+    "approx": false,
+    "text": "Coverage review: ~23% of the curriculum spine",
     "kind": "step"
    },
    {
     "date": "2026-10-06",
     "approx": false,
-    "text": "Briefs renamed MathForge → Wayfinder; Wayfinder locked as the brand; placement gates for Eras I–II",
+    "text": "Mathera Artist created for the era art",
     "kind": "step"
    }
   ],
@@ -1309,27 +1312,27 @@ window.ITEMS = [
   "owners": [
    "Math Sensei"
   ],
-  "stage": "Built / Shipped",
+  "stage": "Design",
   "summary": "Battle Design v2, Brief Review & Gates, and the Gate Dependency Map (PDFs).",
   "done": "",
-  "next": "",
+  "next": "Pick the MVP slice for the Unity game.",
   "history": [
    {
     "date": "2026-10-05",
     "approx": false,
-    "text": "First written as 'ForgePath Battle Design'",
+    "text": "First written: Wayfinder pedagogy / battle design briefs",
     "kind": "first"
    },
    {
-    "date": "2026-10-06",
+    "date": "2026-10-05",
     "approx": false,
-    "text": "v2 + MathForge Brief Review & Gates + Gate Dependency Map",
+    "text": "Brand locked as Wayfinder (from MathForge / ForgePath)",
     "kind": "step"
    },
    {
     "date": "2026-10-06",
     "approx": false,
-    "text": "Renamed to Wayfinder editions",
+    "text": "Brief review, gates and dependency map",
     "kind": "step"
    }
   ],
@@ -1338,7 +1341,8 @@ window.ITEMS = [
   "links": [],
   "files": [],
   "updated": "2026-10-09",
-  "waitingOnJulius": false
+  "waitingOnJulius": false,
+  "stageNote": "Design"
  },
  {
   "id": "forgepath",
@@ -1396,204 +1400,7 @@ window.ITEMS = [
  },
  {
   "id": "era-art-1",
-  "title": "Era I world art",
-  "realm": "EDUCATION",
-  "goal": "g-wayfinder",
-  "owners": [
-   "Mathera Artist",
-   "Grok Bot",
-   "Math Sensei"
-  ],
-  "stage": "Built / Shipped",
-  "summary": "Hero world-tree art. Wallpaper-size hero art for the era, with room for skill paths.",
-  "done": "",
-  "next": "Branch-matched landmarks once Era VI is settled.",
-  "history": [
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "First discussed: Julius sends the 7-era monument table and asks for wallpaper-size art with skill paths",
-    "kind": "first"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "New world painting ships in Mathera v0.6.2",
-    "kind": "step"
-   }
-  ],
-  "lastTouched": "2026-10-06",
-  "source": "Bot reports (2026-10-09)",
-  "links": [],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "note": "Split from Mathera Artist's single round-1 'Era World Art' card; the Artist's round-2 reply wasn't received, so per-era stages are inferred.",
-  "stageNote": "Hero art delivered; landmarks next"
- },
- {
-  "id": "era-art-2",
-  "title": "Era II world art",
-  "realm": "EDUCATION",
-  "goal": "g-wayfinder",
-  "owners": [
-   "Mathera Artist",
-   "Grok Bot",
-   "Math Sensei"
-  ],
-  "stage": "Built / Shipped",
-  "summary": "Hero art. Wallpaper-size hero art for the era, with room for skill paths.",
-  "done": "",
-  "next": "Branch-matched landmarks once Era VI is settled.",
-  "history": [
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "First discussed: Julius sends the 7-era monument table and asks for wallpaper-size art with skill paths",
-    "kind": "first"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "New world painting ships in Mathera v0.6.2",
-    "kind": "step"
-   }
-  ],
-  "lastTouched": "2026-10-06",
-  "source": "Bot reports (2026-10-09)",
-  "links": [],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "note": "Split from Mathera Artist's single round-1 'Era World Art' card; the Artist's round-2 reply wasn't received, so per-era stages are inferred.",
-  "stageNote": "Hero art delivered; landmarks next"
- },
- {
-  "id": "era-art-3",
-  "title": "Era III world art",
-  "realm": "EDUCATION",
-  "goal": "g-wayfinder",
-  "owners": [
-   "Mathera Artist",
-   "Grok Bot",
-   "Math Sensei"
-  ],
-  "stage": "Built / Shipped",
-  "summary": "Hero art. Wallpaper-size hero art for the era, with room for skill paths.",
-  "done": "",
-  "next": "Branch-matched landmarks once Era VI is settled.",
-  "history": [
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "First discussed: Julius sends the 7-era monument table and asks for wallpaper-size art with skill paths",
-    "kind": "first"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "New world painting ships in Mathera v0.6.2",
-    "kind": "step"
-   }
-  ],
-  "lastTouched": "2026-10-06",
-  "source": "Bot reports (2026-10-09)",
-  "links": [],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "note": "Split from Mathera Artist's single round-1 'Era World Art' card; the Artist's round-2 reply wasn't received, so per-era stages are inferred.",
-  "stageNote": "Hero art delivered; landmarks next"
- },
- {
-  "id": "era-art-4",
-  "title": "Era IV world art",
-  "realm": "EDUCATION",
-  "goal": "g-wayfinder",
-  "owners": [
-   "Mathera Artist",
-   "Grok Bot",
-   "Math Sensei"
-  ],
-  "stage": "Built / Shipped",
-  "summary": "Redone as a structure. Wallpaper-size hero art for the era, with room for skill paths.",
-  "done": "",
-  "next": "Branch-matched landmarks once Era VI is settled.",
-  "history": [
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "First discussed: Julius sends the 7-era monument table and asks for wallpaper-size art with skill paths",
-    "kind": "first"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "New world painting ships in Mathera v0.6.2",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-07",
-    "approx": true,
-    "text": "Redone as a structure",
-    "kind": "step"
-   }
-  ],
-  "lastTouched": "2026-10-07",
-  "source": "Bot reports (2026-10-09)",
-  "links": [],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "note": "Split from Mathera Artist's single round-1 'Era World Art' card; the Artist's round-2 reply wasn't received, so per-era stages are inferred.",
-  "stageNote": "Hero art delivered; landmarks next"
- },
- {
-  "id": "era-art-5",
-  "title": "Era V world art",
-  "realm": "EDUCATION",
-  "goal": "g-wayfinder",
-  "owners": [
-   "Mathera Artist",
-   "Grok Bot",
-   "Math Sensei"
-  ],
-  "stage": "Built / Shipped",
-  "summary": "Redone as a structure. Wallpaper-size hero art for the era, with room for skill paths.",
-  "done": "",
-  "next": "Branch-matched landmarks once Era VI is settled.",
-  "history": [
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "First discussed: Julius sends the 7-era monument table and asks for wallpaper-size art with skill paths",
-    "kind": "first"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "New world painting ships in Mathera v0.6.2",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-07",
-    "approx": true,
-    "text": "Redone as a structure",
-    "kind": "step"
-   }
-  ],
-  "lastTouched": "2026-10-07",
-  "source": "Bot reports (2026-10-09)",
-  "links": [],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "note": "Split from Mathera Artist's single round-1 'Era World Art' card; the Artist's round-2 reply wasn't received, so per-era stages are inferred.",
-  "stageNote": "Hero art delivered; landmarks next"
- },
- {
-  "id": "era-art",
-  "title": "Era VI world art: 'Change'",
+  "title": "Era I · Count: First Tree",
   "realm": "EDUCATION",
   "goal": "g-wayfinder",
   "owners": [
@@ -1602,77 +1409,15 @@ window.ITEMS = [
    "Math Sensei"
   ],
   "stage": "Design",
-  "summary": "Calculus era 'Change': 12 branches, 174 skills; 10 alternative concepts. Wallpaper-size hero art for the era, with room for skill paths.",
+  "summary": "v1 approved look. Wallpaper-size hero art with room for skill paths.",
   "done": "",
-  "next": "Julius picks the Era VI concept, then branch-matched landmarks.",
+  "next": "",
   "history": [
    {
     "date": "2026-10-06",
     "approx": false,
-    "text": "First discussed: Julius sends the 7-era monument table and asks for wallpaper-size art with skill paths",
+    "text": "First discussed: Julius sends the 7-era monument table; Tree Aesthetics guide; v1 hero art",
     "kind": "first"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "New world painting ships in Mathera v0.6.2",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-07",
-    "approx": true,
-    "text": "Redone as a structure",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-08",
-    "approx": true,
-    "text": "Renamed 'Change' (calculus, 12 branches, 174 skills); 10 alternative concepts drawn",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-08",
-    "approx": true,
-    "text": "Artist recommends cascade gardens; runner-up river delta",
-    "kind": "step"
-   }
-  ],
-  "lastTouched": "2026-10-08",
-  "source": "Bot reports (2026-10-09)",
-  "links": [],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": true,
-  "decision": "Pick the Era VI concept (recommended: cascade gardens; runner-up: river delta)",
-  "note": "Split from Mathera Artist's single round-1 'Era World Art' card; the Artist's round-2 reply wasn't received, so per-era stages are inferred.",
-  "stageNote": "Design (concept pick pending)"
- },
- {
-  "id": "era-art-7",
-  "title": "Era VII world art",
-  "realm": "EDUCATION",
-  "goal": "g-wayfinder",
-  "owners": [
-   "Mathera Artist",
-   "Grok Bot",
-   "Math Sensei"
-  ],
-  "stage": "Built / Shipped",
-  "summary": "Hero art. Wallpaper-size hero art for the era, with room for skill paths.",
-  "done": "",
-  "next": "Branch-matched landmarks once Era VI is settled.",
-  "history": [
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "First discussed: Julius sends the 7-era monument table and asks for wallpaper-size art with skill paths",
-    "kind": "first"
-   },
-   {
-    "date": "2026-10-06",
-    "approx": false,
-    "text": "New world painting ships in Mathera v0.6.2",
-    "kind": "step"
    }
   ],
   "lastTouched": "2026-10-06",
@@ -1681,30 +1426,249 @@ window.ITEMS = [
   "files": [],
   "updated": "2026-10-09",
   "waitingOnJulius": false,
-  "note": "Split from Mathera Artist's single round-1 'Era World Art' card; the Artist's round-2 reply wasn't received, so per-era stages are inferred.",
-  "stageNote": "Hero art delivered; landmarks next"
+  "stageNote": "Design"
+ },
+ {
+  "id": "era-art-2",
+  "title": "Era II · Operate: Great Banyan",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist",
+   "Grok Bot",
+   "Math Sensei"
+  ],
+  "stage": "Design",
+  "summary": "v1; redo offered (reads like a village), no answer yet. Wallpaper-size hero art with room for skill paths.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First discussed: Julius sends the 7-era monument table; Tree Aesthetics guide; v1 hero art",
+    "kind": "first"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "Redo offered; no answer",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": true,
+  "decision": "Answer the Era II redo offer (it reads like a village)",
+  "stageNote": "Design"
+ },
+ {
+  "id": "era-art-3",
+  "title": "Era III · Relate: World Tree",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist",
+   "Grok Bot",
+   "Math Sensei"
+  ],
+  "stage": "Design",
+  "summary": "v1 approved. Wallpaper-size hero art with room for skill paths.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First discussed: Julius sends the 7-era monument table; Tree Aesthetics guide; v1 hero art",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "stageNote": "Design"
+ },
+ {
+  "id": "era-art-4",
+  "title": "Era IV · Solve: steam-engine mountain city",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist",
+   "Grok Bot",
+   "Math Sensei"
+  ],
+  "stage": "Design",
+  "summary": "v2 awaiting review. Wallpaper-size hero art with room for skill paths.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First discussed: Julius sends the 7-era monument table; Tree Aesthetics guide; v1 hero art",
+    "kind": "first"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "v1 superseded; redone as a structure (v2)",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": true,
+  "decision": "Review the Era IV v2 (steam-engine mountain city)",
+  "stageNote": "Design"
+ },
+ {
+  "id": "era-art-5",
+  "title": "Era V · Prove: terraced marble citadel",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist",
+   "Grok Bot",
+   "Math Sensei"
+  ],
+  "stage": "Design",
+  "summary": "v2 above the clouds, awaiting review. Wallpaper-size hero art with room for skill paths.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First discussed: Julius sends the 7-era monument table; Tree Aesthetics guide; v1 hero art",
+    "kind": "first"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "v1 superseded; redone as a structure (v2)",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": true,
+  "decision": "Review the Era V v2 (terraced marble citadel)",
+  "stageNote": "Design"
+ },
+ {
+  "id": "era-art",
+  "title": "Era VI · Change: pick a concept",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist",
+   "Grok Bot",
+   "Math Sensei"
+  ],
+  "stage": "Design",
+  "summary": "Formerly Motion / Infinite Engine. 10 options; artist recommends cascade gardens, runner-up river delta. Wallpaper-size hero art with room for skill paths.",
+  "done": "",
+  "next": "Julius picks a concept, then branch-mapped landmarks.",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First discussed: Julius sends the 7-era monument table; Tree Aesthetics guide; v1 hero art",
+    "kind": "first"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "v1 cosmic tree, then v2 sky city, both superseded",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "Era VI rethink: 10 options drawn",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-09",
+    "approx": false,
+    "text": "Options re-sent to Julius",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-09",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": true,
+  "decision": "Pick the Era VI concept (recommended: cascade gardens; runner-up: river delta)",
+  "stageNote": "Design"
+ },
+ {
+  "id": "era-art-7",
+  "title": "Era VII · Space: Celestial Tree",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist",
+   "Grok Bot",
+   "Math Sensei"
+  ],
+  "stage": "Design",
+  "summary": "v1 approved. Wallpaper-size hero art with room for skill paths.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First discussed: Julius sends the 7-era monument table; Tree Aesthetics guide; v1 hero art",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "stageNote": "Design"
  },
  {
   "id": "era-landmarks",
-  "title": "Branch-matched landmarks + style guide",
+  "title": "Branch-mapped landmark versions",
   "realm": "EDUCATION",
   "goal": "g-wayfinder",
   "owners": [
    "Mathera Artist"
   ],
-  "stage": "Planning",
-  "summary": "Landmarks matched to each era's skill branches, plus a style guide.",
+  "stage": "Idea",
+  "summary": "Landmark versions of each era mapped to its skill branches (Era VI branch list received).",
   "done": "",
-  "next": "Starts after the Era VI concept pick.",
+  "next": "After the Era VI pick.",
   "history": [
    {
-    "date": "2026-10-07",
+    "date": "2026-10-06",
     "approx": true,
-    "text": "First discussed as the next step after the era hero art",
+    "text": "First floated; Era VI branch list received",
     "kind": "first"
    }
   ],
-  "lastTouched": "2026-10-07",
+  "lastTouched": "2026-10-06",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
@@ -1725,13 +1689,19 @@ window.ITEMS = [
   "next": "Decide where it lives: Wayfinder, Mathera, or a minigame.",
   "history": [
    {
-    "date": "2026-10-05",
-    "approx": true,
-    "text": "First discussed by Math Historian, with story seeds: Archimedes, Thales' olive presses, Hypatia, Columbus's 1504 eclipse, a made-up banking house's Waterloo beat",
+    "date": "2026-10-03",
+    "approx": false,
+    "text": "First discussed: rival civs using Newton vs Leibniz notation, with a Lagrange joke",
     "kind": "first"
+   },
+   {
+    "date": "2026-10-03",
+    "approx": false,
+    "text": "Hooks: notation locks doors, reputation, smuggling a continental paper into Cambridge",
+    "kind": "step"
    }
   ],
-  "lastTouched": "2026-10-05",
+  "lastTouched": "2026-10-03",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
@@ -1753,25 +1723,19 @@ window.ITEMS = [
   "next": "Demo polish, pixel vehicles.",
   "history": [
    {
-    "date": "2026-10-03",
+    "date": "2026-10-02",
     "approx": false,
-    "text": "First built: Precedence shell with Eras 1–4 playable garage MVP",
+    "text": "First discussed: ten-era vehicle ladder; 'Miami Burnout' defined as 1.0",
     "kind": "first"
    },
    {
     "date": "2026-10-03",
     "approx": false,
-    "text": "Math titles for eras; full levels inventory; Hangar/Flight ladder (Eras 11–20)",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-05",
-    "approx": true,
-    "text": "Paused on content",
+    "text": "GitHub Pages with Eras 1–4 playable; Flight Eras 11–20 as stubs",
     "kind": "step"
    }
   ],
-  "lastTouched": "2026-10-05",
+  "lastTouched": "2026-10-03",
   "source": "Bot reports (2026-10-09)",
   "links": [
    {
@@ -1782,8 +1746,8 @@ window.ITEMS = [
   "files": [],
   "updated": "2026-10-09",
   "waitingOnJulius": false,
-  "note": "Overlap: The Road is also an algebra racer and its plate 1 is 'Precedence'. Math Sensei's round-2 reply wasn't received; last commit 2026-10-03.",
-  "stageNote": "In progress, paused on content (round 1)",
+  "note": "Overlap: The Road is also an algebra racer and its plate 1 is called 'Precedence'.",
+  "stageNote": "Paused; last work 2026-10-03",
   "liveUrl": "https://julianlee314-hue.github.io/precedence/",
   "liveLabel": "Play Precedence"
  },
@@ -1795,33 +1759,33 @@ window.ITEMS = [
   "owners": [
    "Math Website Administrator"
   ],
-  "stage": "In Progress",
+  "stage": "Built / Shipped",
   "summary": "Phone-first algebra racer in a 60s cartoon style. Plates 1–15, career chapters 1–2.",
   "done": "",
   "next": "Julius's feedback, then chapter 3.",
   "history": [
    {
-    "date": "2026-10-03",
+    "date": "2026-10-02",
     "approx": false,
-    "text": "First built: plates 1–11 playable; Hyperloop ride",
+    "text": "First discussed: folded in as a phone-first algebra racer",
     "kind": "first"
    },
    {
     "date": "2026-10-03",
     "approx": false,
-    "text": "Tap operations on the expression instead of multiple choice; precalc plates 12–15",
+    "text": "Live: plates 1–11, then 12–15",
     "kind": "step"
    },
    {
     "date": "2026-10-04",
     "approx": false,
-    "text": "Order / Calculate modes, exponent morphs, timed clocks (30s to endless), Simplify",
+    "text": "Order / Calculate modes, clocks, Simplify",
     "kind": "step"
    },
    {
     "date": "2026-10-05",
     "approx": false,
-    "text": "Splash + PRESS START; career-mode story bible; map + chapters 1–2",
+    "text": "Restyle + PRESS START; career story bible; chapters 1–2",
     "kind": "step"
    }
   ],
@@ -1837,6 +1801,7 @@ window.ITEMS = [
   "updated": "2026-10-09",
   "waitingOnJulius": true,
   "decision": "Play The Road and send feedback before chapter 3",
+  "stageNote": "Built (plates 1–15, career ch 1–2); waiting on Julius before ch 3",
   "liveUrl": "https://julianlee314-hue.github.io/the-road/",
   "liveLabel": "Play The Road"
  },
@@ -1917,7 +1882,6 @@ window.ITEMS = [
   "updated": "2026-10-09",
   "waitingOnJulius": true,
   "decision": "Revive OPERATE! or fold it into Primary mode",
-  "note": "Stage changed: round 1 said Built (prototype); MWA's round-2 strict call is Paused.",
   "liveUrl": "https://julianlee314-hue.github.io/operate/",
   "liveLabel": "Play OPERATE!"
  },
@@ -1970,7 +1934,7 @@ window.ITEMS = [
    {
     "date": "2026-10-06",
     "approx": false,
-    "text": "First built: Mathera Memes Wall from top r/mathmemes by score",
+    "text": "First built: Memes Wall from top r/mathmemes by score",
     "kind": "first"
    },
    {
@@ -2037,13 +2001,13 @@ window.ITEMS = [
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "First built: home page with series contents",
+    "text": "First named and built: Chronographs home page",
     "kind": "first"
    },
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "Coming-soon IV–VI named; VI renamed Korea & Vietnam; WW2 card thumbnail refreshed",
+    "text": "IV–VI named; VI renamed Korea & Vietnam",
     "kind": "step"
    }
   ],
@@ -2072,7 +2036,7 @@ window.ITEMS = [
   "stage": "Built / Shipped",
   "summary": "Timeline of the Dow, 1896–2026 (v0.2).",
   "done": "",
-  "next": "Fix the president strip.",
+  "next": "",
   "history": [
    {
     "date": "2026-10-06",
@@ -2081,15 +2045,15 @@ window.ITEMS = [
     "kind": "first"
    },
    {
-    "date": "2026-10-07",
-    "approx": false,
-    "text": "v0.2 at /v0.2",
+    "date": "2026-10-06",
+    "approx": true,
+    "text": "Design review (through 2026-10-07); v0.2",
     "kind": "step"
    },
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "Chronographs series kicker linking to the hub",
+    "text": "Chronographs series kicker",
     "kind": "step"
    }
   ],
@@ -2118,24 +2082,30 @@ window.ITEMS = [
   "stage": "Built / Shipped",
   "summary": "Three centuries of the Bank, with a yield chart, monarchs strip and archive plates.",
   "done": "",
-  "next": "Small fix: headline dash gap.",
+  "next": "",
   "history": [
    {
-    "date": "2026-10-07",
+    "date": "2026-10-06",
     "approx": false,
-    "text": "First built: The Bank 1694–1994 timeline",
+    "text": "First scoped",
     "kind": "first"
    },
    {
     "date": "2026-10-07",
     "approx": false,
-    "text": "Monarchs strip, portraits and blurbs; Commons archive plates for Bank events",
+    "text": "Published",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-07",
+    "approx": false,
+    "text": "Monarchs strip and 212 archive plates (through 2026-10-08)",
     "kind": "step"
    },
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "Series kicker; chart lightbox fix",
+    "text": "Crash fix; series kicker",
     "kind": "step"
    }
   ],
@@ -2218,30 +2188,24 @@ window.ITEMS = [
   "stage": "Paused",
   "summary": "Week-by-week WW2 paper atlas: 305-week spine, Logbook/Ruler, photo plates.",
   "done": "",
-  "next": "Monthly control areas, front lines, Ruler/Logbook layout.",
+  "next": "See the follow-up notes.",
   "history": [
    {
-    "date": "2026-10-07",
-    "approx": false,
-    "text": "First built: WW2 Europe strategic map v1, then monthly grain (131 events, 69 months)",
+    "date": "2026-10-06",
+    "approx": true,
+    "text": "First built: v1 Leaflet map (through 2026-10-07)",
     "kind": "first"
    },
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "Rebuilt as a Chronograph: D3 paper atlas, 305-week spine with original articles, Logbook/Ruler panel",
+    "text": "Rebuilt with 305 weekly articles",
     "kind": "step"
    },
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "Photo plates for weeks 1–296b; 12th Army Group maps from D-Day",
-    "kind": "step"
-   },
-   {
-    "date": "2026-10-08",
-    "approx": false,
-    "text": "Paused",
+    "text": "Control-area / front-line pass started, then paused",
     "kind": "step"
    }
   ],
@@ -2256,7 +2220,7 @@ window.ITEMS = [
   "files": [],
   "updated": "2026-10-09",
   "waitingOnJulius": false,
-  "stageNote": "In progress, paused 2026-10-08",
+  "stageNote": "Paused 2026-10-08",
   "liveUrl": "https://julianlee314-hue.github.io/ww2-strat-map/",
   "liveLabel": "Open Chronograph III"
  },
@@ -2349,13 +2313,13 @@ window.ITEMS = [
  },
  {
   "id": "ziyuan",
-  "title": "字園 site: plots 1–3",
+  "title": "字園 Zìyuán site (plots 1–3)",
   "realm": "EDUCATION",
   "goal": "g-ziyuan",
   "owners": [
    "Taiwan/Chinese Webmaster"
   ],
-  "stage": "Built / Shipped",
+  "stage": "Paused",
   "summary": "Live garden of 3,600 Traditional characters with exhaustive Zhuyin.",
   "done": "",
   "next": "",
@@ -2363,19 +2327,25 @@ window.ITEMS = [
    {
     "date": "2026-09-28",
     "approx": false,
-    "text": "First built: 字園 v0 site shell, first-plot note, EN ↔ 中文 toggle",
+    "text": "First built: repo, v0 shell, 10-character seed catalog (took over from an earlier GROK session); shell fixed; EN/中文 toggle",
     "kind": "first"
    },
    {
     "date": "2026-10-01",
     "approx": false,
-    "text": "一圃 市井: 1,200 singles with Zhuyin; Nursery landing, continuous grid",
+    "text": "Locked 5 plots × 1,200 = 6,000 characters",
     "kind": "step"
    },
    {
     "date": "2026-10-01",
     "approx": false,
-    "text": "二圃 and 三圃: next 2,400 singles",
+    "text": "Plot 1 (市井, 1,200 with Zhuyin), Nursery landing, infinite scroll",
+    "kind": "step"
+   },
+   {
+    "date": "2026-10-01",
+    "approx": false,
+    "text": "Plot 2 (2,400) and Plot 3 (3,600, a13b53b); Julius: finish with the third plot for now",
     "kind": "step"
    }
   ],
@@ -2390,7 +2360,7 @@ window.ITEMS = [
   "files": [],
   "updated": "2026-10-09",
   "waitingOnJulius": false,
-  "stageNote": "Live (round 1 said In progress)",
+  "stageNote": "Paused: 'finish with the third plot for now'",
   "liveUrl": "https://julianlee314-hue.github.io/ziyuan/",
   "liveLabel": "Open 字園 Zìyuán"
  },
@@ -2402,7 +2372,7 @@ window.ITEMS = [
   "owners": [
    "Taiwan/Chinese Webmaster"
   ],
-  "stage": "Paused",
+  "stage": "Planning",
   "summary": "The next two plots of characters, on hold.",
   "done": "",
   "next": "",
@@ -2410,24 +2380,24 @@ window.ITEMS = [
    {
     "date": "2026-10-01",
     "approx": false,
-    "text": "First planned as the plots after 三圃",
+    "text": "First scoped as plots 4–5 of the 5 × 1,200 plan",
     "kind": "first"
    },
    {
-    "date": "2026-10-02",
-    "approx": true,
-    "text": "Put on hold by Julius",
+    "date": "2026-10-01",
+    "approx": false,
+    "text": "Parked",
     "kind": "step"
    }
   ],
-  "lastTouched": "2026-10-02",
+  "lastTouched": "2026-10-01",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
   "updated": "2026-10-09",
   "waitingOnJulius": true,
   "decision": "Plots 4–5 are on hold until you give the go-ahead",
-  "stageNote": "Parked by Julius"
+  "stageNote": "Planning; scoped 2026-10-01 and parked"
  },
  {
   "id": "chengyu-study",
@@ -2449,13 +2419,13 @@ window.ITEMS = [
     "kind": "first"
    },
    {
-    "date": "2026-10-05",
-    "approx": true,
-    "text": "Greedy list of 744 idioms delivered as a spreadsheet",
+    "date": "2026-10-03",
+    "approx": false,
+    "text": "Built: ~60% headword coverage, ~70% with related; 744 idioms / 1,523 chars; 882 entries / 1,787 chars",
     "kind": "step"
    }
   ],
-  "lastTouched": "2026-10-05",
+  "lastTouched": "2026-10-03",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
@@ -2476,19 +2446,19 @@ window.ITEMS = [
   "next": "",
   "history": [
    {
-    "date": "2026-10-05",
-    "approx": true,
-    "text": "First set up as a daily 8:14 AM routine",
+    "date": "2026-10-03",
+    "approx": false,
+    "text": "First run: daily 8:14 AM idiom lesson",
     "kind": "first"
    },
    {
-    "date": "2026-10-09",
+    "date": "2026-10-08",
     "approx": false,
-    "text": "Running: 14 of 744 taught",
+    "text": "14 of 744 sent",
     "kind": "step"
    }
   ],
-  "lastTouched": "2026-10-09",
+  "lastTouched": "2026-10-08",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
@@ -2498,25 +2468,31 @@ window.ITEMS = [
  },
  {
   "id": "phrase-bed",
-  "title": "Idiom phrase bed",
+  "title": "字園 phrases / richer meanings",
   "realm": "EDUCATION",
   "goal": "g-ziyuan",
   "owners": [
    "Taiwan/Chinese Webmaster"
   ],
   "stage": "Idea",
-  "summary": "Maybe a phrase bed for the idioms later.",
+  "summary": "Add phrases and richer meanings to the characters.",
   "done": "",
   "next": "",
   "history": [
    {
-    "date": "2026-10-05",
-    "approx": true,
-    "text": "First floated alongside the 成語 study",
+    "date": "2026-10-01",
+    "approx": false,
+    "text": "First raised",
     "kind": "first"
+   },
+   {
+    "date": "2026-10-03",
+    "approx": false,
+    "text": "Raised again",
+    "kind": "step"
    }
   ],
-  "lastTouched": "2026-10-05",
+  "lastTouched": "2026-10-03",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
@@ -2531,7 +2507,7 @@ window.ITEMS = [
   "owners": [
    "KEEP Finance Bot"
   ],
-  "stage": "Built / Shipped",
+  "stage": "Paused",
   "summary": "Personal finance app (private).",
   "done": "",
   "next": "",
@@ -2613,7 +2589,7 @@ window.ITEMS = [
  },
  {
   "id": "income-app",
-  "title": "Income app",
+  "title": "Income tracker app",
   "realm": "LIFE",
   "goal": "g-lifeapps",
   "owners": [
@@ -2625,13 +2601,13 @@ window.ITEMS = [
   "next": "",
   "history": [
    {
-    "date": "2026-10-08",
-    "approx": true,
+    "date": "2026-09-28",
+    "approx": false,
     "text": "First floated",
     "kind": "first"
    }
   ],
-  "lastTouched": "2026-10-08",
+  "lastTouched": "2026-09-28",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
@@ -2801,14 +2777,8 @@ window.ITEMS = [
    {
     "date": "2026-09-24",
     "approx": false,
-    "text": "First built and published: 100 recipes",
+    "text": "First built and published: 100 recipes (text)",
     "kind": "first"
-   },
-   {
-    "date": "2026-09-24",
-    "approx": true,
-    "text": "Anime plates handed to another bot",
-    "kind": "step"
    }
   ],
   "lastTouched": "2026-09-24",
@@ -2881,7 +2851,7 @@ window.ITEMS = [
   "owners": [
    "Fitbot"
   ],
-  "stage": "In Progress",
+  "stage": "Planning",
   "summary": "Weekly training plan (details private).",
   "done": "",
   "next": "",
@@ -2908,7 +2878,7 @@ window.ITEMS = [
   "owners": [
    "Fitbot"
   ],
-  "stage": "In Progress",
+  "stage": "Planning",
   "summary": "Endurance goal with a 9-week plan (details private).",
   "done": "",
   "next": "",
@@ -3033,27 +3003,6 @@ window.ITEMS = [
    "RE/MAX"
   ],
   "stage": "Paused",
-  "summary": "Property research (private).",
-  "done": "",
-  "next": "",
-  "history": [],
-  "lastTouched": null,
-  "source": "Bot reports (2026-10-09)",
-  "links": [],
-  "files": [],
-  "updated": "2026-10-09",
-  "waitingOnJulius": false,
-  "historyNote": "History kept private."
- },
- {
-  "id": "property-explainers",
-  "title": "Property explainers (private)",
-  "realm": "LIFE",
-  "goal": "g-property",
-  "owners": [
-   "RE/MAX"
-  ],
-  "stage": "Built / Shipped",
   "summary": "Property research (private).",
   "done": "",
   "next": "",
@@ -3377,7 +3326,7 @@ window.ITEMS = [
   "updated": "2026-10-09",
   "waitingOnJulius": true,
   "decision": "Pick a name for TRASK / Fake Film School",
-  "stageNote": "Round 1: In progress (barely)"
+  "stageNote": "Paused; had reached Planning"
  },
  {
   "id": "tower-9",
@@ -3610,7 +3559,7 @@ window.ITEMS = [
    "MacOS/Tech Expert",
    "Grok Bot"
   ],
-  "stage": "In Progress",
+  "stage": "Design",
   "summary": "Data pipeline for a private movie app.",
   "done": "",
   "next": "",
@@ -3634,18 +3583,18 @@ window.ITEMS = [
   "stage": "Planning",
   "summary": "Personal film-editing practice from public-domain ads.",
   "done": "",
-  "next": "Julius OKs downloading the Prelinger set into decade folders; may send his own clips.",
+  "next": "Julius OKs downloading the Prelinger set into decade folders, and sends his own clips + a show.",
   "history": [
    {
-    "date": "2026-10-07",
-    "approx": true,
-    "text": "First discussed: retro commercials as editing practice",
+    "date": "2026-10-08",
+    "approx": false,
+    "text": "First discussed: retro TV ads as a personal film-editing learning project",
     "kind": "first"
    },
    {
     "date": "2026-10-08",
     "approx": false,
-    "text": "Public-domain sources surveyed (Prelinger, ~130 ads)",
+    "text": "Public-domain sources surveyed: Prelinger ~130 ads (1940s–60s), ~40 Wikimedia, some NARA PSAs",
     "kind": "step"
    }
   ],
@@ -3700,8 +3649,14 @@ window.ITEMS = [
    {
     "date": "2026-10-07",
     "approx": false,
-    "text": "First built",
+    "text": "First made: 13 pages",
     "kind": "first"
+   },
+   {
+    "date": "2026-10-07",
+    "approx": false,
+    "text": "Delivery stopped for now",
+    "kind": "step"
    }
   ],
   "lastTouched": "2026-10-07",
@@ -3710,8 +3665,7 @@ window.ITEMS = [
   "files": [],
   "updated": "2026-10-09",
   "waitingOnJulius": false,
-  "note": "Built, but Bookworm paused the delivery, so it sits in Paused.",
-  "stageNote": "Built, delivery paused"
+  "stageNote": "Paused"
  },
  {
   "id": "books-library",
@@ -3754,13 +3708,19 @@ window.ITEMS = [
   "next": "",
   "history": [
    {
-    "date": "2026-10-07",
+    "date": "2026-10-05",
     "approx": false,
-    "text": "First floated by Bookworm",
+    "text": "First floated",
     "kind": "first"
+   },
+   {
+    "date": "2026-10-08",
+    "approx": false,
+    "text": "Raised again",
+    "kind": "step"
    }
   ],
-  "lastTouched": "2026-10-07",
+  "lastTouched": "2026-10-08",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
@@ -3862,13 +3822,13 @@ window.ITEMS = [
   "next": "",
   "history": [
    {
-    "date": "2026-10-07",
-    "approx": true,
-    "text": "First proposed",
+    "date": "2026-10-08",
+    "approx": false,
+    "text": "First proposed: ONTOLOGY home page linking Books + COMIX",
     "kind": "first"
    }
   ],
-  "lastTouched": "2026-10-07",
+  "lastTouched": "2026-10-08",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
@@ -3891,7 +3851,7 @@ window.ITEMS = [
    {
     "date": "2026-10-05",
     "approx": true,
-    "text": "First set up",
+    "text": "First set up (Mon/Thu 9:56)",
     "kind": "first"
    }
   ],
@@ -3919,17 +3879,11 @@ window.ITEMS = [
    {
     "date": "2026-09-24",
     "approx": true,
-    "text": "First built on the RE/MAX side",
+    "text": "First built on the RE/MAX side; abandoned (Bookworm owns book sites)",
     "kind": "first"
-   },
-   {
-    "date": "2026-09-28",
-    "approx": true,
-    "text": "Cancelled; Bookworm owns book sites",
-    "kind": "step"
    }
   ],
-  "lastTouched": "2026-09-28",
+  "lastTouched": "2026-09-24",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
@@ -4379,6 +4333,667 @@ window.ITEMS = [
    }
   ],
   "lastTouched": "2026-10-08",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false
+ },
+ {
+  "id": "concept-histories",
+  "title": "Concept Histories (144 essays)",
+  "realm": "EDUCATION",
+  "goal": "g-mathera",
+  "owners": [
+   "Math Sensei"
+  ],
+  "stage": "Built / Shipped",
+  "summary": "144 multi-epoch concept-history essays, shipped inside Math History 101.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-01",
+    "approx": false,
+    "text": "First written: all 144 multi-epoch concept essays, then tightened ~50%",
+    "kind": "first"
+   },
+   {
+    "date": "2026-10-03",
+    "approx": true,
+    "text": "Handed off inside Math History 101",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-03",
+  "source": "Bot reports (2026-10-09)",
+  "links": [
+   {
+    "label": "Open Math History 101",
+    "url": "https://julianlee314-hue.github.io/math-history-101/"
+   }
+  ],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "liveUrl": "https://julianlee314-hue.github.io/math-history-101/",
+  "liveLabel": "Open Math History 101"
+ },
+ {
+  "id": "wall-icons",
+  "title": "Math-symbol Wall icons",
+  "realm": "EDUCATION",
+  "goal": "g-mathera",
+  "owners": [
+   "Math Sensei"
+  ],
+  "stage": "Abandoned / Superseded",
+  "summary": "OTGW-style math-symbol mini icons for the 12×12 Concept Wall.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-01",
+    "approx": false,
+    "text": "First 16 math-symbol Wall icons made",
+    "kind": "first"
+   },
+   {
+    "date": "2026-10-02",
+    "approx": true,
+    "text": "Abandoned by Math Sensei",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-02",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "note": "Conflict: Math Sensei calls this icon set Abandoned; MWA still lists '~128 Wall icons' as Math History 101's next step. Both are kept: this note is the abandoned style, the remaining icons stay on Math History 101."
+ },
+ {
+  "id": "meme-mapping",
+  "title": "Meme constellation / curriculum mapping",
+  "realm": "EDUCATION",
+  "goal": "g-memes",
+  "owners": [
+   "Math Sensei"
+  ],
+  "stage": "Idea",
+  "summary": "Map memes onto the curriculum as a constellation.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First floated with the gallery",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false
+ },
+ {
+  "id": "chrono-1-pres",
+  "title": "The Dow: president-strip fix",
+  "realm": "EDUCATION",
+  "goal": "g-chrono",
+  "owners": [
+   "Math Sensei"
+  ],
+  "stage": "Planning",
+  "summary": "Fix the presidents strip on Chronograph I.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-07",
+    "approx": true,
+    "text": "First raised in the design review",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-07",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false
+ },
+ {
+  "id": "chrono-2-dash",
+  "title": "The Bank: headline dash gap",
+  "realm": "EDUCATION",
+  "goal": "g-chrono",
+  "owners": [
+   "Math Sensei"
+  ],
+  "stage": "Idea",
+  "summary": "Small typography idea for The Bank's headlines.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-08",
+    "approx": true,
+    "text": "First floated as a Bank sub-idea",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-08",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false
+ },
+ {
+  "id": "chrono-3-fronts",
+  "title": "WWII: control areas, front lines, Ruler/Logbook",
+  "realm": "EDUCATION",
+  "goal": "g-chrono",
+  "owners": [
+   "Math Sensei"
+  ],
+  "stage": "Planning",
+  "summary": "Monthly control areas, front lines and the Ruler/Logbook layout for Chronograph III.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-08",
+    "approx": false,
+    "text": "First started in the control/front-line pass, then paused",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-08",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false
+ },
+ {
+  "id": "chrono-3-photos",
+  "title": "WWII: photo styling",
+  "realm": "EDUCATION",
+  "goal": "g-chrono",
+  "owners": [
+   "Math Sensei"
+  ],
+  "stage": "Idea",
+  "summary": "Restyle Chronograph III's photo plates.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-08",
+    "approx": false,
+    "text": "First floated",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-08",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false
+ },
+ {
+  "id": "ziyuan-charpages",
+  "title": "字園 per-character pages",
+  "realm": "EDUCATION",
+  "goal": "g-ziyuan",
+  "owners": [
+   "Taiwan/Chinese Webmaster"
+  ],
+  "stage": "Planning",
+  "summary": "A page for each character.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-01",
+    "approx": false,
+    "text": "First scoped; deferred",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-01",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false
+ },
+ {
+  "id": "media-catalog",
+  "title": "Home media upkeep: catalog",
+  "realm": "MEDIA",
+  "goal": "g-homemedia",
+  "owners": [
+   "MacOS/Tech Expert"
+  ],
+  "stage": "Built / Shipped",
+  "summary": "Home media library upkeep (private).",
+  "done": "",
+  "next": "",
+  "history": [],
+  "lastTouched": null,
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "historyNote": "History kept private."
+ },
+ {
+  "id": "order-metadata",
+  "title": "Order metadata (private)",
+  "realm": "LIFE",
+  "goal": "g-lifeapps",
+  "owners": [
+   "KEEP Finance Bot"
+  ],
+  "stage": "Paused",
+  "summary": "Personal finance data (private).",
+  "done": "",
+  "next": "",
+  "history": [],
+  "lastTouched": null,
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "historyNote": "History kept private."
+ },
+ {
+  "id": "weekly-reminder",
+  "title": "Weekly reminder (private)",
+  "realm": "LIFE",
+  "goal": "g-admin",
+  "owners": [
+   "Fitbot"
+  ],
+  "stage": "Built / Shipped",
+  "summary": "Personal reminder (private).",
+  "done": "",
+  "next": "",
+  "history": [],
+  "lastTouched": null,
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "historyNote": "History kept private."
+ },
+ {
+  "id": "era-art-4-v1",
+  "title": "Era IV v1: Great Engine",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist"
+  ],
+  "stage": "Abandoned / Superseded",
+  "summary": "Superseded by the v2 steam-engine mountain city.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First drawn",
+    "kind": "first"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "Superseded",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "stageNote": "Superseded"
+ },
+ {
+  "id": "era-art-5-v1",
+  "title": "Era V v1: marble-castle tree",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist"
+  ],
+  "stage": "Abandoned / Superseded",
+  "summary": "Superseded by the v2 terraced marble citadel.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First drawn",
+    "kind": "first"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "Superseded",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "stageNote": "Superseded"
+ },
+ {
+  "id": "era-art-6-v1",
+  "title": "Era VI v1: cosmic tree",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist"
+  ],
+  "stage": "Abandoned / Superseded",
+  "summary": "Superseded during the Era VI rethink.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First drawn",
+    "kind": "first"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "Superseded",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "stageNote": "Superseded"
+ },
+ {
+  "id": "era-art-6-v2",
+  "title": "Era VI v2: sky city",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist"
+  ],
+  "stage": "Abandoned / Superseded",
+  "summary": "Superseded by the 10-option rethink.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First drawn",
+    "kind": "first"
+   },
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "Superseded",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "stageNote": "Superseded"
+ },
+ {
+  "id": "era-extras",
+  "title": "Portrait shots, zoomed details, era transition spaces",
+  "realm": "EDUCATION",
+  "goal": "g-wayfinder",
+  "owners": [
+   "Mathera Artist"
+  ],
+  "stage": "Idea",
+  "summary": "Extra art formats floated for the eras; skipped for now.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": true,
+    "text": "First floated; skipped for now",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-06",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false
+ },
+ {
+  "id": "publish-library",
+  "title": "Publish the Personal Books Library",
+  "realm": "TOOLS",
+  "goal": "g-books",
+  "owners": [
+   "Bookworm"
+  ],
+  "stage": "Abandoned / Superseded",
+  "summary": "Publishing idea (dropped).",
+  "done": "",
+  "next": "",
+  "history": [],
+  "lastTouched": null,
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "historyNote": "History kept private."
+ },
+ {
+  "id": "books-net-test",
+  "title": "Private access test",
+  "realm": "TOOLS",
+  "goal": "g-books",
+  "owners": [
+   "Bookworm"
+  ],
+  "stage": "Idea",
+  "summary": "Private access idea.",
+  "done": "",
+  "next": "",
+  "history": [],
+  "lastTouched": null,
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "historyNote": "History kept private."
+ },
+ {
+  "id": "library-fix",
+  "title": "Replace a corrupt ebook",
+  "realm": "TOOLS",
+  "goal": "g-books",
+  "owners": [
+   "Bookworm"
+  ],
+  "stage": "Idea",
+  "summary": "Library fix (private).",
+  "done": "",
+  "next": "",
+  "history": [],
+  "lastTouched": null,
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "historyNote": "History kept private."
+ },
+ {
+  "id": "citadel-public",
+  "title": "Re-publish two catalog sites",
+  "realm": "TOOLS",
+  "goal": "g-books",
+  "owners": [
+   "Bookworm"
+  ],
+  "stage": "Abandoned / Superseded",
+  "summary": "Re-publish two catalog sites (declined).",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-01",
+    "approx": false,
+    "text": "Declined",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-01",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false
+ },
+ {
+  "id": "comics-pages",
+  "title": "Comics on GitHub Pages",
+  "realm": "MEDIA",
+  "goal": "g-comics",
+  "owners": [
+   "Bookworm"
+  ],
+  "stage": "Abandoned / Superseded",
+  "summary": "Publish the comics reader online (declined).",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-07",
+    "approx": false,
+    "text": "Declined",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-07",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false
+ },
+ {
+  "id": "property-scout",
+  "title": "Property research: early scout (private)",
+  "realm": "LIFE",
+  "goal": "g-property",
+  "owners": [
+   "RE/MAX"
+  ],
+  "stage": "Abandoned / Superseded",
+  "summary": "Property research (private).",
+  "done": "",
+  "next": "",
+  "history": [],
+  "lastTouched": null,
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "historyNote": "History kept private."
+ },
+ {
+  "id": "border-plates",
+  "title": "Border & Mesa anime plates",
+  "realm": "LIFE",
+  "goal": "g-cookbooks",
+  "owners": [
+   "RE/MAX"
+  ],
+  "stage": "Abandoned / Superseded",
+  "summary": "Anime plate illustrations for Border & Mesa.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-09-24",
+    "approx": false,
+    "text": "First planned",
+    "kind": "first"
+   },
+   {
+    "date": "2026-09-24",
+    "approx": false,
+    "text": "Abandoned on the RE/MAX side",
+    "kind": "step"
+   }
+  ],
+  "lastTouched": "2026-09-24",
+  "source": "Bot reports (2026-10-09)",
+  "links": [],
+  "files": [],
+  "updated": "2026-10-09",
+  "waitingOnJulius": false,
+  "note": "Round 1 said the plates were handed to another bot; RE/MAX's round 2 says Abandoned on its side."
+ },
+ {
+  "id": "graph-lab-extras",
+  "title": "Graph Lab extras",
+  "realm": "EDUCATION",
+  "goal": "g-mathera",
+  "owners": [
+   "Math Website Administrator"
+  ],
+  "stage": "Idea",
+  "summary": "Inequalities, slope triangle, transform animation.",
+  "done": "",
+  "next": "",
+  "history": [
+   {
+    "date": "2026-10-06",
+    "approx": false,
+    "text": "First floated with v1",
+    "kind": "first"
+   }
+  ],
+  "lastTouched": "2026-10-06",
   "source": "Bot reports (2026-10-09)",
   "links": [],
   "files": [],
