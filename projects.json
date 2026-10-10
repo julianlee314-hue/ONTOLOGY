@@ -461,22 +461,11 @@
    ]
   },
   {
-   "id": "g-property",
-   "realm": "LIFE",
-   "title": "Property",
-   "color": "#8d6e63",
-   "description": "Property research (private).",
-   "owners": [
-    "RE/MAX"
-   ],
-   "history": []
-  },
-  {
    "id": "g-admin",
    "realm": "LIFE",
    "title": "Personal admin",
    "color": "#5c9bd1",
-   "description": "Personal admin and advice (private).",
+   "description": "Personal admin (private).",
    "owners": [
     "Lawyer/Business Advisor",
     "Kronos"
@@ -2750,33 +2739,6 @@
    "waitingOnJulius": false
   },
   {
-   "id": "income-app",
-   "title": "Income tracker app",
-   "realm": "LIFE",
-   "goal": "g-lifeapps",
-   "owners": [
-    "KEEP Finance Bot"
-   ],
-   "stage": "Idea",
-   "summary": "Personal finance idea (private).",
-   "done": "",
-   "next": "",
-   "history": [
-    {
-     "date": "2026-09-28",
-     "approx": false,
-     "text": "First floated",
-     "kind": "first"
-    }
-   ],
-   "lastTouched": "2026-09-28",
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false
-  },
-  {
    "id": "recipes-rewatch",
    "title": "Recipes Worth Rewatching",
    "realm": "LIFE",
@@ -3123,67 +3085,34 @@
    "stageNote": "Idea (floated by Fitbot, not started)"
   },
   {
-   "id": "property-a",
-   "title": "Property research A (private)",
+   "id": "personal-admin",
+   "title": "Personal admin (private)",
    "realm": "LIFE",
-   "goal": "g-property",
+   "goal": "g-admin",
    "owners": [
-    "RE/MAX"
+    "KEEP Finance Bot",
+    "Kronos",
+    "Lawyer/Business Advisor",
+    "RE/MAX",
+    "TRASK CORP"
    ],
    "stage": "In Progress",
-   "summary": "Property research (private).",
+   "summary": "Personal admin (private).",
    "done": "",
    "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
-  },
-  {
-   "id": "property-b",
-   "title": "Property research B (private)",
-   "realm": "LIFE",
-   "goal": "g-property",
-   "owners": [
-    "RE/MAX"
+   "history": [
+    {
+     "date": "2026-10-10",
+     "text": "Private items collapsed into one card for the public view.",
+     "kind": "first"
+    }
    ],
-   "stage": "In Progress",
-   "summary": "Property research (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
+   "lastTouched": "2026-10-10",
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
    "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
-  },
-  {
-   "id": "property-rentals",
-   "title": "Property research: rentals (private)",
-   "realm": "LIFE",
-   "goal": "g-property",
-   "owners": [
-    "RE/MAX"
-   ],
-   "stage": "Paused",
-   "summary": "Property research (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
+   "waitingOnJulius": false
   },
   {
    "id": "calendar",
@@ -3211,111 +3140,6 @@
    "files": [],
    "updated": "2026-10-10",
    "waitingOnJulius": false
-  },
-  {
-   "id": "personal-plans",
-   "title": "Personal plans (private)",
-   "realm": "LIFE",
-   "goal": "g-admin",
-   "owners": [
-    "Kronos"
-   ],
-   "stage": "Paused",
-   "summary": "Personal plans (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
-  },
-  {
-   "id": "finance-advice",
-   "title": "Finance advice (private)",
-   "realm": "LIFE",
-   "goal": "g-admin",
-   "owners": [
-    "Lawyer/Business Advisor"
-   ],
-   "stage": "Built / Shipped",
-   "summary": "Personal finance advice (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
-  },
-  {
-   "id": "advice-question",
-   "title": "Advice question (private)",
-   "realm": "LIFE",
-   "goal": "g-admin",
-   "owners": [
-    "Lawyer/Business Advisor"
-   ],
-   "stage": "Idea",
-   "summary": "Personal advice question (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
-  },
-  {
-   "id": "teaching-abroad",
-   "title": "Teaching abroad (private)",
-   "realm": "LIFE",
-   "goal": "g-admin",
-   "owners": [
-    "Lawyer/Business Advisor"
-   ],
-   "stage": "Paused",
-   "summary": "Teaching math abroad (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
-  },
-  {
-   "id": "creator-advice",
-   "title": "Creator advice (private)",
-   "realm": "LIFE",
-   "goal": "g-admin",
-   "owners": [
-    "Lawyer/Business Advisor"
-   ],
-   "stage": "Built / Shipped",
-   "summary": "Advice for creator work (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
   },
   {
    "id": "trask-wire",
@@ -3446,28 +3270,6 @@
    "updated": "2026-10-10",
    "waitingOnJulius": true,
    "decision": "Decide whether to publish the off-wire house media"
-  },
-  {
-   "id": "trask-rights",
-   "title": "Rights review (private)",
-   "realm": "MEDIA",
-   "goal": "g-trask",
-   "owners": [
-    "TRASK CORP",
-    "Lawyer/Business Advisor"
-   ],
-   "stage": "Paused",
-   "summary": "Review before publishing (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
   },
   {
    "id": "fake-film-school-identity",
@@ -4124,67 +3926,31 @@
    "historyNote": "History kept private."
   },
   {
-   "id": "security",
-   "title": "Security upkeep",
+   "id": "mac-upkeep",
+   "title": "Mac upkeep (private)",
    "realm": "TOOLS",
    "goal": "g-mac",
    "owners": [
+    "Bookworm",
     "MacOS/Tech Expert"
    ],
    "stage": "In Progress",
-   "summary": "Mac & security upkeep (private).",
+   "summary": "Mac upkeep (private).",
    "done": "",
    "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
-  },
-  {
-   "id": "home-network",
-   "title": "Home network upkeep",
-   "realm": "TOOLS",
-   "goal": "g-mac",
-   "owners": [
-    "MacOS/Tech Expert"
+   "history": [
+    {
+     "date": "2026-10-10",
+     "text": "Private items collapsed into one card for the public view.",
+     "kind": "first"
+    }
    ],
-   "stage": "Planning",
-   "summary": "Mac & security upkeep (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
+   "lastTouched": "2026-10-10",
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
    "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
-  },
-  {
-   "id": "remote-access",
-   "title": "Remote access",
-   "realm": "TOOLS",
-   "goal": "g-mac",
-   "owners": [
-    "MacOS/Tech Expert"
-   ],
-   "stage": "Planning",
-   "summary": "Mac & security upkeep (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
+   "waitingOnJulius": false
   },
   {
    "id": "dev-setup",
@@ -4767,27 +4533,6 @@
    "historyNote": "History kept private."
   },
   {
-   "id": "order-metadata",
-   "title": "Order metadata (private)",
-   "realm": "LIFE",
-   "goal": "g-lifeapps",
-   "owners": [
-    "KEEP Finance Bot"
-   ],
-   "stage": "Paused",
-   "summary": "Personal finance data (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
-  },
-  {
    "id": "weekly-reminder",
    "title": "Monday laundry reminder (6:14 AM)",
    "realm": "HEALTH",
@@ -4999,27 +4744,6 @@
    "historyNote": "History kept private."
   },
   {
-   "id": "books-net-test",
-   "title": "Private access test",
-   "realm": "TOOLS",
-   "goal": "g-books",
-   "owners": [
-    "Bookworm"
-   ],
-   "stage": "Idea",
-   "summary": "Private access idea.",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
-  },
-  {
    "id": "library-fix",
    "title": "Replace a corrupt ebook",
    "realm": "TOOLS",
@@ -5093,27 +4817,6 @@
    "files": [],
    "updated": "2026-10-10",
    "waitingOnJulius": false
-  },
-  {
-   "id": "property-scout",
-   "title": "Property research: early scout (private)",
-   "realm": "LIFE",
-   "goal": "g-property",
-   "owners": [
-    "RE/MAX"
-   ],
-   "stage": "Abandoned / Superseded",
-   "summary": "Property research (private).",
-   "done": "",
-   "next": "",
-   "history": [],
-   "lastTouched": null,
-   "source": "Bot reports (2026-10-09)",
-   "links": [],
-   "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false,
-   "historyNote": "History kept private."
   },
   {
    "id": "border-plates",
