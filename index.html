@@ -211,6 +211,10 @@ html[data-theme="dark"] .kid{filter:saturate(.85) brightness(.92)}
 .vlist2{list-style:none;padding:0;margin:6px 0}.vlist2 li{display:flex;gap:8px;align-items:baseline;padding:5px 0;border-bottom:1px dashed rgba(0,0,0,.12)}.vlist2 .vd{min-width:84px;font-size:12px;color:var(--ink-soft)}.vlist2 .vs{font-size:11px;color:var(--ink-soft)}
 .vgo{display:inline-block;text-decoration:none;font-weight:800;border-radius:6px;padding:0 6px;background:#2b2118;color:#fff;font-size:12px}
 .tline .vgo{margin-left:6px}
+.hm{display:inline-flex;gap:2px;font-size:11px}.hm i{font-style:normal;opacity:.9}
+.hbox{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.hbox span{border-radius:999px;padding:2px 9px;font-size:12px;border:1px solid rgba(0,0,0,.15);background:rgba(0,0,0,.04)}.hbox span.on{background:#d9f2df;border-color:#3d9b57}
+html[data-theme="dark"] .hbox span.on{background:#1f4a2b}
+.truth{border-left:4px solid #7b5cd6;background:rgba(123,92,214,.09);padding:6px 10px;border-radius:6px;margin:6px 0}
 .goal .tl:hover{background:#fff;transform:scale(1.08)}
 .goal:hover{opacity:1;transform:translateY(-1px)}
 .goal[aria-pressed="true"]{opacity:1;box-shadow:0 0 0 3px #fff,0 0 0 6px var(--gc),0 6px 14px rgba(0,0,0,.3)}
@@ -263,7 +267,7 @@ html[data-theme="dark"] .abtoggle{color:var(--ink-soft);border-color:rgba(255,23
 <header class="top">
   <div class="titlebar">
     <h1>📌 ONTOLOGY Kanban</h1>
-    <span class="meta">v4 · bot data from <b id="updated"></b></span>
+    <span class="meta">v5 · bot data from <b id="updated"></b></span>
     <div class="totals" id="totals"></div>
   </div>
   <div class="toolbar">
@@ -443,6 +447,7 @@ function render(){
 }
 function linkedOf(x){ const t=x&&(x.linkedTo||(x.goal&&goalById(x.goal)&&goalById(x.goal).linkedTo)); if(!t) return null; return goalById(t)||goalById("g-"+t)||null; }
 function companionsOf(id){ return GOALS.filter(g=>g.linkedTo===id||"g-"+g.linkedTo===id); }
+function healthMarks(p){ const h=p.health||{}; const a=[]; if(h.stranger)a.push('<i title="A stranger can use it">🌐</i>'); if(h.repeat)a.push('<i title="Julius uses it repeatedly">🔁</i>'); if(h.nextTest)a.push(`<i title="Next test ${esc(h.nextTest)}">🧪</i>`); if(p.nextTruth)a.push(`<i title="Next truth: ${esc(p.nextTruth)}">❓</i>`); return a.length?`<span class="hm">${a.join("")}</span>`:""; }
 function stampOf(p){ const t=((p.history||[]).slice(-1)[0]||{}).text||""; const s=t+" "+(p.stageNote||""); return /merged/i.test(s)?"merged":/early exploration/i.test(s)?"explored":/supersed|replaced|successor/i.test(s)?"superseded":"abandoned"; }
 function noteEl(p){
   const d=document.createElement("article");
@@ -456,7 +461,7 @@ function noteEl(p){
   d.innerHTML=`<span class="pin"></span>${liveA(p)}<h3>${esc(p.title)}</h3><div class="sum">${esc(p.summary||"")}</div>
    <div class="foot">${g?`<span class="gtag" style="--gc:${g.color}">${esc(g.title)}</span>`:`<span class="tag realm-t" style="--c:${REALM_COLORS[p.realm]}">${esc(p.realm)}</span>`}${(()=>{const l=linkedOf(p);return l?`<span class="lkchip" style="--lc:${l.color}" title="Linked to ${esc(l.title)}">🔗 ${esc(l.title)}</span>`:""})()}<span class="tag owner">🤖 ${esc(owners[0]||"")}${owners.length>1?" +"+(owners.length-1):""}</span>
    ${n!=null?`<span class="ago${n>=7?" old":""}" title="Last touched ${esc(p.lastTouched)}">🕑 ${agoText(p.lastTouched)}</span>`:""}
-   ${p.waitingOnJulius&&p.stage!==AB?'<span class="badge-wait" title="'+esc(p.decision||"")+'">⏳ You</span>':""}${p.moved?'<span class="badge-moved" title="Bot data says: '+esc(p.botStage)+'">↔ moved</span>':""}${p.mine?'<span class="badge-mine">✎ yours</span>':""}</div>
+   ${p.waitingOnJulius&&p.stage!==AB?'<span class="badge-wait" title="'+esc(p.decision||"")+'">⏳ You</span>':""}${p.moved?'<span class="badge-moved" title="Bot data says: '+esc(p.botStage)+'">↔ moved</span>':""}${p.mine?'<span class="badge-mine">✎ yours</span>':""}${healthMarks(p)}</div>
    ${p.stage===AB?`<span class="stamp">${stampOf(p)}</span>`:""}`;
   d.setAttribute("aria-label",p.title+", "+p.stage+(g?", goal "+g.title:"")+(p.waitingOnJulius?", waiting on you":""));
   d.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openItem(p.id)}});
@@ -541,6 +546,8 @@ function openItem(id,from,keep){
     ${p.stageNote||p.moved?`<h4>Stage (bot's words)</h4><p>${esc(p.stageNote||p.botStage)}${p.moved?` <span class="pmeta">— you moved it to ${esc(p.stage)}</span>`:""}</p>`:""}
     ${p.done?`<h4>Done</h4><p>${esc(p.done)}</p>`:""}
     ${p.next?`<h4>Next / open</h4><p>${esc(p.next)}</p>`:""}
+    ${p.nextTruth?`<h4>Next truth</h4><div class="truth">❓ ${esc(p.nextTruth)}</div>`:""}
+    ${!p.mine?`<h4>Health</h4><div class="hbox"><span class="${(p.health||{}).stranger?"on":""}">🌐 Stranger can use it: ${(p.health||{}).stranger?"yes":"not yet / unknown"}</span><span class="${(p.health||{}).repeat?"on":""}">🔁 Julius uses it repeatedly: ${(p.health||{}).repeat?"yes":"not recorded"}</span><span class="${(p.health||{}).nextTest?"on":""}">🧪 Next test: ${(p.health||{}).nextTest?esc(fmtDate(p.health.nextTest)):"none dated"}</span></div>`:""}
     ${p.note?`<div class="notebox">${esc(p.note)}</div>`:""}
     ${p.versions&&p.versions.length?`<h4>Versions (${p.versions.length})</h4><ul class="vlist2" id="vlist">${p.versions.map(v=>`<li><span class="vd">${esc(fmtDate(v.date))}</span><span style="flex:1"><b>${esc(v.label)}</b> <span class="vs">· ${esc(v.stage)}</span><br><span class="vs">${esc(v.summary||"")}</span></span>${v.url?`<a class="vgo" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer" title="Open ${esc(v.label)}">↗</a>`:(v.note?`<button class="tn" data-kid="${esc(v.note)}">note</button>`:"")}</li>`).join("")}</ul>`:""}
     <h4>${p.versions?"Version timeline":"History"}</h4>${timeline(p.history,{empty:p.historyNote,self:p.id})}
@@ -614,7 +621,7 @@ $("#exportBtn").onclick=()=>{
     goals:GOALS.map(g=>Object.assign({},g,{notes:all.filter(i=>i.goal===g.id).map(i=>i.id)})),
     items:all.map(({moved,botStage,mine,...rest})=>Object.assign(rest,{column:rest.stage,botColumn:botStage,movedByJulius:moved,juliusNote:mine,lastTouchedDaysAgo:daysAgo(rest.lastTouched)})),overrides};
   const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
-  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="ontology-kanban-v4-"+todayStr()+".json";
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="ontology-kanban-v5-"+todayStr()+".json";
   document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500); toast("Board exported"); };
 const dlg=$("#addDlg");
 $("#fRealm").innerHTML=REALMS.map(r=>`<option value="${r.id}">${esc(r.label)}</option>`).join("");

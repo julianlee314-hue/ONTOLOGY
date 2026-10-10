@@ -1,7 +1,7 @@
 {
  "title": "ONTOLOGY Kanban",
- "version": 4,
- "updated": "2026-10-10",
+ "version": 5,
+ "updated": "2026-10-11",
  "stages": [
   "Idea",
   "Planning",
@@ -64,13 +64,14 @@
    "realm": "EDUCATION",
    "title": "Mathera",
    "color": "#f2b705",
-   "description": "The core math platform across seven eras: the Mathera site (all versions), the curriculum spine, exam mode, concepts and the planning docs. Companion products are linked below.",
+   "description": "The core math platform across seven eras: the Mathera site (all versions), the era world art (its only non-math media), the curriculum spine, exam mode and the planning docs. Companion products are linked below.",
    "owners": [
-    "Math Website Administrator",
+    "Don",
+    "Euclid",
+    "Grok Bot",
+    "Patton",
     "Unreported (GitHub history)",
-    "Math Sensei",
-    "Math Historian",
-    "Mathera Artist"
+    "Plutarch"
    ],
    "history": [
     {
@@ -96,6 +97,18 @@
      "approx": false,
      "text": "v0.6, v0.6.1 and v0.6.2 test builds ship the same day",
      "kind": "goal"
+    },
+    {
+     "date": "2026-10-06",
+     "approx": false,
+     "text": "Era world art: v1 heroes for all seven eras; IV, V and VI redone",
+     "kind": "goal"
+    },
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "Julius: era world art belongs to Mathera core, not a companion",
+     "kind": "goal"
     }
    ],
    "note": "Main public site is still v0.5; Julius hasn't picked the canonical 0.6.x build."
@@ -105,10 +118,10 @@
    "realm": "EDUCATION",
    "title": "Wayfinder",
    "color": "#e0892b",
-   "description": "Mathera's testing and placement system: placement gates, a diagnostic, and the pedagogy briefs behind them.",
+   "description": "Mathera's testing and placement system: placement gates and the Root Check diagnostic.",
    "owners": [
-    "Math Sensei",
-    "Math Website Administrator",
+    "Euclid",
+    "Patton",
     "Grok Bot"
    ],
    "history": [
@@ -121,13 +134,7 @@
     {
      "date": "2026-10-05",
      "approx": false,
-     "text": "Pedagogy briefs; coverage review: ~23% of the curriculum spine",
-     "kind": "goal"
-    },
-    {
-     "date": "2026-10-06",
-     "approx": false,
-     "text": "Briefs renamed Wayfinder; placement gates and gate dependency map",
+     "text": "Placement gates; coverage review: ~23% of the curriculum spine",
      "kind": "goal"
     },
     {
@@ -135,42 +142,15 @@
      "approx": false,
      "text": "Julius confirms Wayfinder is Mathera's testing/placement system, separate from ForgePath",
      "kind": "goal"
+    },
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "Battle-play briefs relabelled as ForgePath",
+     "kind": "goal"
     }
    ],
    "liveNote": "Wayfinder isn't live yet; ForgePath Prequel is the playable shell.",
-   "linkedTo": "g-mathera"
-  },
-  {
-   "id": "g-worldart",
-   "realm": "EDUCATION",
-   "title": "Mathera world art",
-   "color": "#c9a227",
-   "description": "Wallpaper-size hero art for Mathera's seven eras, with room for skill paths, plus landmarks and extras.",
-   "owners": [
-    "Mathera Artist",
-    "Grok Bot",
-    "Math Sensei"
-   ],
-   "history": [
-    {
-     "date": "2026-10-06",
-     "approx": false,
-     "text": "Mathera Artist created; Julius sends the 7-era monument table; v1 heroes for all eras",
-     "kind": "goal"
-    },
-    {
-     "date": "2026-10-06",
-     "approx": false,
-     "text": "Eras IV, V, VI redone; Era VI rethink with 10 options",
-     "kind": "goal"
-    },
-    {
-     "date": "2026-10-09",
-     "approx": false,
-     "text": "Era VI options re-sent to Julius",
-     "kind": "goal"
-    }
-   ],
    "linkedTo": "g-mathera"
   },
   {
@@ -180,8 +160,8 @@
    "color": "#8d6e63",
    "description": "Companion history site: Epochs, the 12×12 Concept Wall, 144 artefact portraits and concept-history essays.",
    "owners": [
-    "Math Sensei",
-    "Math Website Administrator"
+    "Euclid",
+    "Patton"
    ],
    "history": [
     {
@@ -206,7 +186,7 @@
    "color": "#26a69a",
    "description": "Companion tool: a Desmos-style, education-first graphing calculator.",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "history": [
     {
@@ -225,8 +205,10 @@
    "color": "#6d4c41",
    "description": "Companion RPG (formerly Numera): a wordless math RPG, separate from Wayfinder.",
    "owners": [
-    "Math Website Administrator",
-    "Math Historian"
+    "Euclid",
+    "Patton",
+    "Plutarch",
+    "Grok Bot"
    ],
    "history": [
     {
@@ -246,6 +228,12 @@
      "approx": false,
      "text": "Julius confirms it's a separate RPG, not replaced by Wayfinder",
      "kind": "goal"
+    },
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "Battle-play briefs relabelled ForgePath; worlds-from-era-art idea",
+     "kind": "goal"
     }
    ],
    "linkedTo": "g-mathera"
@@ -257,8 +245,8 @@
    "color": "#e85d75",
    "description": "Companion algebra racer, merged with Precedence, plus its calculus sequel The Sky.",
    "owners": [
-    "Math Sensei",
-    "Math Website Administrator"
+    "Euclid",
+    "Patton"
    ],
    "history": [
     {
@@ -289,7 +277,7 @@
    "color": "#ef6c00",
    "description": "Companion puzzle: make-24 style four-tile target-number game.",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "history": [
     {
@@ -308,7 +296,7 @@
    "color": "#b36ae2",
    "description": "Math meme collections: the gallery and the atlas.",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "history": [
     {
@@ -345,7 +333,7 @@
    "color": "#c7773a",
    "description": "Interactive history timelines in one series: the hub plus Chronographs I–VI.",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "history": [
     {
@@ -375,7 +363,7 @@
    "color": "#d94f3d",
    "description": "Traditional Chinese, Zhuyin-first character garden, plus the 成語 idiom work.",
    "owners": [
-    "Taiwan/Chinese Webmaster"
+    "老子"
    ],
    "history": [
     {
@@ -405,8 +393,8 @@
    "color": "#2e9e6a",
    "description": "Personal apps: a private finance app, the TENDER converter, a home page and an income-app idea.",
    "owners": [
-    "KEEP Finance Bot",
-    "MacOS/Tech Expert"
+    "The Exchequer",
+    "Q"
    ],
    "history": [
     {
@@ -430,8 +418,9 @@
    "color": "#7bb342",
    "description": "Recipe sites and kitchen ideas.",
    "owners": [
-    "Carl the Chef",
-    "RE/MAX"
+    "Carl Weathers",
+    "RE/MAX",
+    "Patton"
    ],
    "history": [
     {
@@ -461,13 +450,35 @@
    ]
   },
   {
+   "id": "g-property",
+   "realm": "LIFE",
+   "title": "Property",
+   "color": "#8d6e63",
+   "description": "Property research (private).",
+   "owners": [
+    "RE/MAX"
+   ],
+   "history": []
+  },
+  {
+   "id": "g-invest",
+   "realm": "LIFE",
+   "title": "Investments & research",
+   "color": "#455a64",
+   "description": "Long-horizon research (details private).",
+   "owners": [
+    "Gekko"
+   ],
+   "history": []
+  },
+  {
    "id": "g-admin",
    "realm": "LIFE",
    "title": "Personal admin",
    "color": "#5c9bd1",
-   "description": "Personal admin (private).",
+   "description": "Personal admin and advice (private).",
    "owners": [
-    "Lawyer/Business Advisor",
+    "Jimmy McGill",
     "Kronos"
    ],
    "history": []
@@ -479,7 +490,7 @@
    "color": "#26a69a",
    "description": "Swim + rowing training, the 60-minute erg goal, tracker data, the Sunday check-in and personal routine reminders.",
    "owners": [
-    "Fitbot"
+    "Arnold"
    ],
    "history": [
     {
@@ -501,10 +512,11 @@
    "realm": "HEALTH",
    "title": "Nutrition & meal plans",
    "color": "#7cb342",
-   "description": "Meal plans and nutrition tied to training: Fitbot and Carl the Chef coordinating what to eat around workouts.",
+   "description": "Meal plans and nutrition tied to training: Arnold and Carl Weathers coordinating what to eat around workouts.",
    "owners": [
-    "Fitbot",
-    "Carl the Chef"
+    "Carl Weathers",
+    "Arnold",
+    "Patton"
    ],
    "history": [
     {
@@ -529,7 +541,7 @@
    "description": "The TRASK satire wire, its house media, and the Fake Film School identity.",
    "owners": [
     "TRASK CORP",
-    "Lawyer/Business Advisor"
+    "Jimmy McGill"
    ],
    "history": [
     {
@@ -577,7 +589,7 @@
    "color": "#ef6c9a",
    "description": "Home media library upkeep, a private movie app, and a retro commercials project.",
    "owners": [
-    "MacOS/Tech Expert",
+    "Q",
     "Grok Bot",
     "Video Grabber"
    ],
@@ -603,7 +615,7 @@
    "color": "#ab47bc",
    "description": "The local comics reader and the guide to reading comics.",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "history": [
     {
@@ -621,7 +633,7 @@
    "color": "#5c6bc0",
    "description": "Book catalog sites and reading tools (mostly private).",
    "owners": [
-    "Bookworm",
+    "Hypatia",
     "RE/MAX"
    ],
    "history": [
@@ -652,7 +664,7 @@
    "color": "#607d8b",
    "description": "Mac & security upkeep (private).",
    "owners": [
-    "MacOS/Tech Expert"
+    "Q"
    ],
    "history": []
   },
@@ -663,7 +675,8 @@
    "color": "#78909c",
    "description": "Game-dev toolchain and tool ideas.",
    "owners": [
-    "Grok Bot"
+    "Grok Bot",
+    "Patton"
    ],
    "history": [
     {
@@ -693,7 +706,8 @@
    "color": "#9e9d24",
    "description": "Review of what's published (private notes).",
    "owners": [
-    "Lawyer/Business Advisor"
+    "Jimmy McGill",
+    "Patton"
    ],
    "history": []
   },
@@ -728,7 +742,7 @@
    "color": "#a1887f",
    "description": "Things mentioned in passing that don't belong to a goal yet.",
    "owners": [
-    "Fitbot"
+    "Arnold"
    ],
    "history": [
     {
@@ -747,7 +761,7 @@
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "stage": "Built / Shipped",
    "summary": "The Mathera site itself, across every version: v0.5 is the main URL; v0.6, v0.6.1 and v0.6.2 are test builds. Open the note for the version timeline and links.",
@@ -825,7 +839,7 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Pick the canonical Mathera build (v0.6 / v0.6.1 / v0.6.2), then retire or redirect v0.5",
    "versions": [
@@ -880,6 +894,10 @@
      "summary": "Test build with 3200×1800 era paintings and new world paintings for every era."
     }
    ],
+   "health": {
+    "stranger": true
+   },
+   "nextTruth": "Which 0.6.x build does Julius pick as canonical?",
    "stageNote": "Built (v0.6.x test builds); waiting on the canonical-build pick",
    "liveUrl": "https://julianlee314-hue.github.io/mathera/",
    "liveLabel": "Open Mathera (main site, v0.5)"
@@ -925,7 +943,7 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
    "stageNote": "Early exploration that inspired Mathera",
@@ -967,7 +985,7 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
    "stageNote": "Early exploration that inspired Mathera",
@@ -1009,7 +1027,7 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
    "stageNote": "Early exploration that inspired Mathera",
@@ -1022,9 +1040,9 @@
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
-    "Math Sensei",
-    "Math Historian",
-    "Mathera Artist"
+    "Euclid",
+    "Plutarch",
+    "Don"
    ],
    "stage": "Paused",
    "summary": "The backbone: 144 concepts in lineages across seven eras, behind 1,132 skills.",
@@ -1060,7 +1078,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Paused (Design); last work 2026-10-05"
   },
@@ -1070,7 +1088,7 @@
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "stage": "Built / Shipped",
    "summary": "Ideas document for Mathera's Spotlight skill search.",
@@ -1088,7 +1106,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -1097,8 +1115,8 @@
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
-    "Math Website Administrator",
-    "Math Sensei"
+    "Patton",
+    "Euclid"
    ],
    "stage": "Built / Shipped",
    "summary": "Mathera vs the top 10 platforms and UK / IB / Common Core+AP, with a master gaps file.",
@@ -1122,7 +1140,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Triage the curriculum gaps file"
   },
@@ -1132,8 +1150,8 @@
    "realm": "EDUCATION",
    "goal": "g-wayfinder",
    "owners": [
-    "Math Website Administrator",
-    "Math Sensei"
+    "Patton",
+    "Euclid"
    ],
    "stage": "Paused",
    "summary": "ALEKS-style placement check built on Skills (Eras I–V).",
@@ -1163,7 +1181,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Design (research + design PDFs only), paused since ~2026-10-01"
   },
@@ -1173,7 +1191,7 @@
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "stage": "Paused",
    "summary": "A concept-and-history network with trophies on top of the skills. Designed, not built.",
@@ -1197,7 +1215,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Design, parked until after 1.0"
   },
@@ -1207,7 +1225,7 @@
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "stage": "Paused",
    "summary": "Vision for a younger Primary mode: cartoon look, Brilliant-style manipulatives.",
@@ -1231,7 +1249,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "note": "MWA couldn't confirm delivery. A finished Primary-mode vision PDF exists on the box, so it was very likely delivered."
   },
@@ -1241,7 +1259,7 @@
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Paused",
    "summary": "UK / IB / US exam overlay: 1,000 skills, 3,000 questions, PDFs.",
@@ -1265,7 +1283,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Paused (Design): content only, no UI"
   },
@@ -1275,7 +1293,7 @@
    "realm": "EDUCATION",
    "goal": "g-graphlab",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "stage": "Built / Shipped",
    "summary": "Desmos-style, education-first graphing calculator (MVP).",
@@ -1298,8 +1316,11 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "stranger": true
+   },
    "stageNote": "Built/Shipped (MVP)",
    "liveUrl": "https://julianlee314-hue.github.io/graph-lab/",
    "liveLabel": "Open Graph Lab"
@@ -1310,8 +1331,8 @@
    "realm": "EDUCATION",
    "goal": "g-mh101",
    "owners": [
-    "Math Website Administrator",
-    "Math Sensei"
+    "Patton",
+    "Euclid"
    ],
    "stage": "Paused",
    "summary": "History site: Epochs, a 12×12 Concept Wall, 144 artefact portraits and essays.",
@@ -1352,9 +1373,9 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
-   "note": "Conflict: Math Sensei (round 1) said Built/Shipped; MWA (owner since 2026-10-03) says Paused, last commit 2026-10-01. Owner's call used.",
+   "note": "Conflict: Euclid (round 1) said Built/Shipped; MWA (owner since 2026-10-03) says Paused, last commit 2026-10-01. Owner's call used.",
    "liveUrl": "https://julianlee314-hue.github.io/math-history-101/",
    "liveLabel": "Open Math History 101"
   },
@@ -1364,7 +1385,7 @@
    "realm": "EDUCATION",
    "goal": "g-mathera",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "stage": "Paused",
    "summary": "Mac screensaver of the Mathera era paintings.",
@@ -1382,7 +1403,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Paused, waiting on Julius"
   },
@@ -1392,7 +1413,7 @@
    "realm": "EDUCATION",
    "goal": "g-wayfinder",
    "owners": [
-    "Math Sensei",
+    "Euclid",
     "Grok Bot"
    ],
    "stage": "Design",
@@ -1403,19 +1424,13 @@
     {
      "date": "2026-10-05",
      "approx": false,
-     "text": "First discussed: Math Sensei's pedagogy briefs (written as MathForge)",
+     "text": "First discussed: placement gates and coverage review (~23% of the curriculum spine)",
      "kind": "first"
-    },
-    {
-     "date": "2026-10-05",
-     "approx": false,
-     "text": "Coverage review: ~23% of the curriculum spine",
-     "kind": "step"
     },
     {
      "date": "2026-10-06",
      "approx": false,
-     "text": "Briefs renamed Wayfinder; placement gates for Eras I–II",
+     "text": "Placement gates for Eras I–II",
      "kind": "step"
     },
     {
@@ -1429,46 +1444,46 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
    "id": "wayfinder-briefs",
-   "title": "Wayfinder pedagogy briefs",
+   "title": "ForgePath battle-play briefs (old naming: Wayfinder / MathForge)",
    "realm": "EDUCATION",
-   "goal": "g-wayfinder",
+   "goal": "g-forgepath",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Design",
-   "summary": "Design v2, Brief Review & Gates, and the Gate Dependency Map (PDFs) for placement.",
+   "summary": "Euclid's battle-play / pedagogy briefs: Battle Design v2, Brief Review & Gates, Gate Dependency Map (PDFs). Written for ForgePath under the old naming.",
    "done": "",
-   "next": "Pick the MVP slice.",
+   "next": "Use them when ForgePath resumes.",
    "history": [
     {
      "date": "2026-10-05",
      "approx": false,
-     "text": "First written: Wayfinder pedagogy briefs (as MathForge)",
+     "text": "First written as 'ForgePath Battle Design'",
      "kind": "first"
     },
     {
      "date": "2026-10-06",
      "approx": false,
-     "text": "Brief review, gates and dependency map",
+     "text": "v2 + Brief Review & Gates + Gate Dependency Map; filed under the MathForge / Wayfinder names",
      "kind": "step"
     },
     {
-     "date": "2026-10-06",
+     "date": "2026-10-10",
      "approx": false,
-     "text": "Renamed Wayfinder editions",
+     "text": "Relabelled: these briefs were about ForgePath (old naming)",
      "kind": "step"
     }
    ],
-   "lastTouched": "2026-10-06",
+   "lastTouched": "2026-10-10",
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Design"
   },
@@ -1478,7 +1493,7 @@
    "realm": "EDUCATION",
    "goal": "g-forgepath",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "stage": "Paused",
    "summary": "Wordless math RPG shell: Seed Grove overworld, tile duels, Workshop Isles, familiars.",
@@ -1519,7 +1534,7 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Paused; last work 2026-10-03",
    "liveUrl": "https://julianlee314-hue.github.io/forgepath/",
@@ -1529,11 +1544,11 @@
    "id": "era-art-1",
    "title": "Era I · Count: First Tree",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist",
+    "Don",
     "Grok Bot",
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Design",
    "summary": "v1 approved look. Wallpaper-size hero art with room for skill paths.",
@@ -1545,13 +1560,19 @@
      "approx": false,
      "text": "First discussed: Julius sends the 7-era monument table; Tree Aesthetics guide; v1 hero art",
      "kind": "first"
+    },
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "Moved under Mathera core (Julius)",
+     "kind": "step"
     }
    ],
-   "lastTouched": "2026-10-06",
+   "lastTouched": "2026-10-10",
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Design"
   },
@@ -1559,11 +1580,11 @@
    "id": "era-art-2",
    "title": "Era II · Operate: Great Banyan",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist",
+    "Don",
     "Grok Bot",
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Design",
    "summary": "v1; redo offered (reads like a village), no answer yet. Wallpaper-size hero art with room for skill paths.",
@@ -1587,7 +1608,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Answer the Era II redo offer (it reads like a village)",
    "stageNote": "Design"
@@ -1596,11 +1617,11 @@
    "id": "era-art-3",
    "title": "Era III · Relate: World Tree",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist",
+    "Don",
     "Grok Bot",
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Design",
    "summary": "v1 approved. Wallpaper-size hero art with room for skill paths.",
@@ -1618,7 +1639,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Design"
   },
@@ -1626,11 +1647,11 @@
    "id": "era-art-4",
    "title": "Era IV · Solve: steam-engine mountain city",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist",
+    "Don",
     "Grok Bot",
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Design",
    "summary": "v2 awaiting review. Wallpaper-size hero art with room for skill paths.",
@@ -1654,7 +1675,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Review the Era IV v2 (steam-engine mountain city)",
    "stageNote": "Design"
@@ -1663,11 +1684,11 @@
    "id": "era-art-5",
    "title": "Era V · Prove: terraced marble citadel",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist",
+    "Don",
     "Grok Bot",
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Design",
    "summary": "v2 above the clouds, awaiting review. Wallpaper-size hero art with room for skill paths.",
@@ -1691,7 +1712,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Review the Era V v2 (terraced marble citadel)",
    "stageNote": "Design"
@@ -1700,11 +1721,11 @@
    "id": "era-art",
    "title": "Era VI · Change: pick a concept",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist",
+    "Don",
     "Grok Bot",
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Design",
    "summary": "Formerly Motion / Infinite Engine. 10 options; artist recommends cascade gardens, runner-up river delta. Wallpaper-size hero art with room for skill paths.",
@@ -1740,7 +1761,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Pick the Era VI concept (recommended: cascade gardens; runner-up: river delta)",
    "stageNote": "Design"
@@ -1749,11 +1770,11 @@
    "id": "era-art-7",
    "title": "Era VII · Space: Celestial Tree",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist",
+    "Don",
     "Grok Bot",
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Design",
    "summary": "v1 approved. Wallpaper-size hero art with room for skill paths.",
@@ -1771,7 +1792,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Design"
   },
@@ -1779,9 +1800,9 @@
    "id": "era-landmarks",
    "title": "Branch-mapped landmark versions",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist"
+    "Don"
    ],
    "stage": "Idea",
    "summary": "Landmark versions of each era mapped to its skill branches (Era VI branch list received).",
@@ -1799,7 +1820,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -1808,7 +1829,7 @@
    "realm": "EDUCATION",
    "goal": "g-forgepath",
    "owners": [
-    "Math Historian"
+    "Plutarch"
    ],
    "stage": "Idea",
    "summary": "A factions game element built on the Newton / Leibniz rivalry, a fit for ForgePath or a minigame.",
@@ -1832,7 +1853,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Decide where the factions idea lives: ForgePath or a minigame"
   },
@@ -1842,7 +1863,7 @@
    "realm": "EDUCATION",
    "goal": "g-road",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Abandoned / Superseded",
    "summary": "OutRun-style order-of-operations racer (Eras 1–4 playable). Merged into The Road.",
@@ -1877,7 +1898,7 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Merged into The Road",
    "liveUrl": "https://julianlee314-hue.github.io/precedence/",
@@ -1889,8 +1910,8 @@
    "realm": "EDUCATION",
    "goal": "g-road",
    "owners": [
-    "Math Website Administrator",
-    "Math Sensei"
+    "Patton",
+    "Euclid"
    ],
    "stage": "Planning",
    "summary": "Phone-first algebra racer in a 60s cartoon style (plates 1–15, career chapters 1–2), merging in Precedence's OutRun-style order-of-operations eras.",
@@ -1949,9 +1970,10 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Play The Road and send feedback before chapter 3",
+   "nextTruth": "Does the merged Road + Precedence feel like one game to Julius?",
    "stageNote": "Planning (merge of The Road and Precedence)",
    "liveUrl": "https://julianlee314-hue.github.io/the-road/",
    "liveLabel": "Play The Road"
@@ -1962,7 +1984,7 @@
    "realm": "EDUCATION",
    "goal": "g-road",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "stage": "Idea",
    "summary": "Calculus sequel to The Road: limits through complex numbers.",
@@ -1986,7 +2008,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -1995,7 +2017,7 @@
    "realm": "EDUCATION",
    "goal": "g-operate",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "stage": "Paused",
    "summary": "Make-24 style four-tile target-number puzzle with light arena duels.",
@@ -2030,7 +2052,7 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Revive OPERATE! or fold it into Primary mode",
    "liveUrl": "https://julianlee314-hue.github.io/operate/",
@@ -2066,7 +2088,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2075,7 +2097,7 @@
    "realm": "EDUCATION",
    "goal": "g-memes",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Built / Shipped",
    "summary": "Gallery of 936 math memes: top r/mathmemes plus Julius's own album.",
@@ -2104,8 +2126,11 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "stranger": true
+   },
    "liveUrl": "https://julianlee314-hue.github.io/math-memes/",
    "liveLabel": "Open the math-memes gallery"
   },
@@ -2115,7 +2140,7 @@
    "realm": "EDUCATION",
    "goal": "g-memes",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Built / Shipped",
    "summary": "PDF atlas of the math memes.",
@@ -2133,7 +2158,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2142,7 +2167,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Built / Shipped",
    "summary": "Hub page for the series, driven by one data file.",
@@ -2171,8 +2196,11 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "stranger": true
+   },
    "liveUrl": "https://julianlee314-hue.github.io/chronographs/",
    "liveLabel": "Open the Chronographs hub"
   },
@@ -2182,7 +2210,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Built / Shipped",
    "summary": "Timeline of the Dow, 1896–2026 (v0.2).",
@@ -2217,8 +2245,11 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "stranger": true
+   },
    "liveUrl": "https://julianlee314-hue.github.io/dow-timeline/v0.2/",
    "liveLabel": "Open Chronograph I"
   },
@@ -2228,7 +2259,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Built / Shipped",
    "summary": "Three centuries of the Bank, with a yield chart, monarchs strip and archive plates.",
@@ -2269,8 +2300,11 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "stranger": true
+   },
    "liveUrl": "https://julianlee314-hue.github.io/the-bank-1694/",
    "liveLabel": "Open Chronograph II"
   },
@@ -2280,7 +2314,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Idea",
    "summary": "Idea: an inset on the South Sea Bubble for Chronograph II.",
@@ -2298,7 +2332,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2307,7 +2341,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Idea",
    "summary": "Idea: check and add the Dutch East India Company (VOC) thread.",
@@ -2325,7 +2359,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2334,7 +2368,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Paused",
    "summary": "Week-by-week WW2 paper atlas: 305-week spine, Logbook/Ruler, photo plates.",
@@ -2369,7 +2403,7 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Paused 2026-10-08",
    "liveUrl": "https://julianlee314-hue.github.io/ww2-strat-map/",
@@ -2381,7 +2415,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Idea",
    "summary": "Company-states from 1492 to 1874.",
@@ -2399,7 +2433,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2408,7 +2442,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Idea",
    "summary": "The Asia & Pacific war, 1937–45.",
@@ -2426,7 +2460,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2435,7 +2469,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Idea",
    "summary": "The Korea and Vietnam wars, week by week, 1950–75.",
@@ -2459,7 +2493,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2468,7 +2502,7 @@
    "realm": "EDUCATION",
    "goal": "g-ziyuan",
    "owners": [
-    "Taiwan/Chinese Webmaster"
+    "老子"
    ],
    "stage": "Paused",
    "summary": "Live garden of 3,600 Traditional characters with exhaustive Zhuyin.",
@@ -2509,7 +2543,7 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Paused: 'finish with the third plot for now'",
    "liveUrl": "https://julianlee314-hue.github.io/ziyuan/",
@@ -2521,7 +2555,7 @@
    "realm": "EDUCATION",
    "goal": "g-ziyuan",
    "owners": [
-    "Taiwan/Chinese Webmaster"
+    "老子"
    ],
    "stage": "Planning",
    "summary": "The next two plots of characters, on hold.",
@@ -2545,7 +2579,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Plots 4–5 are on hold until you give the go-ahead",
    "stageNote": "Planning; scoped 2026-10-01 and parked"
@@ -2556,7 +2590,7 @@
    "realm": "EDUCATION",
    "goal": "g-ziyuan",
    "owners": [
-    "Taiwan/Chinese Webmaster"
+    "老子"
    ],
    "stage": "Built / Shipped",
    "summary": "Coverage study and a greedy list of 744 idioms (spreadsheet).",
@@ -2580,7 +2614,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2589,7 +2623,7 @@
    "realm": "EDUCATION",
    "goal": "g-ziyuan",
    "owners": [
-    "Taiwan/Chinese Webmaster"
+    "老子"
    ],
    "stage": "In Progress",
    "summary": "A daily idiom lesson routine working through the 744 list.",
@@ -2613,8 +2647,11 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "repeat": true
+   },
    "stageNote": "Running"
   },
   {
@@ -2623,7 +2660,7 @@
    "realm": "EDUCATION",
    "goal": "g-ziyuan",
    "owners": [
-    "Taiwan/Chinese Webmaster"
+    "老子"
    ],
    "stage": "Idea",
    "summary": "Add phrases and richer meanings to the characters.",
@@ -2647,16 +2684,16 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
    "id": "meridian",
-   "title": "Meridian (formerly KEEP)",
+   "title": "ALFRED (private finance app)",
    "realm": "LIFE",
    "goal": "g-lifeapps",
    "owners": [
-    "KEEP Finance Bot"
+    "The Exchequer"
    ],
    "stage": "Paused",
    "summary": "Personal finance app (private).",
@@ -2664,17 +2701,23 @@
    "next": "",
    "history": [
     {
-     "date": "2026-09-28",
+     "date": "2026-09-27",
      "approx": false,
-     "text": "Versions 0.5 to 0.9 built; renamed Meridian",
+     "text": "Started",
      "kind": "first"
+    },
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "Renamed ALFRED",
+     "kind": "step"
     }
    ],
-   "lastTouched": "2026-09-28",
+   "lastTouched": "2026-10-10",
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2683,8 +2726,8 @@
    "realm": "LIFE",
    "goal": "g-lifeapps",
    "owners": [
-    "KEEP Finance Bot",
-    "MacOS/Tech Expert"
+    "The Exchequer",
+    "Q"
    ],
    "stage": "In Progress",
    "summary": "Value converter for currencies, crypto, metals and custom units.",
@@ -2708,8 +2751,9 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "nextTruth": "Would Julius use it instead of a web converter?"
   },
   {
    "id": "life-homepage",
@@ -2717,7 +2761,7 @@
    "realm": "LIFE",
    "goal": "g-lifeapps",
    "owners": [
-    "KEEP Finance Bot"
+    "The Exchequer"
    ],
    "stage": "Built / Shipped",
    "summary": "Personal home page (private).",
@@ -2735,7 +2779,34 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "income-app",
+   "title": "Income tracker app",
+   "realm": "LIFE",
+   "goal": "g-lifeapps",
+   "owners": [
+    "The Exchequer"
+   ],
+   "stage": "Idea",
+   "summary": "Personal finance idea (private).",
+   "done": "",
+   "next": "",
+   "history": [
+    {
+     "date": "2026-09-28",
+     "approx": false,
+     "text": "First floated",
+     "kind": "first"
+    }
+   ],
+   "lastTouched": "2026-09-28",
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2744,7 +2815,7 @@
    "realm": "LIFE",
    "goal": "g-cookbooks",
    "owners": [
-    "Carl the Chef"
+    "Carl Weathers"
    ],
    "stage": "Built / Shipped",
    "summary": "Cookbook site: 460 cards from the 471-video YouTube Recipes playlist, 18 categories, glossaries.",
@@ -2785,8 +2856,11 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "stranger": true
+   },
    "liveUrl": "https://julianlee314-hue.github.io/recipe-playlist-digests/",
    "liveLabel": "Open Recipes Worth Rewatching"
   },
@@ -2796,7 +2870,7 @@
    "realm": "LIFE",
    "goal": "g-cookbooks",
    "owners": [
-    "Carl the Chef",
+    "Carl Weathers",
     "RE/MAX"
    ],
    "stage": "Built / Shipped",
@@ -2815,9 +2889,9 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
-   "note": "Reported by both RE/MAX and Carl the Chef; merged.",
+   "note": "Reported by both RE/MAX and Carl Weathers; merged.",
    "stageNote": "Built (private repo)"
   },
   {
@@ -2826,7 +2900,7 @@
    "realm": "LIFE",
    "goal": "g-cookbooks",
    "owners": [
-    "Carl the Chef"
+    "Carl Weathers"
    ],
    "stage": "Built / Shipped",
    "summary": "Four Instant Pot stock and stew recipes added to the Southern cookbook.",
@@ -2844,7 +2918,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Built in private repo, not live"
   },
@@ -2855,7 +2929,7 @@
    "goal": "g-cookbooks",
    "owners": [
     "RE/MAX",
-    "Carl the Chef"
+    "Carl Weathers"
    ],
    "stage": "Built / Shipped",
    "summary": "88 Chinese American recipes with pan-Asian anime plates.",
@@ -2879,7 +2953,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "note": "Pages link now returns 404 (repo private), so no live button.",
    "stageNote": "Built (private repo)"
@@ -2891,7 +2965,7 @@
    "goal": "g-cookbooks",
    "owners": [
     "RE/MAX",
-    "Carl the Chef"
+    "Carl Weathers"
    ],
    "stage": "Built / Shipped",
    "summary": "100 Tex-Mex and authentic Mexican recipes.",
@@ -2909,7 +2983,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Built (private repo)"
   },
@@ -2919,7 +2993,7 @@
    "realm": "LIFE",
    "goal": "g-cookbooks",
    "owners": [
-    "Carl the Chef"
+    "Carl Weathers"
    ],
    "stage": "Idea",
    "summary": "A recipe idea from chat, not on any site yet.",
@@ -2937,7 +3011,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2946,7 +3020,7 @@
    "realm": "LIFE",
    "goal": "g-cookbooks",
    "owners": [
-    "Carl the Chef"
+    "Carl Weathers"
    ],
    "stage": "Idea",
    "summary": "Batch-and-freeze meatball system.",
@@ -2964,7 +3038,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -2973,7 +3047,7 @@
    "realm": "HEALTH",
    "goal": "g-fitness",
    "owners": [
-    "Fitbot"
+    "Arnold"
    ],
    "stage": "Planning",
    "summary": "Weekly training built around swimming and rowing, with a Sunday check-in.",
@@ -2993,12 +3067,16 @@
      "kind": "step"
     }
    ],
-   "lastTouched": "2026-10-08",
+   "lastTouched": "2026-10-11",
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "health": {
+    "nextTest": "2026-10-11"
+   },
+   "nextTruth": "Does the first Sunday check-in happen at 4:45 AM?"
   },
   {
    "id": "endurance-goal",
@@ -3006,7 +3084,7 @@
    "realm": "HEALTH",
    "goal": "g-fitness",
    "owners": [
-    "Fitbot"
+    "Arnold"
    ],
    "stage": "Planning",
    "summary": "9-week plan to row 60 continuous minutes; long Friday row grows weekly.",
@@ -3024,7 +3102,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3033,7 +3111,7 @@
    "realm": "HEALTH",
    "goal": "g-fitness",
    "owners": [
-    "Fitbot"
+    "Arnold"
    ],
    "stage": "Idea",
    "summary": "Track recovery, strain and sleep from WHOOP.",
@@ -3051,21 +3129,21 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Choose WHOOP's official API or the in-app data export"
   },
   {
    "id": "nutrition",
-   "title": "Diet coordination: Fitbot × Carl the Chef",
+   "title": "Diet coordination: Arnold × Carl Weathers",
    "realm": "HEALTH",
    "goal": "g-nutrition",
    "owners": [
-    "Fitbot",
-    "Carl the Chef"
+    "Arnold",
+    "Carl Weathers"
    ],
    "stage": "Idea",
-   "summary": "Fitbot and Carl the Chef coordinating meals and a meal plan around the training week.",
+   "summary": "Arnold and Carl Weathers coordinating meals and a meal plan around the training week.",
    "done": "",
    "next": "Decide whether Carl drafts a weekly meal plan around the swim/row schedule.",
    "history": [
@@ -3080,39 +3158,72 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
-   "stageNote": "Idea (floated by Fitbot, not started)"
+   "stageNote": "Idea (floated by Arnold, not started)"
   },
   {
-   "id": "personal-admin",
-   "title": "Personal admin (private)",
+   "id": "property-a",
+   "title": "Property research A (private)",
    "realm": "LIFE",
-   "goal": "g-admin",
+   "goal": "g-property",
    "owners": [
-    "KEEP Finance Bot",
-    "Kronos",
-    "Lawyer/Business Advisor",
-    "RE/MAX",
-    "TRASK CORP"
+    "RE/MAX"
    ],
    "stage": "In Progress",
-   "summary": "Personal admin (private).",
+   "summary": "Property research (private).",
    "done": "",
    "next": "",
-   "history": [
-    {
-     "date": "2026-10-10",
-     "text": "Private items collapsed into one card for the public view.",
-     "kind": "first"
-    }
-   ],
-   "lastTouched": "2026-10-10",
+   "history": [],
+   "lastTouched": null,
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
+  },
+  {
+   "id": "property-b",
+   "title": "Property research B (private)",
+   "realm": "LIFE",
+   "goal": "g-property",
+   "owners": [
+    "RE/MAX"
+   ],
+   "stage": "In Progress",
+   "summary": "Property research (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
+  },
+  {
+   "id": "property-rentals",
+   "title": "Property research: rentals (private)",
+   "realm": "LIFE",
+   "goal": "g-property",
+   "owners": [
+    "RE/MAX"
+   ],
+   "stage": "Paused",
+   "summary": "Property research (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
   },
   {
    "id": "calendar",
@@ -3138,8 +3249,113 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
+  },
+  {
+   "id": "personal-plans",
+   "title": "Personal plans (private)",
+   "realm": "LIFE",
+   "goal": "g-admin",
+   "owners": [
+    "Kronos"
+   ],
+   "stage": "Paused",
+   "summary": "Personal plans (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
+  },
+  {
+   "id": "finance-advice",
+   "title": "Finance advice (private)",
+   "realm": "LIFE",
+   "goal": "g-admin",
+   "owners": [
+    "Jimmy McGill"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Personal finance advice (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
+  },
+  {
+   "id": "advice-question",
+   "title": "Advice question (private)",
+   "realm": "LIFE",
+   "goal": "g-admin",
+   "owners": [
+    "Jimmy McGill"
+   ],
+   "stage": "Idea",
+   "summary": "Personal advice question (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
+  },
+  {
+   "id": "teaching-abroad",
+   "title": "Teaching abroad (private)",
+   "realm": "LIFE",
+   "goal": "g-admin",
+   "owners": [
+    "Jimmy McGill"
+   ],
+   "stage": "Paused",
+   "summary": "Teaching math abroad (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
+  },
+  {
+   "id": "creator-advice",
+   "title": "Creator advice (private)",
+   "realm": "LIFE",
+   "goal": "g-admin",
+   "owners": [
+    "Jimmy McGill"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Advice for creator work (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
   },
   {
    "id": "trask-wire",
@@ -3148,7 +3364,7 @@
    "goal": "g-trask",
    "owners": [
     "TRASK CORP",
-    "Lawyer/Business Advisor"
+    "Jimmy McGill"
    ],
    "stage": "Built / Shipped",
    "summary": "69-plate satire meme wire in a Burroughs voice.",
@@ -3177,9 +3393,12 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Decide the next intake (more Logistics/Body/Republic posters, bigger Antiquity?)",
+   "health": {
+    "stranger": true
+   },
    "liveUrl": "https://opal-raven-polar-cinder.grok.me",
    "liveLabel": "Open the live TRASK Wire"
   },
@@ -3207,7 +3426,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3234,7 +3453,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3267,9 +3486,31 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Decide whether to publish the off-wire house media"
+  },
+  {
+   "id": "trask-rights",
+   "title": "Rights review (private)",
+   "realm": "MEDIA",
+   "goal": "g-trask",
+   "owners": [
+    "TRASK CORP",
+    "Jimmy McGill"
+   ],
+   "stage": "Paused",
+   "summary": "Review before publishing (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
   },
   {
    "id": "fake-film-school-identity",
@@ -3277,7 +3518,7 @@
    "realm": "MEDIA",
    "goal": "g-trask",
    "owners": [
-    "Lawyer/Business Advisor"
+    "Jimmy McGill"
    ],
    "stage": "Paused",
    "summary": "An online identity for TRASK / Fake Film School.",
@@ -3295,7 +3536,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Pick a name for TRASK / Fake Film School",
    "stageNote": "Paused; had reached Planning"
@@ -3324,7 +3565,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "Sign off yes/no on the director's 12 proposals so storyboarding can start",
    "note": "Grok Bot (owner) said 'effectively Paused', but the last work was 2026-10-08, inside the 7-day rule, so it stays in Design.",
@@ -3354,7 +3595,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3381,7 +3622,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3414,7 +3655,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3423,7 +3664,7 @@
    "realm": "MEDIA",
    "goal": "g-homemedia",
    "owners": [
-    "MacOS/Tech Expert"
+    "Q"
    ],
    "stage": "Built / Shipped",
    "summary": "Home media library upkeep (private).",
@@ -3434,7 +3675,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -3444,7 +3685,7 @@
    "realm": "MEDIA",
    "goal": "g-homemedia",
    "owners": [
-    "MacOS/Tech Expert"
+    "Q"
    ],
    "stage": "Built / Shipped",
    "summary": "Home media library upkeep (private).",
@@ -3455,7 +3696,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -3465,7 +3706,7 @@
    "realm": "MEDIA",
    "goal": "g-homemedia",
    "owners": [
-    "MacOS/Tech Expert"
+    "Q"
    ],
    "stage": "Built / Shipped",
    "summary": "Home media library upkeep (private).",
@@ -3476,7 +3717,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -3486,7 +3727,7 @@
    "realm": "MEDIA",
    "goal": "g-homemedia",
    "owners": [
-    "MacOS/Tech Expert"
+    "Q"
    ],
    "stage": "Paused",
    "summary": "Home media library upkeep (private).",
@@ -3497,7 +3738,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -3507,7 +3748,7 @@
    "realm": "MEDIA",
    "goal": "g-homemedia",
    "owners": [
-    "MacOS/Tech Expert"
+    "Q"
    ],
    "stage": "Built / Shipped",
    "summary": "Home media library upkeep (private).",
@@ -3518,7 +3759,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -3528,7 +3769,7 @@
    "realm": "MEDIA",
    "goal": "g-homemedia",
    "owners": [
-    "MacOS/Tech Expert",
+    "Q",
     "Grok Bot"
    ],
    "stage": "Design",
@@ -3540,7 +3781,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -3574,7 +3815,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": true,
    "decision": "OK downloading the Prelinger ads into decade folders (and send any of your own clips)"
   },
@@ -3584,7 +3825,7 @@
    "realm": "MEDIA",
    "goal": "g-comics",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Built / Shipped",
    "summary": "Local comics reader (private).",
@@ -3602,7 +3843,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3611,7 +3852,7 @@
    "realm": "MEDIA",
    "goal": "g-comics",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Paused",
    "summary": "13-page guide to reading comics.",
@@ -3635,7 +3876,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Paused"
   },
@@ -3645,7 +3886,7 @@
    "realm": "TOOLS",
    "goal": "g-books",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Built / Shipped",
    "summary": "Local catalog of Julius's ebook collection (private).",
@@ -3663,7 +3904,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3672,7 +3913,7 @@
    "realm": "TOOLS",
    "goal": "g-books",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Idea",
    "summary": "Add a reading status to each library entry.",
@@ -3696,7 +3937,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3705,7 +3946,7 @@
    "realm": "TOOLS",
    "goal": "g-books",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Paused",
    "summary": "Catalog site for books Julius owns (private).",
@@ -3729,7 +3970,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3738,7 +3979,7 @@
    "realm": "TOOLS",
    "goal": "g-books",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Paused",
    "summary": "Wishlist catalog site (private).",
@@ -3756,7 +3997,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3765,7 +4006,7 @@
    "realm": "TOOLS",
    "goal": "g-books",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Built / Shipped",
    "summary": "File housekeeping for the book collection (private).",
@@ -3776,7 +4017,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -3786,7 +4027,7 @@
    "realm": "TOOLS",
    "goal": "g-books",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Idea",
    "summary": "One home page for books and comics.",
@@ -3804,7 +4045,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3813,7 +4054,7 @@
    "realm": "TOOLS",
    "goal": "g-books",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Built / Shipped",
    "summary": "Regular check-ins on the book sites.",
@@ -3831,8 +4072,11 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "repeat": true
+   },
    "stageNote": "Built, running"
   },
   {
@@ -3844,7 +4088,7 @@
     "RE/MAX"
    ],
    "stage": "Abandoned / Superseded",
-   "summary": "An early bookshelf from RE/MAX, before Bookworm owned the book sites.",
+   "summary": "An early bookshelf from RE/MAX, before Hypatia owned the book sites.",
    "done": "",
    "next": "",
    "history": [
@@ -3859,7 +4103,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -3868,7 +4112,7 @@
    "realm": "TOOLS",
    "goal": "g-mac",
    "owners": [
-    "MacOS/Tech Expert"
+    "Q"
    ],
    "stage": "In Progress",
    "summary": "Mac & security upkeep (private).",
@@ -3879,7 +4123,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -3889,7 +4133,7 @@
    "realm": "TOOLS",
    "goal": "g-mac",
    "owners": [
-    "MacOS/Tech Expert"
+    "Q"
    ],
    "stage": "Built / Shipped",
    "summary": "Mac & security upkeep (private).",
@@ -3900,7 +4144,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -3910,7 +4154,7 @@
    "realm": "TOOLS",
    "goal": "g-mac",
    "owners": [
-    "MacOS/Tech Expert"
+    "Q"
    ],
    "stage": "Built / Shipped",
    "summary": "Mac & security upkeep (private).",
@@ -3921,36 +4165,75 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "health": {
+    "repeat": true
+   },
+   "historyNote": "History kept private."
+  },
+  {
+   "id": "security",
+   "title": "Security upkeep",
+   "realm": "TOOLS",
+   "goal": "g-mac",
+   "owners": [
+    "Q"
+   ],
+   "stage": "In Progress",
+   "summary": "Mac & security upkeep (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
   {
-   "id": "mac-upkeep",
-   "title": "Mac upkeep (private)",
+   "id": "home-network",
+   "title": "Home network upkeep",
    "realm": "TOOLS",
    "goal": "g-mac",
    "owners": [
-    "Bookworm",
-    "MacOS/Tech Expert"
+    "Q"
    ],
-   "stage": "In Progress",
-   "summary": "Mac upkeep (private).",
+   "stage": "Planning",
+   "summary": "Mac & security upkeep (private).",
    "done": "",
    "next": "",
-   "history": [
-    {
-     "date": "2026-10-10",
-     "text": "Private items collapsed into one card for the public view.",
-     "kind": "first"
-    }
-   ],
-   "lastTouched": "2026-10-10",
+   "history": [],
+   "lastTouched": null,
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
+  },
+  {
+   "id": "remote-access",
+   "title": "Remote access",
+   "realm": "TOOLS",
+   "goal": "g-mac",
+   "owners": [
+    "Q"
+   ],
+   "stage": "Planning",
+   "summary": "Mac & security upkeep (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
   },
   {
    "id": "dev-setup",
@@ -3982,7 +4265,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4009,7 +4292,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4018,7 +4301,7 @@
    "realm": "TOOLS",
    "goal": "g-publishing",
    "owners": [
-    "Lawyer/Business Advisor"
+    "Jimmy McGill"
    ],
    "stage": "Built / Shipped",
    "summary": "Review of what's published on GitHub Pages (private notes).",
@@ -4029,7 +4312,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -4039,7 +4322,7 @@
    "realm": "TOOLS",
    "goal": "g-publishing",
    "owners": [
-    "Lawyer/Business Advisor"
+    "Jimmy McGill"
    ],
    "stage": "Paused",
    "summary": "Follow-up fixes from the publish review (private).",
@@ -4050,7 +4333,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -4084,7 +4367,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4117,7 +4400,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4150,12 +4433,12 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
    "id": "kanban",
-   "title": "ONTOLOGY Kanban v4 (this board)",
+   "title": "ONTOLOGY Kanban v5 (this board)",
    "realm": "TOOLS",
    "goal": "g-kanban",
    "owners": [
@@ -4171,9 +4454,15 @@
      "approx": false,
      "text": "v1 → v4 built the same day",
      "kind": "first"
+    },
+    {
+     "date": "2026-10-11",
+     "approx": false,
+     "text": "v5: bot renames, health marks + next truth",
+     "kind": "step"
     }
    ],
-   "lastTouched": "2026-10-09",
+   "lastTouched": "2026-10-11",
    "source": "Bot reports (2026-10-09)",
    "links": [
     {
@@ -4182,8 +4471,12 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "stranger": true,
+    "repeat": true
+   },
    "liveUrl": "https://julianlee314-hue.github.io/ONTOLOGY/",
    "liveLabel": "Open the public ONTOLOGY Kanban"
   },
@@ -4211,8 +4504,11 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "health": {
+    "repeat": true
+   }
   },
   {
    "id": "monday-checkin",
@@ -4244,8 +4540,11 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "repeat": true
+   },
    "stageNote": "Built, running"
   },
   {
@@ -4254,10 +4553,10 @@
    "realm": "OTHER",
    "goal": "g-other",
    "owners": [
-    "Fitbot"
+    "Arnold"
    ],
    "stage": "Idea",
-   "summary": "Julius mentioned it to Fitbot with no details.",
+   "summary": "Julius mentioned it to Arnold with no details.",
    "done": "",
    "next": "Julius says what he means (maybe TENDER or Meridian?).",
    "history": [
@@ -4272,7 +4571,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4281,7 +4580,7 @@
    "realm": "EDUCATION",
    "goal": "g-mh101",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Built / Shipped",
    "summary": "144 multi-epoch concept-history essays, shipped inside Math History 101.",
@@ -4310,8 +4609,11 @@
     }
    ],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
+   "health": {
+    "stranger": true
+   },
    "liveUrl": "https://julianlee314-hue.github.io/math-history-101/",
    "liveLabel": "Open Math History 101"
   },
@@ -4321,7 +4623,7 @@
    "realm": "EDUCATION",
    "goal": "g-mh101",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Abandoned / Superseded",
    "summary": "OTGW-style math-symbol mini icons for the 12×12 Concept Wall.",
@@ -4345,9 +4647,9 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
-   "note": "Conflict: Math Sensei calls this icon set Abandoned; MWA still lists '~128 Wall icons' as Math History 101's next step. Both are kept: this note is the abandoned style, the remaining icons stay on Math History 101."
+   "note": "Conflict: Euclid calls this icon set Abandoned; MWA still lists '~128 Wall icons' as Math History 101's next step. Both are kept: this note is the abandoned style, the remaining icons stay on Math History 101."
   },
   {
    "id": "meme-mapping",
@@ -4355,7 +4657,7 @@
    "realm": "EDUCATION",
    "goal": "g-memes",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Idea",
    "summary": "Map memes onto the curriculum as a constellation.",
@@ -4373,7 +4675,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4382,7 +4684,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Planning",
    "summary": "Fix the presidents strip on Chronograph I.",
@@ -4400,7 +4702,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4409,7 +4711,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Idea",
    "summary": "Small typography idea for The Bank's headlines.",
@@ -4427,7 +4729,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4436,7 +4738,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Planning",
    "summary": "Monthly control areas, front lines and the Ruler/Logbook layout for Chronograph III.",
@@ -4454,7 +4756,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4463,7 +4765,7 @@
    "realm": "EDUCATION",
    "goal": "g-chrono",
    "owners": [
-    "Math Sensei"
+    "Euclid"
    ],
    "stage": "Idea",
    "summary": "Restyle Chronograph III's photo plates.",
@@ -4481,7 +4783,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4490,7 +4792,7 @@
    "realm": "EDUCATION",
    "goal": "g-ziyuan",
    "owners": [
-    "Taiwan/Chinese Webmaster"
+    "老子"
    ],
    "stage": "Planning",
    "summary": "A page for each character.",
@@ -4508,7 +4810,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4517,7 +4819,7 @@
    "realm": "MEDIA",
    "goal": "g-homemedia",
    "owners": [
-    "MacOS/Tech Expert"
+    "Q"
    ],
    "stage": "Built / Shipped",
    "summary": "Home media library upkeep (private).",
@@ -4528,7 +4830,28 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
+  },
+  {
+   "id": "order-metadata",
+   "title": "Order metadata (private)",
+   "realm": "LIFE",
+   "goal": "g-lifeapps",
+   "owners": [
+    "The Exchequer"
+   ],
+   "stage": "Paused",
+   "summary": "Personal finance data (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -4538,7 +4861,7 @@
    "realm": "HEALTH",
    "goal": "g-fitness",
    "owners": [
-    "Fitbot"
+    "Arnold"
    ],
    "stage": "Built / Shipped",
    "summary": "Weekly Monday reminder.",
@@ -4556,16 +4879,19 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
-   "waitingOnJulius": false
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "health": {
+    "repeat": true
+   }
   },
   {
    "id": "era-art-4-v1",
    "title": "Era IV v1: Great Engine",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist"
+    "Don"
    ],
    "stage": "Abandoned / Superseded",
    "summary": "Superseded by the v2 steam-engine mountain city.",
@@ -4589,7 +4915,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Superseded"
   },
@@ -4597,9 +4923,9 @@
    "id": "era-art-5-v1",
    "title": "Era V v1: marble-castle tree",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist"
+    "Don"
    ],
    "stage": "Abandoned / Superseded",
    "summary": "Superseded by the v2 terraced marble citadel.",
@@ -4623,7 +4949,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Superseded"
   },
@@ -4631,9 +4957,9 @@
    "id": "era-art-6-v1",
    "title": "Era VI v1: cosmic tree",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist"
+    "Don"
    ],
    "stage": "Abandoned / Superseded",
    "summary": "Superseded during the Era VI rethink.",
@@ -4657,7 +4983,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Superseded"
   },
@@ -4665,9 +4991,9 @@
    "id": "era-art-6-v2",
    "title": "Era VI v2: sky city",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist"
+    "Don"
    ],
    "stage": "Abandoned / Superseded",
    "summary": "Superseded by the 10-option rethink.",
@@ -4691,7 +5017,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "stageNote": "Superseded"
   },
@@ -4699,9 +5025,9 @@
    "id": "era-extras",
    "title": "Portrait shots, zoomed details, era transition spaces",
    "realm": "EDUCATION",
-   "goal": "g-worldart",
+   "goal": "g-mathera",
    "owners": [
-    "Mathera Artist"
+    "Don"
    ],
    "stage": "Idea",
    "summary": "Extra art formats floated for the eras; skipped for now.",
@@ -4719,7 +5045,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4728,7 +5054,7 @@
    "realm": "TOOLS",
    "goal": "g-books",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Abandoned / Superseded",
    "summary": "Publishing idea (dropped).",
@@ -4739,7 +5065,28 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
+  },
+  {
+   "id": "books-net-test",
+   "title": "Private access test",
+   "realm": "TOOLS",
+   "goal": "g-books",
+   "owners": [
+    "Hypatia"
+   ],
+   "stage": "Idea",
+   "summary": "Private access idea.",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -4749,7 +5096,7 @@
    "realm": "TOOLS",
    "goal": "g-books",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Idea",
    "summary": "Library fix (private).",
@@ -4760,7 +5107,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "historyNote": "History kept private."
   },
@@ -4770,7 +5117,7 @@
    "realm": "TOOLS",
    "goal": "g-books",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Abandoned / Superseded",
    "summary": "Re-publish two catalog sites (declined).",
@@ -4788,7 +5135,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   },
   {
@@ -4797,7 +5144,7 @@
    "realm": "MEDIA",
    "goal": "g-comics",
    "owners": [
-    "Bookworm"
+    "Hypatia"
    ],
    "stage": "Abandoned / Superseded",
    "summary": "Publish the comics reader online (declined).",
@@ -4815,8 +5162,29 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false
+  },
+  {
+   "id": "property-scout",
+   "title": "Property research: early scout (private)",
+   "realm": "LIFE",
+   "goal": "g-property",
+   "owners": [
+    "RE/MAX"
+   ],
+   "stage": "Abandoned / Superseded",
+   "summary": "Property research (private).",
+   "done": "",
+   "next": "",
+   "history": [],
+   "lastTouched": null,
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "historyNote": "History kept private."
   },
   {
    "id": "border-plates",
@@ -4848,7 +5216,7 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
    "waitingOnJulius": false,
    "note": "Round 1 said the plates were handed to another bot; RE/MAX's round 2 says Abandoned on its side."
   },
@@ -4858,7 +5226,7 @@
    "realm": "EDUCATION",
    "goal": "g-graphlab",
    "owners": [
-    "Math Website Administrator"
+    "Patton"
    ],
    "stage": "Idea",
    "summary": "Inequalities, slope triangle, transform animation.",
@@ -4876,7 +5244,248 @@
    "source": "Bot reports (2026-10-09)",
    "links": [],
    "files": [],
-   "updated": "2026-10-10",
+   "updated": "2026-10-11",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "forgepath-worlds",
+   "title": "ForgePath worlds inspired by the Mathera era art",
+   "realm": "EDUCATION",
+   "goal": "g-forgepath",
+   "owners": [
+    "Grok Bot"
+   ],
+   "stage": "Idea",
+   "summary": "Optionally base ForgePath's worlds on the Mathera era art; they don't have to match.",
+   "done": "",
+   "next": "Julius decides.",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "First discussed: Julius says ForgePath worlds don't have to match the Mathera era art, but could",
+     "kind": "first"
+    }
+   ],
+   "lastTouched": "2026-10-10",
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": true,
+   "decision": "Decide whether ForgePath's worlds follow the Mathera era art",
+   "linkedTo": "g-mathera",
+   "nextTruth": "Do ForgePath's worlds follow the era art or not?"
+  },
+  {
+   "id": "sites-index",
+   "title": "Sites Index",
+   "realm": "TOOLS",
+   "goal": "g-publishing",
+   "owners": [
+    "Patton"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "One index page listing every public GitHub Pages site.",
+   "done": "",
+   "next": "",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "First built and published",
+     "kind": "first"
+    }
+   ],
+   "lastTouched": "2026-10-10",
+   "source": "Bot reports (2026-10-09)",
+   "links": [
+    {
+     "label": "Open the Sites Index",
+     "url": "https://julianlee314-hue.github.io/sites/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "health": {
+    "stranger": true
+   },
+   "liveUrl": "https://julianlee314-hue.github.io/sites/",
+   "liveLabel": "Open the Sites Index"
+  },
+  {
+   "id": "site-descriptions",
+   "title": "Site description fixes",
+   "realm": "TOOLS",
+   "goal": "g-publishing",
+   "owners": [
+    "Patton"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Corrected descriptions across the public sites.",
+   "done": "",
+   "next": "",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "Built",
+     "kind": "first"
+    }
+   ],
+   "lastTouched": "2026-10-10",
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "nutrition-app",
+   "title": "Nutrition (Life app)",
+   "realm": "HEALTH",
+   "goal": "g-nutrition",
+   "owners": [
+    "Carl Weathers",
+    "Patton"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "Nutrition site for meals and eating around training.",
+   "done": "",
+   "next": "",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "First built and published",
+     "kind": "first"
+    }
+   ],
+   "lastTouched": "2026-10-10",
+   "source": "Bot reports (2026-10-09)",
+   "links": [
+    {
+     "label": "Open Nutrition",
+     "url": "https://julianlee314-hue.github.io/nutrition/"
+    }
+   ],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false,
+   "health": {
+    "stranger": true
+   },
+   "liveUrl": "https://julianlee314-hue.github.io/nutrition/",
+   "liveLabel": "Open Nutrition"
+  },
+  {
+   "id": "cookbook-pdfs",
+   "title": "Cookbook PDFs (4 books)",
+   "realm": "LIFE",
+   "goal": "g-cookbooks",
+   "owners": [
+    "Patton",
+    "Carl Weathers"
+   ],
+   "stage": "Built / Shipped",
+   "summary": "PDF editions of the cookbooks (private use).",
+   "done": "",
+   "next": "",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "Built",
+     "kind": "first"
+    }
+   ],
+   "lastTouched": "2026-10-10",
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "protected-hosting",
+   "title": "Protected hosting for private sites",
+   "realm": "TOOLS",
+   "goal": "g-dev",
+   "owners": [
+    "Patton"
+   ],
+   "stage": "Idea",
+   "summary": "Host the private sites behind a login instead of keeping them local.",
+   "done": "",
+   "next": "",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "First floated",
+     "kind": "first"
+    }
+   ],
+   "lastTouched": "2026-10-10",
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "land-research",
+   "title": "Land research (private)",
+   "realm": "LIFE",
+   "goal": "g-invest",
+   "owners": [
+    "Gekko"
+   ],
+   "stage": "Idea",
+   "summary": "Long-horizon land research (private).",
+   "done": "",
+   "next": "",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "First discussed",
+     "kind": "first"
+    }
+   ],
+   "lastTouched": "2026-10-10",
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
+   "waitingOnJulius": false
+  },
+  {
+   "id": "robotaxi-intel",
+   "title": "Robotaxi intelligence",
+   "realm": "LIFE",
+   "goal": "g-invest",
+   "owners": [
+    "Gekko"
+   ],
+   "stage": "Idea",
+   "summary": "Structured robotaxi industry monitoring: deployed vs announced.",
+   "done": "",
+   "next": "",
+   "history": [
+    {
+     "date": "2026-10-10",
+     "approx": false,
+     "text": "First discussed",
+     "kind": "first"
+    }
+   ],
+   "lastTouched": "2026-10-10",
+   "source": "Bot reports (2026-10-09)",
+   "links": [],
+   "files": [],
+   "updated": "2026-10-11",
    "waitingOnJulius": false
   }
  ]
