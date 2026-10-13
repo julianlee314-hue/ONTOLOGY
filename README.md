@@ -7,6 +7,7 @@ A sticky-note Kanban board of Julius's ONTOLOGY projects. Version 4 is organized
 - Click a note to see its dated history, from when it was first discussed through each version, rename and decision.
 - Click a goal banner to show only that goal's notes. Its 🕑 button opens the goal's combined timeline.
 - The Abandoned / Superseded column is hidden by default. Use the toggle to show it.
+- **The Graveyard** (`graveyard.html`, the 🪦 button): every dropped, outgrown or never-answered idea as a tombstone with its cause of death. Personal-life graves are counted but not named here.
 - The ↗ buttons open each project's live site.
 - It's plain HTML, CSS and JS: `index.html` renders `projects.js`, and `projects.json` holds the same data.
 - Drag-and-drop moves, sticky notes and export are saved only in your own browser.
