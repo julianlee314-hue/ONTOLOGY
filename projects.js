@@ -787,7 +787,7 @@ window.ITEMS = [
     "date": "2026-09-24",
     "approx": false,
     "text": "Quintile, an early exploration (math map + drill rooms) that inspired Mathera",
-    "url": "https://julianlee314-hue.github.io/quintile/",
+    "url": "https://the-court-press.github.io/quintile/",
     "note": "quintile",
     "kind": "first"
    },
@@ -807,7 +807,7 @@ window.ITEMS = [
     "date": "2026-10-01",
     "approx": false,
     "text": "v0.5 beta replaces the garden site: splash, Skills-first nav; 1.0 defined as Eras I–V with real practice",
-    "url": "https://julianlee314-hue.github.io/mathera/",
+    "url": "https://the-court-press.github.io/mathera/",
     "kind": "step"
    },
    {
@@ -821,21 +821,21 @@ window.ITEMS = [
     "date": "2026-10-06",
     "approx": false,
     "text": "v0.6 test build: seven-worlds landing, Spotlight, Practice / Learn / Map tabs",
-    "url": "https://julianlee314-hue.github.io/mathera-v06/",
+    "url": "https://the-court-press.github.io/mathera-v06/",
     "kind": "step"
    },
    {
     "date": "2026-10-06",
     "approx": false,
     "text": "v0.6.1 test build: world-tree look, curtain intro, Era VI = The Spiral Isle",
-    "url": "https://julianlee314-hue.github.io/mathera-v061/",
+    "url": "https://the-court-press.github.io/mathera-v061/",
     "kind": "step"
    },
    {
     "date": "2026-10-06",
     "approx": false,
     "text": "v0.6.2 test build: 3200×1800 era paintings",
-    "url": "https://julianlee314-hue.github.io/mathera-v062/",
+    "url": "https://the-court-press.github.io/mathera-v062/",
     "kind": "step"
    },
    {
@@ -892,7 +892,7 @@ window.ITEMS = [
    {
     "label": "Quintile (early exploration)",
     "date": "2026-09-24",
-    "url": "https://julianlee314-hue.github.io/quintile/",
+    "url": "https://the-court-press.github.io/quintile/",
     "stage": "Abandoned / Superseded",
     "summary": "Super-early seven-era math map + drill rooms that inspired Mathera."
    },
@@ -906,7 +906,7 @@ window.ITEMS = [
    {
     "label": "v0.5 (main site)",
     "date": "2026-10-01",
-    "url": "https://julianlee314-hue.github.io/mathera/",
+    "url": "https://the-court-press.github.io/mathera/",
     "stage": "Paused",
     "summary": "Former GitHub Pages URL; superseded by mathera.world."
    },
@@ -921,21 +921,21 @@ window.ITEMS = [
    {
     "label": "v0.6",
     "date": "2026-10-06",
-    "url": "https://julianlee314-hue.github.io/mathera-v06/",
+    "url": "https://the-court-press.github.io/mathera-v06/",
     "stage": "Built / Shipped",
     "summary": "Test build: seven-worlds landing, skill Spotlight, Practice / Learn / Map tabs (761 skills)."
    },
    {
     "label": "v0.6.1 (Era VI: The Spiral Isle)",
     "date": "2026-10-06",
-    "url": "https://julianlee314-hue.github.io/mathera-v061/",
+    "url": "https://the-court-press.github.io/mathera-v061/",
     "stage": "Built / Shipped",
     "summary": "The devs' build: world-tree look, curtain intro, Era VI = The Spiral Isle."
    },
    {
     "label": "v0.6.2 (high-res paintings)",
     "date": "2026-10-06",
-    "url": "https://julianlee314-hue.github.io/mathera-v062/",
+    "url": "https://the-court-press.github.io/mathera-v062/",
     "stage": "Built / Shipped",
     "summary": "Test build with 3200×1800 era paintings; later became the base for v0.6.3 on mathera.world."
    },
@@ -998,7 +998,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open Quintile (old)",
-    "url": "https://julianlee314-hue.github.io/quintile/"
+    "url": "https://the-court-press.github.io/quintile/"
    }
   ],
   "files": [],
@@ -1006,7 +1006,7 @@ window.ITEMS = [
   "waitingOnJulius": false,
   "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
   "stageNote": "Early exploration that inspired Mathera",
-  "liveUrl": "https://julianlee314-hue.github.io/quintile/",
+  "liveUrl": "https://the-court-press.github.io/quintile/",
   "liveLabel": "Open Quintile (old)"
  },
  {
@@ -1046,7 +1046,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open the AA HL drill room",
-    "url": "https://julianlee314-hue.github.io/quintile-aa-hl/"
+    "url": "https://the-court-press.github.io/quintile-aa-hl/"
    }
   ],
   "files": [],
@@ -1054,7 +1054,7 @@ window.ITEMS = [
   "waitingOnJulius": false,
   "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
   "stageNote": "Early exploration that inspired Mathera",
-  "liveUrl": "https://julianlee314-hue.github.io/quintile-aa-hl/",
+  "liveUrl": "https://the-court-press.github.io/quintile-aa-hl/",
   "liveLabel": "Open the AA HL drill room"
  },
  {
@@ -1088,7 +1088,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open Course Exam Drills",
-    "url": "https://julianlee314-hue.github.io/course-exam-drills/"
+    "url": "https://the-court-press.github.io/course-exam-drills/"
    }
   ],
   "files": [],
@@ -1096,7 +1096,7 @@ window.ITEMS = [
   "waitingOnJulius": false,
   "note": "Part of Quintile, a super-early exploration (2026-09-24) that inspired Mathera; not a predecessor version.",
   "stageNote": "Early exploration that inspired Mathera",
-  "liveUrl": "https://julianlee314-hue.github.io/course-exam-drills/",
+  "liveUrl": "https://the-court-press.github.io/course-exam-drills/",
   "liveLabel": "Open Course Exam Drills"
  },
  {
@@ -1377,7 +1377,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open Graph Lab",
-    "url": "https://julianlee314-hue.github.io/graph-lab/"
+    "url": "https://the-court-press.github.io/graph-lab/"
    }
   ],
   "files": [],
@@ -1387,7 +1387,7 @@ window.ITEMS = [
    "stranger": true
   },
   "stageNote": "Built/Shipped (MVP)",
-  "liveUrl": "https://julianlee314-hue.github.io/graph-lab/",
+  "liveUrl": "https://the-court-press.github.io/graph-lab/",
   "liveLabel": "Open Graph Lab"
  },
  {
@@ -1434,14 +1434,14 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open Math History 101",
-    "url": "https://julianlee314-hue.github.io/math-history-101/"
+    "url": "https://the-court-press.github.io/math-history-101/"
    }
   ],
   "files": [],
   "updated": "2026-10-15",
   "waitingOnJulius": false,
   "note": "Conflict: Euclid (round 1) said Built/Shipped; MWA (owner since 2026-10-03) says Paused, last commit 2026-10-01. Owner's call used.",
-  "liveUrl": "https://julianlee314-hue.github.io/math-history-101/",
+  "liveUrl": "https://the-court-press.github.io/math-history-101/",
   "liveLabel": "Open Math History 101"
  },
  {
@@ -1607,7 +1607,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open ForgePath Prequel",
-    "url": "https://julianlee314-hue.github.io/forgepath/"
+    "url": "https://the-court-press.github.io/forgepath/"
    }
   ],
   "files": [],
@@ -1615,7 +1615,7 @@ window.ITEMS = [
   "waitingOnJulius": true,
   "decision": "Pick the new name for ForgePath",
   "stageNote": "Paused; last work 2026-10-03",
-  "liveUrl": "https://julianlee314-hue.github.io/forgepath/",
+  "liveUrl": "https://the-court-press.github.io/forgepath/",
   "liveLabel": "Open ForgePath Prequel"
  },
  {
@@ -2022,14 +2022,14 @@ window.ITEMS = [
   "links": [
    {
     "label": "Play Precedence",
-    "url": "https://julianlee314-hue.github.io/precedence/"
+    "url": "https://the-court-press.github.io/precedence/"
    }
   ],
   "files": [],
   "updated": "2026-10-15",
   "waitingOnJulius": false,
   "stageNote": "Merged into The Road",
-  "liveUrl": "https://julianlee314-hue.github.io/precedence/",
+  "liveUrl": "https://the-court-press.github.io/precedence/",
   "liveLabel": "Play Precedence"
  },
  {
@@ -2094,7 +2094,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Play The Road",
-    "url": "https://julianlee314-hue.github.io/the-road/"
+    "url": "https://the-court-press.github.io/the-road/"
    }
   ],
   "files": [],
@@ -2103,7 +2103,7 @@ window.ITEMS = [
   "decision": "Play The Road and send feedback before chapter 3",
   "nextTruth": "Does the merged Road + Precedence feel like one game to Julius?",
   "stageNote": "Planning (merge of The Road and Precedence)",
-  "liveUrl": "https://julianlee314-hue.github.io/the-road/",
+  "liveUrl": "https://the-court-press.github.io/the-road/",
   "liveLabel": "Play The Road"
  },
  {
@@ -2183,14 +2183,14 @@ window.ITEMS = [
   "links": [
    {
     "label": "Play OPERATE!",
-    "url": "https://julianlee314-hue.github.io/operate/"
+    "url": "https://the-court-press.github.io/operate/"
    }
   ],
   "files": [],
   "updated": "2026-10-15",
   "waitingOnJulius": true,
   "decision": "Revive OPERATE! or fold it into Primary mode",
-  "liveUrl": "https://julianlee314-hue.github.io/operate/",
+  "liveUrl": "https://the-court-press.github.io/operate/",
   "liveLabel": "Play OPERATE!"
  },
  {
@@ -2340,7 +2340,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open the Chronographs hub",
-    "url": "https://julianlee314-hue.github.io/chronographs/"
+    "url": "https://the-court-press.github.io/chronographs/"
    }
   ],
   "files": [],
@@ -2349,7 +2349,7 @@ window.ITEMS = [
   "health": {
    "stranger": true
   },
-  "liveUrl": "https://julianlee314-hue.github.io/chronographs/",
+  "liveUrl": "https://the-court-press.github.io/chronographs/",
   "liveLabel": "Open the Chronographs hub"
  },
  {
@@ -2389,7 +2389,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open Chronograph I",
-    "url": "https://julianlee314-hue.github.io/dow-timeline/v0.2/"
+    "url": "https://the-court-press.github.io/dow-timeline/v0.2/"
    }
   ],
   "files": [],
@@ -2398,7 +2398,7 @@ window.ITEMS = [
   "health": {
    "stranger": true
   },
-  "liveUrl": "https://julianlee314-hue.github.io/dow-timeline/v0.2/",
+  "liveUrl": "https://the-court-press.github.io/dow-timeline/v0.2/",
   "liveLabel": "Open Chronograph I"
  },
  {
@@ -2444,7 +2444,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open Chronograph II",
-    "url": "https://julianlee314-hue.github.io/the-bank-1694/"
+    "url": "https://the-court-press.github.io/the-bank-1694/"
    }
   ],
   "files": [],
@@ -2453,7 +2453,7 @@ window.ITEMS = [
   "health": {
    "stranger": true
   },
-  "liveUrl": "https://julianlee314-hue.github.io/the-bank-1694/",
+  "liveUrl": "https://the-court-press.github.io/the-bank-1694/",
   "liveLabel": "Open Chronograph II"
  },
  {
@@ -2561,14 +2561,14 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open Chronograph III",
-    "url": "https://julianlee314-hue.github.io/ww2-strat-map/"
+    "url": "https://the-court-press.github.io/ww2-strat-map/"
    }
   ],
   "files": [],
   "updated": "2026-10-15",
   "waitingOnJulius": false,
   "stageNote": "Paused 2026-10-08",
-  "liveUrl": "https://julianlee314-hue.github.io/ww2-strat-map/",
+  "liveUrl": "https://the-court-press.github.io/ww2-strat-map/",
   "liveLabel": "Open Chronograph III"
  },
  {
@@ -2722,14 +2722,14 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open 字園 Zìyuán",
-    "url": "https://julianlee314-hue.github.io/ziyuan/"
+    "url": "https://the-court-press.github.io/ziyuan/"
    }
   ],
   "files": [],
   "updated": "2026-10-15",
   "waitingOnJulius": false,
   "stageNote": "Paused: 'finish with the third plot for now'",
-  "liveUrl": "https://julianlee314-hue.github.io/ziyuan/",
+  "liveUrl": "https://the-court-press.github.io/ziyuan/",
   "liveLabel": "Open 字園 Zìyuán"
  },
  {
@@ -3055,7 +3055,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open Recipes Worth Rewatching",
-    "url": "https://julianlee314-hue.github.io/recipe-playlist-digests/"
+    "url": "https://the-court-press.github.io/recipe-playlist-digests/"
    }
   ],
   "files": [],
@@ -3064,7 +3064,7 @@ window.ITEMS = [
   "health": {
    "stranger": true
   },
-  "liveUrl": "https://julianlee314-hue.github.io/recipe-playlist-digests/",
+  "liveUrl": "https://the-court-press.github.io/recipe-playlist-digests/",
   "liveLabel": "Open Recipes Worth Rewatching"
  },
  {
@@ -4706,7 +4706,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open the public ONTOLOGY Kanban",
-    "url": "https://julianlee314-hue.github.io/ONTOLOGY/"
+    "url": "https://the-court-press.github.io/ONTOLOGY/"
    }
   ],
   "files": [],
@@ -4716,7 +4716,7 @@ window.ITEMS = [
    "stranger": true,
    "repeat": true
   },
-  "liveUrl": "https://julianlee314-hue.github.io/ONTOLOGY/",
+  "liveUrl": "https://the-court-press.github.io/ONTOLOGY/",
   "liveLabel": "Open the public ONTOLOGY Kanban"
  },
  {
@@ -4844,7 +4844,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open Math History 101",
-    "url": "https://julianlee314-hue.github.io/math-history-101/"
+    "url": "https://the-court-press.github.io/math-history-101/"
    }
   ],
   "files": [],
@@ -4853,7 +4853,7 @@ window.ITEMS = [
   "health": {
    "stranger": true
   },
-  "liveUrl": "https://julianlee314-hue.github.io/math-history-101/",
+  "liveUrl": "https://the-court-press.github.io/math-history-101/",
   "liveLabel": "Open Math History 101"
  },
  {
@@ -5597,7 +5597,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open the Sites Index",
-    "url": "https://julianlee314-hue.github.io/sites/"
+    "url": "https://the-court-press.github.io/sites/"
    }
   ],
   "files": [],
@@ -5606,7 +5606,7 @@ window.ITEMS = [
   "health": {
    "stranger": true
   },
-  "liveUrl": "https://julianlee314-hue.github.io/sites/",
+  "liveUrl": "https://the-court-press.github.io/sites/",
   "liveLabel": "Open the Sites Index"
  },
  {
@@ -5662,7 +5662,7 @@ window.ITEMS = [
   "links": [
    {
     "label": "Open Nutrition",
-    "url": "https://julianlee314-hue.github.io/nutrition/"
+    "url": "https://the-court-press.github.io/nutrition/"
    }
   ],
   "files": [],
@@ -5671,7 +5671,7 @@ window.ITEMS = [
   "health": {
    "stranger": true
   },
-  "liveUrl": "https://julianlee314-hue.github.io/nutrition/",
+  "liveUrl": "https://the-court-press.github.io/nutrition/",
   "liveLabel": "Open Nutrition"
  },
  {
